@@ -1,24 +1,18 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
+import { IProjectInfo } from "./interfaces/IProjectInfo";
+import ProjectList from "./components/ProjectList";
 
 const App: React.FC = () => {
+  const [] = useState<IProjectInfo[]>([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="header">
+        <h1>glTF Project Explorer</h1>
+      </div>
+      <ProjectList></ProjectList>
+    </>
   );
 };
 

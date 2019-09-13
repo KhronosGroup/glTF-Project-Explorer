@@ -1,0 +1,5 @@
+export enum FilterActionTypes {
+  UPDATE_FILTER = "UPDATE_FILTER",
+  PERFORM_SEARCH = "PERFORM_SEARCH",
+  LOAD_RESULTS = "LOAD_RESULTS"
+}

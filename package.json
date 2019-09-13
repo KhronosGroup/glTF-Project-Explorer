@@ -7,9 +7,14 @@
     "@types/node": "12.7.5",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
+    "@types/react-redux": "^7.1.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-redux": "^7.1.1",
     "react-scripts": "3.1.1",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.0.5",
     "typescript": "3.6.3"
   },
   "scripts": {
@@ -19,7 +24,14 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "quotes": "double",
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ]
+    }
   },
   "browserslist": {
     "production": [
