@@ -82,7 +82,7 @@
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "libgltf",
-  "description" : "Library for loading glTF",
+  "description" : "glTF 2.0 parser for C++11",
   "link" : "https://github.com/code4game/libgltf",
   "task" : [ "load" ],
   "license" : [ "MIT" ],
@@ -787,11 +787,11 @@
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Ashes",
-  "description" : "WebGL 2.0 & ECS playground",
+  "description" : "WebGL 2.0 3D Game Engine & ECS playground",
   "link" : "https://github.com/but0n/Ashes",
   "task" : [ "import", "view" ],
   "license" : [ "MIT" ],
-  "type" : [ "demo" ],
+  "type" : [ "engine" ],
   "language" : [ "TypeScript" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
@@ -1393,70 +1393,70 @@
   "inputs" : [ "?" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "loader",
+  "name" : "three.js glTF loader",
   "description" : "WebGL engine\n\n[`<model-viewer/>` component](https://github.com/GoogleWebComponents/model-viewer/), [drag-and-drop viewer](https://gltf-viewer.donmccurdy.com/)",
   "link" : "https://threejs.org/docs/index.html#examples/loaders/GLTFLoader)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "loader",
+  "name" : "BabylonJS glTF loader",
   "description" : "WebGL engine\n\n[Viewer component](http://doc.babylonjs.com/extensions/the_babylon_viewer)",
   "link" : "https://github.com/BabylonJS/Babylon.js/tree/master/loaders/src/glTF)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "loader",
+  "name" : "Cesium glTF loader",
   "description" : "WebGL engine\n\n[Drag-and-drop viewer](https://www.virtualgis.io/gltfviewer/), [tutorial](https://cesiumjs.org/tutorials/3D-Models-Tutorial/)",
   "link" : "https://github.com/AnalyticalGraphicsInc/cesium/blob/master/Source/Scene/Model.js)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "loader",
+  "name" : "OSK glTF loader",
   "description" : "WebGL engine",
   "link" : "https://github.com/cedricpinson/osgjs/blob/master/sources/osgPlugins/ReaderWriterGLTF.js)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "loader",
+  "name" : "Grimoire.js glTF loader",
   "description" : "WebGL engine",
   "link" : "https://github.com/GrimoireGL/grimoirejs-gltf)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "loader",
+  "name" : "Hilo3d glTF loader",
   "description" : "WebGL engine\n\n[Doc](https://hiloteam.github.io/Hilo3d/docs/)",
   "link" : "https://github.com/hiloteam/Hilo3d/blob/master/src/loader/GLTFLoader.js)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "loader",
+  "name" : "A-Frame glTF loader",
   "description" : "WebGL engine\n\n[Doc](https://aframe.io/docs/0.7.0/components/gltf-model.html)",
   "link" : "https://aframe.io/docs/0.6.0/components/gltf-model.html)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "loader",
+  "name" : "xeogl glTF loader",
   "description" : "WebGL engine\n\n[Tutorial](http://xeogl.org/docs/classes/GLTFModel.html)",
   "link" : "http://xeogl.org/examples/#importing_gltf_BoomBox)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "loader",
+  "name" : "ClayGL glTF loader",
   "description" : "WebGL engine\n\n[Examples](http://examples.claygl.xyz/)",
   "link" : "http://docs.claygl.xyz/api/clay.application.App3D.html#loadModel)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "loader",
+  "name" : "Verge3D glTF loader",
   "description" : "WebGL engine",
   "link" : "https://www.soft8soft.com/docs/examples/loaders/GLTFLoader.html)",
   "task" : [ "import", "view" ],
@@ -1470,35 +1470,35 @@
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "loader",
+  "name" : "CZPG glTF loader",
   "description" : "WebGL engine\n\n[Examples](http://princessgod.github.io/CraZyPG)",
   "link" : "https://github.com/PrincessGod/CraZyPG/blob/master/src/loaders/GLTFLoader.js)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "loader",
+  "name" : "PEX glTF loader",
   "description" : "WebGL engine",
   "link" : "https://github.com/pex-gl/pex-gltf)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 1.0" ]
 }, {
-  "name" : "loader",
+  "name" : "GLBoost glTF loader",
   "description" : "WebGL engine\n\n[Examples](https://gitcdn.xyz/repo/emadurandal/GLBoost/master/examples/index.html)",
   "link" : "https://github.com/emadurandal/GLBoost/blob/master/src/js/middle_level/loader/GLTFLoader.js)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 1.0" ]
 }, {
-  "name" : "loader",
+  "name" : "xml3d.js glTF loader",
   "description" : "WebGL engine",
   "link" : "https://github.com/xml3d/xml3d-gltf-plugin)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 1.0" ]
 }, {
-  "name" : "loader",
+  "name" : "X3DOM glTF loader",
   "description" : "WebGL engine",
   "link" : "https://github.com/x3dom/x3dom/blob/master/src/util/glTF/glTFLoader.js)",
   "task" : [ "import", "view" ],
@@ -1508,13 +1508,6 @@
   "name" : "RedGL",
   "description" : "WebGL engine\n\n[Examples](https://redcamel.github.io/RedGL2/example)",
   "link" : "https://github.com/redcamel/RedGL2/",
-  "task" : [ "import", "view" ],
-  "type" : [ "engine" ],
-  "inputs" : [ "glTF 2.0" ]
-}, {
-  "name" : "Ashes",
-  "description" : "WebGL engine\n\n[Examples](https://codepen.io/but0n/pen/jddYoX)",
-  "link" : "https://github.com/but0n/Ashes",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
@@ -1554,12 +1547,6 @@
   "link" : "https://github.com/Reon90/redcube",
   "language" : [ "JavaScript" ],
   "inputs" : [ "glTF 2.0" ]
-}, {
-  "name" : "gltf-bounding-box",
-  "description" : "Computes the global bounding box of a gltf model",
-  "link" : "https://github.com/wanadev/gltf-bounding-box",
-  "language" : [ "JavaScript" ],
-  "inputs" : [ "glTF 1.0" ]
 }, {
   "name" : "Tiny glTF loader",
   "description" : "Header only C++ glTF parsing library, with [Alembic?glTF](https://github.com/syoyo/tinygltfloader/tree/master/examples/alembic_to_gltf) and [CyHair->glTF](https://github.com/syoyo/tinygltfloader/tree/master/examples/cyhair_to_gltf) converters",
@@ -1639,18 +1626,6 @@
   "language" : [ "C++" ],
   "inputs" : [ "glTF 1.0" ]
 }, {
-  "name" : "AssetKit",
-  "description" : "3D asset importer/exporter/util library",
-  "link" : "https://github.com/recp/assetkit",
-  "language" : [ "C++" ],
-  "inputs" : [ "" ]
-}, {
-  "name" : "libgltf",
-  "description" : "glTF 2.0 parser for C++11",
-  "link" : "https://github.com/code4game/libgltf",
-  "language" : [ "C++" ],
-  "inputs" : [ "glTF 2.0" ]
-}, {
   "name" : "libgltf_ue4",
   "description" : "A third-party library for UE4.10+ to load glTF files",
   "link" : "https://github.com/code4game/libgltf_ue4",
@@ -1708,12 +1683,7 @@
   "name" : "AssetKit",
   "description" : "3D asset importer, exporter library.",
   "link" : "https://github.com/recp/assetkit",
-  "language" : [ "C" ],
-  "inputs" : [ "glTF 2.0" ]
-}, {
-  "name" : "cgltf",
-  "description" : "Single-header C glTF loader.",
-  "link" : "https://github.com/jkuhlmann/cgltf",
+  "license" : [ "MIT" ],
   "language" : [ "C" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
