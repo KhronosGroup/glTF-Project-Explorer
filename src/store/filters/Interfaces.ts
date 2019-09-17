@@ -1,3 +1,12 @@
-// TODO: Filter Action Interfaces
+import { IFilter } from "../../interfaces/IFilter";
+import { FilterActionTypes } from "./Types";
 
-export default {};
+export type FiltersActions = IUpdateFiltersAction;
+
+export interface IUpdateFiltersAction {
+  readonly type: FilterActionTypes.UPDATE_FILTERS;
+  readonly tasks: IFilter[];
+  readonly types: IFilter[];
+  readonly languages: IFilter[];
+  readonly licenses: IFilter[];
+}

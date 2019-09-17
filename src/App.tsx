@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import { IProjectInfo } from "./interfaces/IProjectInfo";
 import ProjectList from "./components/ProjectList";
+import FilterBar from "./components/FilterBar";
 
 const App: React.FC = () => {
-  const [] = useState<IProjectInfo[]>([]);
-
   return (
     <>
       <div className="header">
         <h1>glTF Project Explorer</h1>
       </div>
+      <FilterBar></FilterBar>
       <ProjectList></ProjectList>
     </>
   );
