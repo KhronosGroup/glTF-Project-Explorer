@@ -8,7 +8,7 @@ export enum FilterDimension {
 export interface IFilter {
   dimension: FilterDimension;
   value: string;
-  selected: boolean;
+  // selected: boolean;
 }
 
 export function createNewFilter(
@@ -17,7 +17,7 @@ export function createNewFilter(
 ): IFilter {
   return {
     dimension,
-    value,
-    selected: false
+    value
+    // selected: false
   };
 }

@@ -7,7 +7,8 @@ export function filters(
     tasks: [],
     types: [],
     licenses: [],
-    languages: []
+    languages: [],
+    selected: []
   },
   action: FiltersActions
 ) {
@@ -19,6 +20,11 @@ export function filters(
         types: action.types,
         licenses: action.licenses,
         languages: action.languages
+      };
+    case FilterActionTypes.UPDATE_SELECTED_FILTERS:
+      return {
+        ...state,
+        selected: action.selected
       };
     default:
       return state;

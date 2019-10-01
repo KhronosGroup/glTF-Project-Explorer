@@ -13,7 +13,9 @@ const ProjectList: React.FC<IProjectListProps> = props => {
 
   return (
     <>
-      <ul>{projects && projects.map(p => <ProjectCard project={p} />)}</ul>
+      <ul>
+        {projects && projects.map(p => <ProjectCard project={p} key={p.id} />)}
+      </ul>
     </>
   );
 };

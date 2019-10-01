@@ -5,6 +5,7 @@ export type ProjectLanguage = string;
 export type ProjectLicense = string;
 
 export interface IProjectInfo {
+  id: number;
   name: string;
   description?: string;
   link?: string;

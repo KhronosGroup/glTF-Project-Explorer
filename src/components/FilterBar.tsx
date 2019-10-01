@@ -2,14 +2,15 @@ import React, { useCallback } from "react";
 import { connect } from "react-redux";
 import { IFilter } from "../interfaces/IFilter";
 import { IAppState } from "../interfaces/IAppState";
-import { updateFilters } from "../store/filters/Actions";
+import { updateSelectedFilters } from "../store/filters/Actions";
 
 export interface IFilterBarProps {
   taskFilters: IFilter[];
   typeFilters: IFilter[];
   licenseFilters: IFilter[];
   languageFilters: IFilter[];
-  updateFilters: typeof updateFilters;
+  selectedFilters: IFilter[];
+  updateSelectedFilters: typeof updateSelectedFilters;
 }
 
 const FilterBar: React.FC<IFilterBarProps> = props => {
@@ -18,62 +19,43 @@ const FilterBar: React.FC<IFilterBarProps> = props => {
     typeFilters,
     licenseFilters,
     languageFilters,
-    updateFilters
+    selectedFilters,
+    updateSelectedFilters
   } = props;
 
   const handleFilterTaskClick = useCallback(
     _ => {
-      taskFilters[1].selected = true;
-      typeFilters.forEach(f => (f.selected = false));
-      licenseFilters.forEach(f => (f.selected = false));
-      languageFilters.forEach(f => (f.selected = false));
-      updateFilters(taskFilters, typeFilters, licenseFilters, languageFilters);
+      updateSelectedFilters([taskFilters[1]]);
     },
-    [taskFilters, typeFilters, licenseFilters, languageFilters, updateFilters]
+    [taskFilters, updateSelectedFilters]
   );
 
   const handleFilterTypeClick = useCallback(
     _ => {
-      taskFilters.forEach(f => (f.selected = false));
-      typeFilters[1].selected = true;
-      licenseFilters.forEach(f => (f.selected = false));
-      languageFilters.forEach(f => (f.selected = false));
-      updateFilters(taskFilters, typeFilters, licenseFilters, languageFilters);
+      updateSelectedFilters([typeFilters[1]]);
     },
-    [taskFilters, typeFilters, licenseFilters, languageFilters, updateFilters]
+    [typeFilters, updateSelectedFilters]
   );
 
   const handleFilterLicenseClick = useCallback(
     _ => {
-      taskFilters.forEach(f => (f.selected = false));
-      typeFilters.forEach(f => (f.selected = false));
-      licenseFilters[1].selected = true;
-      languageFilters.forEach(f => (f.selected = false));
-      updateFilters(taskFilters, typeFilters, licenseFilters, languageFilters);
+      updateSelectedFilters([licenseFilters[1]]);
     },
-    [taskFilters, typeFilters, licenseFilters, languageFilters, updateFilters]
+    [licenseFilters, updateSelectedFilters]
   );
 
   const handleFilterLanguageClick = useCallback(
     _ => {
-      taskFilters.forEach(f => (f.selected = false));
-      typeFilters.forEach(f => (f.selected = false));
-      licenseFilters.forEach(f => (f.selected = false));
-      languageFilters[2].selected = true;
-      updateFilters(taskFilters, typeFilters, licenseFilters, languageFilters);
+      updateSelectedFilters([languageFilters[1]]);
     },
-    [taskFilters, typeFilters, licenseFilters, languageFilters, updateFilters]
+    [languageFilters, updateSelectedFilters]
   );
 
   const handleFilterResetClick = useCallback(
     _ => {
-      taskFilters.forEach(f => (f.selected = false));
-      typeFilters.forEach(f => (f.selected = false));
-      licenseFilters.forEach(f => (f.selected = false));
-      languageFilters.forEach(f => (f.selected = false));
-      updateFilters(taskFilters, typeFilters, licenseFilters, languageFilters);
+      updateSelectedFilters([]);
     },
-    [taskFilters, typeFilters, licenseFilters, languageFilters, updateFilters]
+    [updateSelectedFilters]
   );
 
   return (
@@ -94,7 +76,8 @@ function mapStateToProps(state: IAppState) {
       tasks: taskFilters,
       types: typeFilters,
       licenses: licenseFilters,
-      languages: languageFilters
+      languages: languageFilters,
+      selected: selectedFilters
     }
   } = state;
 
@@ -102,12 +85,13 @@ function mapStateToProps(state: IAppState) {
     taskFilters,
     typeFilters,
     licenseFilters,
-    languageFilters
+    languageFilters,
+    selectedFilters
   };
 }
 
 const mapDispatchToProps = {
-  updateFilters
+  updateSelectedFilters
 };
 
 export default connect(

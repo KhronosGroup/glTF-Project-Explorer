@@ -17,7 +17,7 @@ const ProjectDetailList: React.FC<IProjectDetailListProps> = props => {
       <h2>{header}</h2>
       <ul>
         {items.map(item => (
-          <li>{item}</li>
+          <li key={item}>{item}</li>
         ))}
       </ul>
     </div>
