@@ -9,8 +9,10 @@ const App: React.FC = () => {
       <div className="header">
         <h1>glTF Project Explorer</h1>
       </div>
-      <FilterBar></FilterBar>
-      <ProjectList></ProjectList>
+      <div className="content">
+        <FilterBar></FilterBar>
+        <ProjectList></ProjectList>
+      </div>
     </>
   );
 };

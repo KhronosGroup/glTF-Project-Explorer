@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProjectDetailList.css";
 
 export interface IProjectDetailListProps {
   header: string;
