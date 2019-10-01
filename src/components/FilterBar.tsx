@@ -1,9 +1,11 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { connect } from "react-redux";
 import { IFilter } from "../interfaces/IFilter";
 import { IAppState } from "../interfaces/IAppState";
 import { updateSelectedFilters } from "../store/filters/Actions";
 import FilterBarOptions from "./FilterBarOptions";
+import "./FilterBar.css";
+import FilterBarSelected from "./FilterBarSelected";
 
 export interface IFilterBarProps {
   taskFilters: IFilter[];
@@ -23,6 +25,12 @@ const FilterBar: React.FC<IFilterBarProps> = props => {
     selectedFilters,
     updateSelectedFilters
   } = props;
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = useCallback(() => {
+    setIsVisible(!isVisible);
+  }, [isVisible, setIsVisible]);
 
   const handleFilterAddClick = useCallback(
     (filter: IFilter) => (_: React.MouseEvent) => {
@@ -48,43 +56,40 @@ const FilterBar: React.FC<IFilterBarProps> = props => {
     [selectedFilters, updateSelectedFilters]
   );
 
-  const displaySelectedFilters = Array.from(selectedFilters);
-
   return (
     <div className="filter-bar">
-      {selectedFilters.size > 0 && (
-        <div>
-          <h1>Selected Filters</h1>
-          <ul>
-            {displaySelectedFilters.map(f => (
-              <li key={f.value}>
-                <button onClick={handleFilterRemoveClick(f)}>{f.value}</button>
-              </li>
-            ))}
-          </ul>
-          <button onClick={handleFilterResetClick}>Clear Filters</button>
-        </div>
-      )}
-      <FilterBarOptions
-        filters={taskFilters}
-        label="Filter by Task"
-        action={handleFilterAddClick}
-      />
-      <FilterBarOptions
-        filters={typeFilters}
-        label="Filter by Type"
-        action={handleFilterAddClick}
-      />
-      <FilterBarOptions
-        filters={licenseFilters}
-        label="Filter by License"
-        action={handleFilterAddClick}
-      />
-      <FilterBarOptions
-        filters={languageFilters}
-        label="Filter by Language"
-        action={handleFilterAddClick}
-      />
+      <div className="filter-bar-header">
+        <h1 onClick={toggleVisibility}>
+          Filter Results {isVisible ? "▲" : "▼"}
+        </h1>
+      </div>
+      <div className={isVisible ? "filter-bar-expando" : "hide"}>
+        <FilterBarSelected
+          selectedFilters={selectedFilters}
+          removeAction={handleFilterRemoveClick}
+          resetAction={handleFilterResetClick}
+        />
+        <FilterBarOptions
+          filters={taskFilters}
+          label="Filter by Task"
+          addAction={handleFilterAddClick}
+        />
+        <FilterBarOptions
+          filters={typeFilters}
+          label="Filter by Type"
+          addAction={handleFilterAddClick}
+        />
+        <FilterBarOptions
+          filters={licenseFilters}
+          label="Filter by License"
+          addAction={handleFilterAddClick}
+        />
+        <FilterBarOptions
+          filters={languageFilters}
+          label="Filter by Language"
+          addAction={handleFilterAddClick}
+        />
+      </div>
     </div>
   );
 };

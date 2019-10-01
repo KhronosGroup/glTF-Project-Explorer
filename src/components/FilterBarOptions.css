@@ -1,0 +1,40 @@
+.filter-bar-options {
+  margin: 0.5rem 0 0 0;
+  padding: 0.5rem 0.75rem;
+}
+
+.filter-bar-options h2 {
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0;
+  width: 100%;
+}
+
+.filter-bar-options ul {
+  background-color: white;
+  border: thin solid #cfcfcf;
+  border-radius: 3px;
+  list-style: none;
+  margin: 0.5rem 0 0 0;
+  padding: 0.5rem 0 0 0;
+}
+
+.filter-bar-options li {
+  display: inline-block;
+}
+
+.filter-bar-options button {
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  margin: 0 0 0.5rem 0.5rem;
+  padding: 0.25rem;
+}
+
+.filter-bar-options .instructions {
+  color: #8a8a8a;
+  font-size: 0.75rem;
+  font-style: italic;
+  margin: 0.25rem 0 0 0.5rem;
+}
