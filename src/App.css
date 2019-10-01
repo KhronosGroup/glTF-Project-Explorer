@@ -42,7 +42,22 @@ h6 {
 
 .header h1 {
   margin: 0;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 2rem;
+  padding: 1.5rem 2rem 1.5rem;
+}
+
+.content {
+  margin: auto;
+  max-width: 100vw;
+}
+
+@media all and (min-width: 420px) and (max-width: 968px) {
+  .content {
+    max-width: 90vw;
+  }
+}
+
+@media all and (min-width: 969px) {
+  .content {
+    max-width: 80vw;
+  }
 }

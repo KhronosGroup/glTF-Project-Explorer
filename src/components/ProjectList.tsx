@@ -12,11 +12,7 @@ const ProjectList: React.FC<IProjectListProps> = props => {
   const { projects } = props;
 
   return (
-    <>
-      <ul>
-        {projects && projects.map(p => <ProjectCard project={p} key={p.id} />)}
-      </ul>
-    </>
+    <>{projects && projects.map(p => <ProjectCard project={p} key={p.id} />)}</>
   );
 };
 
