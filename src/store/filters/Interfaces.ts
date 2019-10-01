@@ -15,5 +15,5 @@ export interface IUpdateFiltersAction {
 
 export interface IUpdateSelectedFiltersAction {
   readonly type: FilterActionTypes.UPDATE_SELECTED_FILTERS;
-  readonly selected: IFilter[];
+  readonly selected: Set<IFilter>;
 }

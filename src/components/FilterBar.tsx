@@ -3,13 +3,14 @@ import { connect } from "react-redux";
 import { IFilter } from "../interfaces/IFilter";
 import { IAppState } from "../interfaces/IAppState";
 import { updateSelectedFilters } from "../store/filters/Actions";
+import FilterBarOptions from "./FilterBarOptions";
 
 export interface IFilterBarProps {
   taskFilters: IFilter[];
   typeFilters: IFilter[];
   licenseFilters: IFilter[];
   languageFilters: IFilter[];
-  selectedFilters: IFilter[];
+  selectedFilters: Set<IFilter>;
   updateSelectedFilters: typeof updateSelectedFilters;
 }
 
@@ -23,49 +24,67 @@ const FilterBar: React.FC<IFilterBarProps> = props => {
     updateSelectedFilters
   } = props;
 
-  const handleFilterTaskClick = useCallback(
-    _ => {
-      updateSelectedFilters([taskFilters[1]]);
+  const handleFilterAddClick = useCallback(
+    (filter: IFilter) => (_: React.MouseEvent) => {
+      selectedFilters.add(filter);
+      updateSelectedFilters(selectedFilters);
     },
-    [taskFilters, updateSelectedFilters]
+    [selectedFilters, updateSelectedFilters]
   );
 
-  const handleFilterTypeClick = useCallback(
-    _ => {
-      updateSelectedFilters([typeFilters[1]]);
+  const handleFilterRemoveClick = useCallback(
+    (filter: IFilter) => (_: React.MouseEvent) => {
+      selectedFilters.delete(filter);
+      updateSelectedFilters(selectedFilters);
     },
-    [typeFilters, updateSelectedFilters]
-  );
-
-  const handleFilterLicenseClick = useCallback(
-    _ => {
-      updateSelectedFilters([licenseFilters[1]]);
-    },
-    [licenseFilters, updateSelectedFilters]
-  );
-
-  const handleFilterLanguageClick = useCallback(
-    _ => {
-      updateSelectedFilters([languageFilters[1]]);
-    },
-    [languageFilters, updateSelectedFilters]
+    [selectedFilters, updateSelectedFilters]
   );
 
   const handleFilterResetClick = useCallback(
     _ => {
-      updateSelectedFilters([]);
+      selectedFilters.clear();
+      updateSelectedFilters(selectedFilters);
     },
-    [updateSelectedFilters]
+    [selectedFilters, updateSelectedFilters]
   );
 
+  const displaySelectedFilters = Array.from(selectedFilters);
+
   return (
-    <div>
-      This will be the filter bar.
-      <button onClick={handleFilterTaskClick}>Filter by Task</button>
-      <button onClick={handleFilterTypeClick}>Filter by Type</button>
-      <button onClick={handleFilterLicenseClick}>Filter by License</button>
-      <button onClick={handleFilterLanguageClick}>Filter by Language</button>
-      <button onClick={handleFilterResetClick}>Clear Filters</button>
+    <div className="filter-bar">
+      {selectedFilters.size > 0 && (
+        <div>
+          <h1>Selected Filters</h1>
+          <ul>
+            {displaySelectedFilters.map(f => (
+              <li key={f.value}>
+                <button onClick={handleFilterRemoveClick(f)}>{f.value}</button>
+              </li>
+            ))}
+          </ul>
+          <button onClick={handleFilterResetClick}>Clear Filters</button>
+        </div>
+      )}
+      <FilterBarOptions
+        filters={taskFilters}
+        label="Filter by Task"
+        action={handleFilterAddClick}
+      />
+      <FilterBarOptions
+        filters={typeFilters}
+        label="Filter by Type"
+        action={handleFilterAddClick}
+      />
+      <FilterBarOptions
+        filters={licenseFilters}
+        label="Filter by License"
+        action={handleFilterAddClick}
+      />
+      <FilterBarOptions
+        filters={languageFilters}
+        label="Filter by Language"
+        action={handleFilterAddClick}
+      />
     </div>
   );
 };

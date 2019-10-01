@@ -19,7 +19,7 @@ export interface IFiltersState {
   types: IFilter[];
   languages: IFilter[];
   licenses: IFilter[];
-  selected: IFilter[];
+  selected: Set<IFilter>;
 }
 
 /**

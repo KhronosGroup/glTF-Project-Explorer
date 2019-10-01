@@ -42,7 +42,7 @@ export function* calculateFilters() {
     call(calculateLanguageFilters, projects)
   ]);
   yield put(actions.updateFilters(tasks, types, licenses, languages));
-  yield put(actions.updateSelectedFilters([]));
+  yield put(actions.updateSelectedFilters(new Set()));
 }
 
 export function* watchForFilterRecalculate() {

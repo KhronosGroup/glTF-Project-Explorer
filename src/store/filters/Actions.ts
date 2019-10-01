@@ -21,8 +21,10 @@ export function updateFilters(
 }
 
 export function updateSelectedFilters(
-  selected: IFilter[]
+  selected: Set<IFilter>
 ): IUpdateSelectedFiltersAction {
+  // React needs a new Set each time.
+  selected = new Set(selected);
   return {
     type: FilterActionTypes.UPDATE_SELECTED_FILTERS,
     selected

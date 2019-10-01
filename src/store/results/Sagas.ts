@@ -7,18 +7,21 @@ import { IFilter, FilterDimension } from "../../interfaces/IFilter";
 import { FilterActionTypes } from "../filters/Types";
 
 export function* applyFilters() {
-  const [projects, selectedFilters]: [IProjectInfo[], IFilter[]] = yield all([
-    select(projectSelectors.getProjects),
-    select(filterSelectors.getSelectedFilters)
-  ]);
+  const [projects, selectedFilters]: [IProjectInfo[], Set<IFilter>] = yield all(
+    [
+      select(projectSelectors.getProjects),
+      select(filterSelectors.getSelectedFilters)
+    ]
+  );
 
-  if (selectedFilters.length < 1) {
+  if (selectedFilters.size < 1) {
     yield put(actions.storeResults(projects));
     return;
   }
 
+  // TODO: This currently does an OR. Do we want to do an AND instead?
   const results = projects.filter(project =>
-    selectedFilters.some(filter => {
+    Array.from(selectedFilters).some(filter => {
       switch (filter.dimension) {
         case FilterDimension.Type:
           if (project.type) {

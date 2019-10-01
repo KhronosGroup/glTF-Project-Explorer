@@ -8,7 +8,7 @@ export function filters(
     types: [],
     licenses: [],
     languages: [],
-    selected: []
+    selected: new Set()
   },
   action: FiltersActions
 ) {
