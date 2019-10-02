@@ -35,7 +35,7 @@ const ProjectCard: React.FC<IProjectCardProps> = props => {
           <ProjectDetailList header="Type" items={project.type} />
         )}
         {shouldShowSection(project.inputs) && (
-          <ProjectDetailList header="Input Methods" items={project.type} />
+          <ProjectDetailList header="Input Methods" items={project.inputs} />
         )}
         {shouldShowSection(project.outputs) && (
           <ProjectDetailList header="Output Methods" items={project.outputs} />
