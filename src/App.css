@@ -35,6 +35,32 @@ h6 {
   font-weight: bold;
 }
 
+a,
+a:active,
+a:visited {
+  color: #222;
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #5772ce;
+  outline: none;
+  text-decoration: none;
+}
+
+a[href*="http"] {
+  background: url("/external-link-icon.svg") no-repeat 100% 0;
+  background-size: 1rem 1rem;
+  padding-right: 1.25rem;
+}
+
+h1 a[href*="http"] {
+  background-size: 1.5rem 1.5rem;
+  padding-right: 2rem;
+}
+
 .header {
   color: #87c540;
   background-color: #222;

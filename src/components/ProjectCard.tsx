@@ -1,6 +1,7 @@
 import React from "react";
 import { IProjectInfo } from "../interfaces/IProjectInfo";
 import ProjectDetailList from "./ProjectDetailList";
+import ProjectCardHeader from "./ProjectCardHeader";
 import "./ProjectCard.css";
 
 const shouldShowSection = (items?: string[]) => items && items.length > 0;
@@ -14,7 +15,7 @@ const ProjectCard: React.FC<IProjectCardProps> = props => {
 
   return (
     <div className="project-card">
-      <h1>{project.name}</h1>
+      <ProjectCardHeader project={project} />
       <div className="project-card-content">
         {project.description && (
           <p className="project-card-description">{project.description}</p>
