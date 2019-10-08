@@ -6,6 +6,10 @@ import * as actions from "./Actions";
 import { IFilter, FilterDimension } from "../../interfaces/IFilter";
 import { FilterActionTypes } from "../filters/Types";
 
+interface IGroupedFilters {
+  [dimension: string]: IFilter[];
+}
+
 export function* applyFilters() {
   const [projects, selectedFilters]: [IProjectInfo[], Set<IFilter>] = yield all(
     [
@@ -19,31 +23,42 @@ export function* applyFilters() {
     return;
   }
 
-  // TODO: This currently does an OR. Do we want to do an AND instead?
-  const results = projects.filter(project =>
-    Array.from(selectedFilters).some(filter => {
-      switch (filter.dimension) {
-        case FilterDimension.Type:
-          if (project.type) {
-            return project.type.findIndex(t => t === filter.value) > -1;
-          } else return false;
-        case FilterDimension.Task:
-          if (project.task) {
-            return project.task.findIndex(t => t === filter.value) > -1;
-          } else return false;
-        case FilterDimension.License:
-          if (project.license) {
-            return project.license.findIndex(l => l === filter.value) > -1;
-          } else return false;
-        case FilterDimension.Language:
-          if (project.language) {
-            return project.language.findIndex(l => l === filter.value) > -1;
-          } else return false;
-        default:
-          return false;
+  const dimensions = Object.values(FilterDimension);
+  const groupedFilters = Array.from(selectedFilters).reduce<IGroupedFilters>(
+    (acc, curr) => {
+      if (!acc[curr.dimension]) {
+        acc[curr.dimension] = [];
       }
-    })
+
+      acc[curr.dimension].push(curr);
+
+      return acc;
+    },
+    {}
   );
+
+  const results = projects.filter(project => {
+    let match = false;
+
+    for (const dimension of dimensions) {
+      if (!groupedFilters[dimension]) continue;
+
+      match = groupedFilters[dimension].some(filter => {
+        if (project[dimension]) {
+          // Within the dimension we do an OR.
+          return project[dimension]!.some(v => v === filter.value);
+        }
+
+        return false;
+      });
+
+      // No matches for this dimension? Break and continue to the next once
+      // since we need all dimensions to match for our AND.
+      if (!match) break;
+    }
+
+    return match;
+  });
 
   yield put(actions.storeResults(results));
 }
