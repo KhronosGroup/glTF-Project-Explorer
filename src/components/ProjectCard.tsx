@@ -3,6 +3,7 @@ import { IProjectInfo } from "../interfaces/IProjectInfo";
 import ProjectDetailList from "./ProjectDetailList";
 import ProjectCardHeader from "./ProjectCardHeader";
 import "./ProjectCard.css";
+import Markdown from "./Markdown";
 
 const shouldShowSection = (items?: string[]) => items && items.length > 0;
 
@@ -18,7 +19,10 @@ const ProjectCard: React.FC<IProjectCardProps> = props => {
       <ProjectCardHeader project={project} />
       <div className="project-card-content">
         {project.description && (
-          <p className="project-card-description">{project.description}</p>
+          <Markdown
+            className="project-card-description"
+            body={project.description}
+          />
         )}
         {shouldShowSection(project.task) && (
           <ProjectDetailList header="Task" items={project.task} />

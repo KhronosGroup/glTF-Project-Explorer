@@ -33,6 +33,7 @@ h6 {
 }
 
 .project-card-description {
+  font-size: 0.9rem;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
