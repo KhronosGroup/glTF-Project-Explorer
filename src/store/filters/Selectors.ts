@@ -7,3 +7,8 @@ export const getSelectedFilters = createSelector(
   getFilters,
   filters => filters.selected
 );
+
+export const getTitleSubstring = createSelector(
+  getFilters,
+  filters => filters.titleSubstring
+);

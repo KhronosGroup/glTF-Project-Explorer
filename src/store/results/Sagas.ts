@@ -1,4 +1,4 @@
-import { takeEvery, all, put, select } from "redux-saga/effects";
+import { takeEvery, all, put, select, debounce } from "redux-saga/effects";
 import * as projectSelectors from "../projects/Selectors";
 import * as filterSelectors from "../filters/Selectors";
 import { IProjectInfo } from "../../interfaces/IProjectInfo";
@@ -10,17 +10,12 @@ interface IGroupedFilters {
   [dimension: string]: IFilter[];
 }
 
-export function* applyFilters() {
-  const [projects, selectedFilters]: [IProjectInfo[], Set<IFilter>] = yield all(
-    [
-      select(projectSelectors.getProjects),
-      select(filterSelectors.getSelectedFilters)
-    ]
-  );
-
+function applyTagFilters(
+  projects: IProjectInfo[],
+  selectedFilters: Set<IFilter>
+): IProjectInfo[] {
   if (selectedFilters.size < 1) {
-    yield put(actions.storeResults(projects));
-    return;
+    return projects;
   }
 
   const dimensions = Object.values(FilterDimension);
@@ -37,7 +32,7 @@ export function* applyFilters() {
     {}
   );
 
-  const results = projects.filter(project => {
+  return projects.filter(project => {
     let match = false;
 
     for (const dimension of dimensions) {
@@ -59,10 +54,41 @@ export function* applyFilters() {
 
     return match;
   });
+}
+
+function applyTitleSearchFilter(
+  projects: IProjectInfo[],
+  titleSubstring?: string
+): IProjectInfo[] {
+  if (!titleSubstring) {
+    return projects;
+  }
+
+  return projects.filter(p => p.name.includes(titleSubstring));
+}
+
+export function* applyFilters() {
+  const [projects, selectedFilters, titleSubstring]: [
+    IProjectInfo[],
+    Set<IFilter>,
+    string
+  ] = yield all([
+    select(projectSelectors.getProjects),
+    select(filterSelectors.getSelectedFilters),
+    select(filterSelectors.getTitleSubstring)
+  ]);
+
+  const interimResults = applyTagFilters(projects, selectedFilters);
+  const results = applyTitleSearchFilter(interimResults, titleSubstring);
 
   yield put(actions.storeResults(results));
 }
 
 export function* watchForResultUpdates() {
   yield takeEvery(FilterActionTypes.UPDATE_SELECTED_FILTERS, applyFilters);
+  yield debounce(
+    500,
+    FilterActionTypes.UPDATE_TITLE_SUBSTRING_FILTER,
+    applyFilters
+  );
 }

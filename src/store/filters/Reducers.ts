@@ -8,6 +8,7 @@ export function filters(
     types: [],
     licenses: [],
     languages: [],
+    titleSubstring: "",
     selected: new Set()
   },
   action: FiltersActions
@@ -19,12 +20,18 @@ export function filters(
         tasks: action.tasks,
         types: action.types,
         licenses: action.licenses,
-        languages: action.languages
+        languages: action.languages,
+        titleSubstring: action.titleSubstring
       };
     case FilterActionTypes.UPDATE_SELECTED_FILTERS:
       return {
         ...state,
         selected: action.selected
+      };
+    case FilterActionTypes.UPDATE_TITLE_SUBSTRING_FILTER:
+      return {
+        ...state,
+        titleSubstring: action.titleSubstring
       };
     default:
       return state;

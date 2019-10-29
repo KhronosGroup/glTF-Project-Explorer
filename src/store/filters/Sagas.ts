@@ -5,6 +5,8 @@ import { ProjectsActionTypes } from "../projects/Types";
 import * as projectSelectors from "../projects/Selectors";
 import * as actions from "./Actions";
 
+const DEFAULT_FULL_TEXT_TITLE_VALUE = "";
+
 export function calculateTaskFilters(projects: IProjectInfo[]) {
   const tasks = [
     ...new Set(projects.flatMap(p => p.task).filter(x => x))
@@ -41,7 +43,15 @@ export function* calculateFilters() {
     call(calculateLicenseFilters, projects),
     call(calculateLanguageFilters, projects)
   ]);
-  yield put(actions.updateFilters(tasks, types, licenses, languages));
+  yield put(
+    actions.updateFilters(
+      tasks,
+      types,
+      licenses,
+      languages,
+      DEFAULT_FULL_TEXT_TITLE_VALUE
+    )
+  );
   yield put(actions.updateSelectedFilters(new Set()));
 }
 
