@@ -19,6 +19,7 @@ export interface IFiltersState {
   types: IFilter[];
   languages: IFilter[];
   licenses: IFilter[];
+  titleSubstring: string;
   selected: Set<IFilter>;
 }
 

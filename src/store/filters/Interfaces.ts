@@ -3,7 +3,8 @@ import { FilterActionTypes } from "./Types";
 
 export type FiltersActions =
   | IUpdateFiltersAction
-  | IUpdateSelectedFiltersAction;
+  | IUpdateSelectedFiltersAction
+  | IUpdateTitleSubstringFilterAction;
 
 export interface IUpdateFiltersAction {
   readonly type: FilterActionTypes.UPDATE_FILTERS;
@@ -11,9 +12,15 @@ export interface IUpdateFiltersAction {
   readonly types: IFilter[];
   readonly languages: IFilter[];
   readonly licenses: IFilter[];
+  readonly titleSubstring: string;
 }
 
 export interface IUpdateSelectedFiltersAction {
   readonly type: FilterActionTypes.UPDATE_SELECTED_FILTERS;
   readonly selected: Set<IFilter>;
+}
+
+export interface IUpdateTitleSubstringFilterAction {
+  readonly type: FilterActionTypes.UPDATE_TITLE_SUBSTRING_FILTER;
+  readonly titleSubstring: string;
 }
