@@ -1379,7 +1379,7 @@
   "inputs" : [ "?" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "Revit glTF Exporter add-in",
+  "name" : "glTF Exporter add-in for Autodesk Revit",
   "description" : "Paid add-in to export glTF from Autodesk Revit 2019 or later",
   "link" : "https://apps.autodesk.com/RVT/en/Detail/Index?id=8451869436709222290",
   "task" : [ "import", "export" ],
@@ -1878,7 +1878,7 @@
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "LÖVR",
+  "name" : "LÃ–VR",
   "description" : "A framework for creating VR with Lua",
   "link" : "https://lovr.org",
   "type" : [ "engine" ],
@@ -1889,4 +1889,92 @@
   "link" : "https://github.com/mgsx-dev/gdx-gltf",
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "RoomVolumeDirectShape",
+  "description" : "Revit C# .NET add-in creating DirectShape elements representing room volume, with [glTF export](https://thebuildingcoder.typepad.com/blog/2019/06/room-volume-gltf-generator.html) library for loading and rendering glTF assets",
+  "link" : "https://github.com/jeremytammik/RoomVolumeDirectShape",
+  "task" : [ "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "plugin" ],
+  "language" : [ "C#" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-insight",
+  "description" : "C++11 based glTF 2.0 data insight tool",
+  "link" : "https://github.com/lighttransport/gltf-insight",
+  "task" : [ "load", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Radeon Cauldron",
+  "description" : "A simple framework for rapid prototyping on Vulkan or Direct3D 12",
+  "link" : "https://github.com/GPUOpen-LibrariesAndSDKs/Cauldron",
+  "task" : [ "load", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Autodesk BIM 360",
+  "description" : "Construction Management Software with [glTF import](https://knowledge.autodesk.com/support/bim-360/learn-explore/caas/CloudHelp/cloudhelp/ENU/BIM360D-Document-Management/files/GUID-0E5E18BC-343A-47FC-B921-BDD1A40DA9F4-html.html)",
+  "link" : "https://www.autodesk.com/bim-360/",
+  "task" : [ "load", "view" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "SimLab GLTF Exporter for Autodesk Revit",
+  "description" : "Export Revit designs directly from inside Revit to GLTF and GLB files",
+  "link" : "https://apps.autodesk.com/RVT/en/Detail/Index?id=531407844766561060&appLang=en&os=Win64",
+  "task" : [ "export" ],
+  "type" : [ "plugin" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "USD from glTF",
+  "description" : "Library, command-line tool, and import plugin for converting glTF models to USD",
+  "link" : "https://github.com/google/usd_from_gltf",
+  "task" : [ "convert" ],
+  "license" : [ "Apache-2.0" ],
+  "type" : [ "application", "library", "plugin" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "USD" ]
+}, {
+  "name" : "The-Forge",
+  "description" : "The Forge is a cross-platform rendering framework, including a [glTF model viewer](https://github.com/ConfettiFX/The-Forge#8-gltf-model-viewer)",
+  "link" : "https://github.com/ConfettiFX/The-Forge",
+  "task" : [ "load", "view" ],
+  "license" : [ "Apache-2.0" ],
+  "type" : [ "application", "library" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF-quicklook",
+  "description" : "Simple QuickLook plugin for previewing gltf-files on macOS",
+  "link" : "https://github.com/toshiks/glTF-quicklook",
+  "task" : [ "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "plugin" ],
+  "language" : [ "Objective-C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Elevation API",
+  "description" : "A simple open source API providing global elevation data and fast content pipeline, enabling live 3D textured terrain generation in both STL and glTF",
+  "link" : "https://elevationapi.com/",
+  "task" : [ "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "web-api" ],
+  "language" : [ "C#" ],
+  "outputs" : [ "glTF 2.0", "STL" ]
+}, {
+  "name" : "glTFVariantMeld",
+  "description" : "An application that accepts files on the glTF format, interprets them as variants of an over-arching whole, and melds them together.",
+  "link" : "https://github.com/facebookincubator/glTFVariantMeld/",
+  "task" : [ "import", "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application" ],
+  "language" : [ "Rust" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
 } ]
