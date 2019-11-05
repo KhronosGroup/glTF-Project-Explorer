@@ -1,0 +1,1980 @@
+[ {
+  "name" : "flatGLTF",
+  "description" : "Flatbuffers-based glTF 2.0 asset API.",
+  "link" : "https://github.com/KageKirin/flatGLTF",
+  "type" : [ "library" ],
+  "language" : [ "C++" ]
+}, {
+  "name" : "Chromium glTF support",
+  "description" : "Implementation of binary glTF reader for VR controller model\n\nOnly used internally. See https://codereview.chromium.org/2852533004",
+  "task" : [ "view" ],
+  "type" : [ "application" ],
+  "language" : [ "C" ],
+  "inputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "Servo glTF support",
+  "description" : "Support for glTF in the Servo browser engine\n\nNot implemented yet. See https://github.com/servo/servo/issues/15506",
+  "task" : [ "view" ],
+  "type" : [ "application" ],
+  "language" : [ "Rust" ]
+}, {
+  "name" : "FME glTF export",
+  "description" : "Export 3D models from FME Desktop als glTF",
+  "link" : "https://www.safe.com/integrate/gltf-gl-transmission-format/",
+  "task" : [ "load", "export" ],
+  "type" : [ "application" ],
+  "inputs" : [ "Multiple" ],
+  "outputs" : [ "glTF 1.0", "glTF 2.0" ]
+}, {
+  "name" : "glTF Viewer Example based on NXT/Dawn",
+  "description" : "An example viewer for glTF based on the Dawn API\n\nExample was at https://github.com/google/nxt-standalone/tree/master/examples/glTFViewer but removed with https://dawn.googlesource.com/dawn/+/f3f5bf480d3b4160617a02c74ad76f17b3084759 ",
+  "task" : [ "view" ],
+  "type" : [ "demo" ],
+  "language" : [ "C++" ]
+}, {
+  "name" : "glTF subreddit",
+  "description" : "A place for discussion about glTF",
+  "link" : "https://www.reddit.com/r/glTF/",
+  "type" : [ "forum" ]
+}, {
+  "name" : "Autodesk Forge",
+  "description" : "An API for file format conversions, including glTF, as well as a viewer for 3D models\n\nDocumentation of glTF support at https://forge.autodesk.com/en/docs/model-derivative/v2/developers_guide/supported-translations/",
+  "link" : "https://forge.autodesk.com/",
+  "task" : [ "load", "view", "export" ],
+  "type" : [ "web-api" ],
+  "language" : [ "REST" ],
+  "inputs" : [ "Multiple" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "WoWExportTools",
+  "description" : "A tool for exporting World of Warcraft assets to other formats, including glTF",
+  "link" : "https://github.com/Marlamin/WoWExportTools",
+  "task" : [ "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application" ],
+  "language" : [ "C#" ],
+  "inputs" : [ "WoW assets" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "nunuStudio",
+  "description" : "Web-based game engine with glTF import/export\n\nBased on ThreeJS loader",
+  "link" : "https://nunustudio.org/",
+  "task" : [ "load", "view", "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "engine" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "Multiple" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "freeciv",
+  "description" : "Strategy game that uses glTF (GLB) for its models\n\nModels are exported from blender, see https://github.com/freeciv/freeciv-web/tree/develop/blender",
+  "link" : "https://github.com/freeciv/freeciv-web",
+  "license" : [ "GPL-2.0+" ],
+  "type" : [ "application" ],
+  "language" : [ "JavaScript" ]
+}, {
+  "name" : "3dge",
+  "description" : "Game engine with glTF support\n\nExperimental ",
+  "link" : "https://github.com/udoprog/3dge",
+  "task" : [ "load", "view" ],
+  "type" : [ "engine" ],
+  "language" : [ "Rust" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "libgltf",
+  "description" : "glTF 2.0 parser for C++11",
+  "link" : "https://github.com/code4game/libgltf",
+  "task" : [ "load" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTFForUE4",
+  "description" : "Toolkit for loading glTF for Unreal Engine 4",
+  "link" : "https://github.com/code4game/glTFForUE4",
+  "task" : [ "load" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "C#" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "lazy-gltf2",
+  "description" : "Header-only C++11 glTF 2.0 loader",
+  "link" : "https://github.com/dgough/lazy-gltf2",
+  "task" : [ "load" ],
+  "license" : [ "Apache-2.0" ],
+  "type" : [ "library" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf2-webgl",
+  "description" : "Loading and rendering experimentation in webgl",
+  "link" : "https://github.com/topfs2/gltf2-webgl",
+  "task" : [ "load", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "web application" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "code-vr",
+  "description" : "Program and explore real applications with virtual reality. Source code is converted into a glTF scene.\n\nSeems to be based on a library (for rendering glTF) that is no longer available",
+  "link" : "https://github.com/OpenHID/code-vr",
+  "task" : [ "view" ],
+  "type" : [ "web application" ],
+  "language" : [ "Rust" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "rome-gltf",
+  "description" : "A demo showing various glTF models with animation\n\nDemo based on three.js",
+  "link" : "https://github.com/mrdoob/rome-gltf",
+  "task" : [ "view" ],
+  "type" : [ "demo" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "TriLib",
+  "description" : "TriLib is a Unity model loader package designed to allow the user to load various 3D model formats inside the Unity editor or during the game execution.",
+  "link" : "https://assetstore.unity.com/packages/tools/modeling/trilib-model-loader-package-91777",
+  "task" : [ "load" ],
+  "license" : [ "Unity3D Asset Store EULA" ],
+  "type" : [ "plugin" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "clay-viewer",
+  "description" : "3D model viewer with high quality rendering and glTF2.0/GLB export\n\nContains a dedicated FBX-to-glTF converter: https://github.com/pissang/clay-viewer#converter",
+  "link" : "https://github.com/pissang/clay-viewer",
+  "task" : [ "load", "view", "export" ],
+  "license" : [ "BSD-3-Clause" ],
+  "type" : [ "application" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "playcanvas-gltf",
+  "description" : "Adds glTF support to the PlayCanvas engine",
+  "link" : "https://github.com/playcanvas/playcanvas-gltf",
+  "task" : [ "load", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "engine extension" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTFSceneKit",
+  "description" : "glTF extension for Apple SceneKit",
+  "link" : "https://github.com/3D4Medical/glTFSceneKit",
+  "task" : [ "load" ],
+  "license" : [ "MIT" ],
+  "type" : [ "engine extension" ],
+  "language" : [ "Swift" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "regltf",
+  "description" : "A glTF loader and renderer for regl\n\nLoader for regl, from https://github.com/regl-project/regl",
+  "link" : "https://github.com/gamedev-js/regltf",
+  "task" : [ "load", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "AMD Compressonator",
+  "description" : "A tool for optimizing 3D assets that can load glTF and compress its textures\n\nThe glTF support was announced in https://gpuopen.com/compressonator-v2-7-release-adds-cross-platform-support-3d-model-compression-gltf-v2-0/",
+  "link" : "https://gpuopen.com/gaming-product/compressonator/",
+  "task" : [ "load", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "Multiple" ]
+}, {
+  "name" : "Google Poly API",
+  "description" : "An API to access 3D assets",
+  "link" : "https://blog.google/products/poly/introducing-poly-api/",
+  "task" : [ "load" ],
+  "type" : [ "web api" ],
+  "language" : [ "REST" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Insimo glTF tools",
+  "description" : "Tools built on top of a glTF viewer\n\nTools in online viewer at https://gltf.insimo.com/",
+  "link" : "https://github.com/InSimo/three-gltf-viewer/tree/tools/tools",
+  "task" : [ "load", "view", "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "web application" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-bounding-box",
+  "description" : "Compute the bounding box of a glTF asset",
+  "link" : "https://github.com/wanadev/gltf-bounding-box",
+  "task" : [ "process" ],
+  "license" : [ "BSD-3-Clause" ],
+  "type" : [ "library" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 1.0 and 2.0" ]
+}, {
+  "name" : "gltf-boundingsphere",
+  "description" : "Compute the bounding sphere of a glTF asset\n\nSeems to be built on top of the Cesium loader",
+  "link" : "https://github.com/iWun/gltf-boundingsphere",
+  "task" : [ "process" ],
+  "license" : [ "Apache-2.0" ],
+  "type" : [ "library" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 1.0 and 2.0" ]
+}, {
+  "name" : "urish gltf2",
+  "description" : "Tools for working with glTF 2.0 files",
+  "link" : "https://github.com/urish/gltf2",
+  "task" : [ "load", "export" ],
+  "type" : [ "library" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF shell extensions",
+  "description" : "Microsoft Windows shell extensions to handle glTF",
+  "link" : "https://github.com/bghgary/glTF-Shell-Extensions",
+  "task" : [ "convert" ],
+  "license" : [ "MIT" ],
+  "type" : [ "plugin" ],
+  "language" : [ "C#" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "UniVRM",
+  "description" : "Unity package that can import and export VRM format, also supporting glTF",
+  "link" : "https://github.com/vrm-c/UniVRM",
+  "task" : [ "load", "view", "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "plugin" ],
+  "language" : [ "C#" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Vulkan-glTF-PBR",
+  "description" : "Physically-Based Rendering example implementation with image based lighting in Vulkan using glTF 2.0",
+  "link" : "https://github.com/SaschaWillems/Vulkan-glTF-PBR",
+  "task" : [ "load", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "demo" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Unbound.io",
+  "description" : "Content creation with glTF export",
+  "link" : "http://unbound.io/",
+  "task" : [ "view", "export" ],
+  "type" : [ "application" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glb-packer",
+  "description" : "Convert glTF to GLB\n\nOnline tool at https://glb-packer.glitch.me/",
+  "link" : "https://glitch.com/edit/#!/glb-packer",
+  "task" : [ "convert" ],
+  "type" : [ "web application" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Oculus Medium",
+  "description" : "3D asset creation for VR with glTF export",
+  "link" : "https://www.oculus.com/medium/",
+  "task" : [ "view", "export" ],
+  "type" : [ "application" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "AssetForge",
+  "description" : "Create 3D models and 2D sprites using building blocks\n\nNot much information about the glTF support...",
+  "link" : "https://assetforge.io/",
+  "task" : [ "export" ],
+  "type" : [ "application" ]
+}, {
+  "name" : "AMD Radeon ProRender",
+  "description" : "Physically-based rendering engine",
+  "link" : "https://www.amd.com/en/technologies/radeon-prorender",
+  "task" : [ "export" ],
+  "type" : [ "application", "library" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-api",
+  "description" : "API to convert OBJ, FBX and COLLADA files to glTF or GLB, based on the ClayGL converter.",
+  "link" : "https://github.com/headjack-dev/gltf-api",
+  "task" : [ "convert" ],
+  "license" : [ "MIT" ],
+  "type" : [ "web-api" ],
+  "language" : [ "Python" ],
+  "inputs" : [ "Multiple" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-loader-ts",
+  "description" : "Engine-agnostic glTF 2.0 loader in TypeScript.",
+  "link" : "https://github.com/bwasty/gltf-loader-ts",
+  "task" : [ "load" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "TypeScript" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "blackthread.io",
+  "description" : "Web application for converting files to glTF, based on three.js",
+  "link" : "https://blackthread.io/gltf-converter/",
+  "task" : [ "convert" ],
+  "type" : [ "web application" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "Multiple" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "vectary",
+  "description" : "Online application for creating 3D content",
+  "link" : "https://www.vectary.com/",
+  "task" : [ "export" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "Multiple" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-bundle",
+  "description" : "Command-line tool to convert FBX to glTF\n\nReplacement of https://github.com/MozillaReality/fbx-gltf-pipeline",
+  "link" : "https://github.com/MozillaReality/gltf-bundle",
+  "task" : [ "convert" ],
+  "license" : [ "MPL-2.0" ],
+  "type" : [ "application" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "FBX" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltfviewer",
+  "description" : "Viewer that allows viewing a glTF model in VR or AR.",
+  "link" : "https://github.com/mkeblx/gltfviewer",
+  "task" : [ "view" ],
+  "type" : [ "web application" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "SOLIDWORKS",
+  "description" : "CAD application with option for glTF export\n\nExport described at http://help.solidworks.com/2019/english/SolidWorks/sldworks/t_export_using_extended_reality.htm",
+  "link" : "https://www.solidworks.com",
+  "task" : [ "export" ],
+  "type" : [ "application" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-component-data",
+  "description" : "Small library and command line utility for adding component data to a glTF file.",
+  "link" : "https://github.com/MozillaReality/gltf-component-data",
+  "task" : [ "process" ],
+  "license" : [ "MPL-2.0" ],
+  "type" : [ "application", "library" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-content-hash",
+  "description" : "Small library and command line utility for adding content hashes to images/bin chunks in glTF files.",
+  "link" : "https://github.com/MozillaReality/gltf-content-hash",
+  "task" : [ "process" ],
+  "license" : [ "MPL-2.0" ],
+  "type" : [ "application", "library" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-unlit-generator",
+  "description" : "Generates an unlit texture for each of the materials in a .gltf file.",
+  "link" : "https://github.com/MozillaReality/gltf-unlit-generator",
+  "task" : [ "process" ],
+  "license" : [ "MPL-2.0" ],
+  "type" : [ "application", "library" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "maya-glTF",
+  "description" : "glTF exporter plugin for Autodesk Maya",
+  "link" : "https://github.com/matiascodesal/maya-glTF",
+  "task" : [ "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "plugin" ],
+  "language" : [ "Python" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Kenney.nl",
+  "description" : "Game asset library with glTF assets",
+  "link" : "https://kenney.nl/assets?s=gltf",
+  "license" : [ "Multiple" ],
+  "type" : [ "asset library" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "x-model HTML element",
+  "description" : "Custom element that allows 3D objects to be loaded into a document and rendered inline",
+  "link" : "https://github.com/keithclark/3d-model-element",
+  "task" : [ "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "8thwall",
+  "description" : "Online AR application with glTF support\n\nVia https://www.euroinvestor.com/news/2018/03/21/8th-wall-is-first-to-allow-gltf-20-link-sharing-for-faster-3d-and-ar-app-development/13788179",
+  "link" : "https://www.8thwall.com/",
+  "task" : [ "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "rollup-plugin-gltf",
+  "description" : "Rollup plugin for importing glTF 3D models as ES6 modules. ",
+  "link" : "https://github.com/bengsfort/rollup-plugin-gltf",
+  "task" : [ "process" ],
+  "license" : [ "MIT" ],
+  "type" : [ "plugin", "library" ],
+  "language" : [ "JavaScript" ]
+}, {
+  "name" : "Oculus Rift",
+  "description" : "Import of GLB in Oculus Home\n\nAnnounced in https://www.oculus.com/blog/welcome-home-introducing-new-features-coming-to-the-oculus-platform-on-rift/?_fb_noscript=1",
+  "link" : "https://www.oculus.com/rift/"
+}, {
+  "name" : "Cheetah3D",
+  "description" : "Modeling and animation software\n\nglTF export discussed in https://www.cheetah3d.com/forum/index.php?threads/12828/, but seems not yet to be implemented",
+  "link" : "https://www.cheetah3d.com/",
+  "type" : [ "application" ],
+  "language" : [ "Rust" ]
+}, {
+  "name" : "awsm",
+  "description" : "A web-based renderer in Rust\n\nWas https://www.npmjs.com/package/gltf-simple and https://github.com/dakom/pure3d but is still desclared as a playground and does not seem to support glTF",
+  "link" : "https://github.com/dakom/awsm",
+  "type" : [ "web application" ]
+}, {
+  "name" : "modelconverter",
+  "description" : "Online converter with glTF output",
+  "link" : "https://modelconverter.com/",
+  "task" : [ "convert" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "OBJ, FBX, COLLADA" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Google ARCore",
+  "description" : "Augmented Reality SDKs\n\nSee https://developers.google.com/ar/develop/java/sceneform/import-assets",
+  "link" : "https://developers.google.com/ar/",
+  "task" : [ "import" ],
+  "type" : [ "sdks" ],
+  "language" : [ "Multiple" ],
+  "inputs" : [ "OBJ, FBX, glTF 2.0" ]
+}, {
+  "name" : "magnum engine",
+  "description" : "Open-source graphics engine with glTF import plugin\n\nSee https://blog.magnum.graphics/announcements/2018.04/",
+  "link" : "https://magnum.graphics/",
+  "task" : [ "import" ],
+  "license" : [ "MIT" ],
+  "type" : [ "engine" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Dust3D",
+  "description" : "Open-source modeling software with glTF export",
+  "link" : "https://dust3d.org/",
+  "task" : [ "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application" ],
+  "language" : [ "C++" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-loader-2",
+  "description" : "A webpack loader for .gltf files, should automatically bundles all referenced files. ",
+  "link" : "https://github.com/MONOGRID/gltf-loader-2",
+  "task" : [ "load" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTFast",
+  "description" : "Unity Plug-In for loading glTF 3D files at runtime",
+  "link" : "https://github.com/atteneder/glTFast",
+  "task" : [ "import" ],
+  "license" : [ "MIT" ],
+  "type" : [ "plugin" ],
+  "language" : [ "C#" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF-DXViewer",
+  "description" : "DirectX GLTF Viewer Sample",
+  "link" : "https://github.com/Microsoft/glTF-DXViewer",
+  "task" : [ "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "demo" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "MixedRealityToolkit DemoRoom",
+  "description" : "Demo Application that uses glTF",
+  "link" : "https://github.com/Microsoft/MixedRealityToolkit/tree/master/SpatialInput/Samples/DemoRoom",
+  "task" : [ "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "demo" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "MeshroomVR",
+  "description" : "3D visualization software",
+  "link" : "https://meshroomvr.com/",
+  "task" : [ "import", "view" ],
+  "type" : [ "application" ],
+  "inputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "glTF-Maya-Exporter",
+  "description" : "Maya glTF 2.0 Exporter",
+  "link" : "https://github.com/kashikacojp/glTF-Maya-Exporter",
+  "task" : [ "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "plugin" ],
+  "language" : [ "C++" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "MagicLeap",
+  "description" : "???\n\nMentions glTF in https://magic-leap.reality.news/news/magic-leap-mobile-companion-app-revealed-ios-android-supported-0186248/",
+  "link" : "https://www.magicleap.com/",
+  "task" : [ "" ],
+  "type" : [ "" ]
+}, {
+  "name" : "px",
+  "description" : "Single header C++ Libraries for Thread Scheduling, Rendering, and so on... ",
+  "link" : "https://github.com/pplux/px/",
+  "task" : [ "import" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "AMP",
+  "description" : "Web-component framework with 3D component for displaying glTF\n\nglTF support described in https://amp.dev/documentation/examples/components/amp-3d-gltf/?format=websites",
+  "link" : "https://github.com/ampproject/amphtml",
+  "task" : [ "import", "view" ],
+  "license" : [ "Apache-2.0" ],
+  "type" : [ "web components" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Wave Engine",
+  "description" : "Cross-Platform graphics engine and authoring tool with glTF support\n\nglTF support announced in https://geeks.ms/waveengineteam/2018/07/03/model_workflow/",
+  "link" : "https://waveengine.net/",
+  "task" : [ "import", "view" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "WorldViz Vizard 6",
+  "description" : "Virtual reality software with glTF support\n\nglTF support mentioned in https://www.worldviz.com/post/worldviz-launches-vizard-6",
+  "link" : "https://www.worldviz.com/vizard-virtual-reality-software",
+  "task" : [ "import", "view" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf2usd",
+  "description" : "Command-line too to convert glTF 2.0 models to USD",
+  "link" : "https://github.com/kcoley/gltf2usd",
+  "task" : [ "convert" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application" ],
+  "language" : [ "Python" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "USD" ]
+}, {
+  "name" : "glTF-SDK",
+  "description" : "C++ Software Development Kit for glTF",
+  "link" : "https://github.com/Microsoft/glTF-SDK",
+  "task" : [ "import", "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "sdk" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-to-usdz-research",
+  "description" : "Research and proof of concept of converting glTF to USDZ",
+  "link" : "https://github.com/TimvanScherpenzeel/gltf-to-usdz-research",
+  "task" : [ "convert" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "USDZ" ]
+}, {
+  "name" : "Speedernet Sphere",
+  "description" : "Virtual Reality software with glTF support\n\nDetails at https://sphereapp.io/speedernet-sphere-create-webvr-solidworks-gltf/",
+  "link" : "https://sphereapp.io/",
+  "task" : [ "import", "view" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF-Rhino",
+  "description" : "Plugin for importing glTF in Rhino3D\n\nFor https://www.rhino3d.com/",
+  "link" : "https://github.com/mcneel/glTF-Rhino",
+  "task" : [ "import" ],
+  "license" : [ "MPL-2.0" ],
+  "type" : [ "plugin" ],
+  "language" : [ "C#" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "InstaLOD",
+  "description" : "3D processing environment",
+  "link" : "https://instalod.com/",
+  "task" : [ "import", "view", "export" ],
+  "type" : [ "application", "library", "sdk" ],
+  "inputs" : [ "Multiple" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Hypar",
+  "description" : "Architecture and construction \n\nglTF support in https://github.com/hypar-io/Elements",
+  "link" : "https://www.hypar.io/",
+  "task" : [ "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "C#" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Ultimate Unwrap3D",
+  "description" : "UV mapping tool",
+  "link" : "https://www.unwrap3d.com/",
+  "task" : [ "import", "export" ],
+  "type" : [ "application" ],
+  "inputs" : [ "Multiple, glTF 2.0" ],
+  "outputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "PasGLTF",
+  "description" : "An Object-Pascal GLTF 2.0 low-level-data loader and writer for GLTF and GLB files\n\nViewer as an example project",
+  "link" : "https://github.com/BeRo1985/pasgltf",
+  "task" : [ "import", "view", "export" ],
+  "license" : [ "Zlib" ],
+  "type" : [ "library" ],
+  "language" : [ "Pascal" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-viewer",
+  "description" : "A glTF viewer",
+  "link" : "https://github.com/tojacob/gltf-viewer",
+  "task" : [ "import", "view" ],
+  "type" : [ "demo" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf2scn",
+  "description" : "Convert glTF .glb files to SceneKit .scn files",
+  "link" : "https://github.com/gimlids/gltf2scn",
+  "task" : [ "convert" ],
+  "type" : [ "library" ],
+  "language" : [ "Swift" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "SCN" ]
+}, {
+  "name" : "Creature",
+  "description" : "Character (creature) skeletal animation and meshing application\n\nExport skinned meshes as glTF to different target runtimes",
+  "link" : "https://creature.kestrelmoon.com/",
+  "task" : [ "export" ],
+  "type" : [ "application" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "KeyShot",
+  "description" : "3D rendering software",
+  "link" : "https://www.keyshot.com/",
+  "task" : [ "export" ],
+  "type" : [ "application" ],
+  "outputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "sidefx Houdini",
+  "description" : "Procedural modeling and rendering tool\n\nglTF described at https://www.sidefx.com/docs/houdini/io/gltf.html",
+  "link" : "https://www.sidefx.com/docs/houdini/index.html",
+  "task" : [ "import", "export" ],
+  "type" : [ "application" ],
+  "inputs" : [ "Multiple, glTF 2.0" ],
+  "outputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "Magneticraft",
+  "description" : "Minecraft mod for animated machines",
+  "link" : "https://github.com/Magneticraft-Team/Magneticraft",
+  "task" : [ "export" ],
+  "license" : [ "GPL-2.0" ],
+  "type" : [ "plugin", "mod" ],
+  "language" : [ "Kotlin" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "GoogleWebComponents model-viewer",
+  "description" : "Experimental glTF support for a model-viewer component",
+  "link" : "https://github.com/GoogleWebComponents/model-viewer",
+  "task" : [ "import", "view" ],
+  "license" : [ "Apache-2.0" ],
+  "type" : [ "web components" ],
+  "language" : [ "TypeScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "VRM",
+  "description" : "A 3D humanoid avatar format based on glTF",
+  "link" : "https://vrm.dev/en/",
+  "type" : [ "file format" ]
+}, {
+  "name" : "AGI Systems Tool Kit",
+  "description" : "Modeling environment",
+  "link" : "http://www.agi.com/products",
+  "task" : [ "import" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "JanusVR",
+  "description" : "Client/Server-based VR environment",
+  "link" : "https://github.com/janusvr",
+  "task" : [ "import", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "web application" ],
+  "language" : [ "Multiple" ],
+  "inputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "Ventuz",
+  "description" : "Real-time graphics content creation, authoring and playout control software\n\nglTF support described at https://www.ventuz.com/support/help/latest/SupportedFormats.html#GLTF",
+  "link" : "https://www.ventuz.com/",
+  "task" : [ "import", "view" ],
+  "type" : [ "application" ],
+  "inputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "HybridRenderingEngine",
+  "description" : "Real-time, Physically based, Clustered renderer\n\nglTF import via assimp",
+  "link" : "https://github.com/Angelo1211/HybridRenderingEngine",
+  "task" : [ "import", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application" ],
+  "inputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "COMSOL Multiphysics",
+  "description" : "Multiphysics simulation software\n\nglTF export described in https://www.comsol.com/blogs/how-to-export-and-share-your-3d-result-plots-as-gltf-files/",
+  "link" : "https://www.comsol.com/",
+  "task" : [ "export" ],
+  "type" : [ "application" ],
+  "outputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "BIMData.io",
+  "description" : "Tool to deal with IFC files\n\nViewer at http://bimsurfer.org/",
+  "link" : "https://bimdata.io/",
+  "task" : [ "import", "view" ],
+  "type" : [ "web api" ],
+  "inputs" : [ "Multiple, glTF 2.0" ],
+  "outputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "vue-gltf-viewer",
+  "description" : "Preview for glTF 2.0 models in WebGL using three.js",
+  "link" : "https://github.com/sajjad-shirazy/vue-gltf-viewer",
+  "task" : [ "import", "view" ],
+  "type" : [ "demo" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "SimLab glTF Importer for SketchUp",
+  "description" : "Importer and exporter for SketchUp\n\nExporter at https://extensions.sketchup.com/en/content/simlab-gltf-exporter-sketchup",
+  "link" : "https://extensions.sketchup.com/en/content/simlab-gltf-importer-sketchup",
+  "task" : [ "import", "export" ],
+  "type" : [ "plugin" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "trimesh",
+  "description" : "Python library for loading and using triangular meshes. ",
+  "link" : "https://github.com/mikedh/trimesh",
+  "task" : [ "import", "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "inputs" : [ "Multiple, glTF 2.0" ],
+  "outputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "cgltf",
+  "description" : "Single-file/stb-style C glTF loader",
+  "link" : "https://github.com/jkuhlmann/cgltf",
+  "task" : [ "import" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "C" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Ashes",
+  "description" : "WebGL 2.0 3D Game Engine & ECS playground",
+  "link" : "https://github.com/but0n/Ashes",
+  "task" : [ "import", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "engine" ],
+  "language" : [ "TypeScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "point105ar",
+  "description" : "Online converter with glTF output",
+  "link" : "https://www.point105ar.com/",
+  "task" : [ "convert" ],
+  "type" : [ "web-application" ],
+  "inputs" : [ "Multiple" ],
+  "outputs" : [ "glTF 2.0, USDZ" ]
+}, {
+  "name" : "The Wild",
+  "description" : "VR/AR collaboration platform",
+  "link" : "https://thewild.com/",
+  "task" : [ "import", "view" ],
+  "type" : [ "web-application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gdx-gltf",
+  "description" : "LibGDX GLTF 2.0 and PBR shader implementation",
+  "link" : "https://github.com/mgsx-dev/gdx-gltf",
+  "task" : [ "import" ],
+  "license" : [ "Apache-2.0" ],
+  "type" : [ "library", "plugin" ],
+  "language" : [ "Java" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "webviz",
+  "description" : "Web-based (robotics) data visualization\n\nImport of glTF models via regl",
+  "link" : "https://webviz.io/",
+  "task" : [ "import" ],
+  "license" : [ "Apache-2.0" ],
+  "type" : [ "web application" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "qmuntal gltf",
+  "description" : "Go package for simple, efficient, and robust serialization/deserialization of glTF 2.0",
+  "link" : "https://github.com/qmuntal/gltf",
+  "task" : [ "import", "export", "validate" ],
+  "license" : [ "BSD-2-Clause" ],
+  "type" : [ "library" ],
+  "language" : [ "Go" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Noesis",
+  "description" : "A tool for converting between model file formats",
+  "link" : "http://richwhitehouse.com/index.php?content=inc_projects.php&showproject=91",
+  "task" : [ "import", "view", "export" ],
+  "type" : [ "application" ],
+  "inputs" : [ "Multiple, glTF 2.0" ],
+  "outputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "esri ArcGIS",
+  "description" : "Spatial data management platform\n\nglTF import demo at https://developers.arcgis.com/javascript/latest/sample-code/import-gltf/index.html",
+  "link" : "https://developers.arcgis.com/",
+  "task" : [ "import", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "Tech Soft 3D HOOPS",
+  "description" : "3D development and engineering tools",
+  "link" : "https://www.techsoft3d.com/",
+  "task" : [ "import", "view" ],
+  "type" : [ "application" ],
+  "inputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "gltf-exporter",
+  "description" : "Unity3D Editor Tool that allows exporting Unity3D objects to glTF 2.0\n\nBuilt on UnityGLTF",
+  "link" : "https://github.com/Plattar/gltf-exporter",
+  "task" : [ "export" ],
+  "type" : [ "plugin" ],
+  "language" : [ "C#" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Xiratech Module Viewer",
+  "description" : "A viewer for a (fixed?) glTF asset",
+  "link" : "http://www.pasamson.net/",
+  "task" : [ "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "VoxEdit",
+  "description" : "Voxel Editor with glTF export",
+  "link" : "https://www.voxedit.io/",
+  "task" : [ "export" ],
+  "type" : [ "application" ],
+  "outputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "javafx-gltf-loader",
+  "description" : "Tool to load GLTF models in Java. \n\nViewer as demo application",
+  "link" : "https://github.com/the-zucc/javafx-gltf-loader",
+  "task" : [ "import" ],
+  "license" : [ "GPL-3.0-only" ],
+  "type" : [ "library" ],
+  "language" : [ "Java" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "goopy",
+  "description" : "AR development platform\n\nglTF support described at https://goopy.io/index.php?mact=CGBlog,cntnt01,detail,0&cntnt01articleid=7&cntnt01returnid=49",
+  "link" : "https://goopy.io/home",
+  "task" : [ "import", "view" ],
+  "type" : [ "application" ],
+  "inputs" : [ "OBJ, glTF 2.0" ]
+}, {
+  "name" : "vxna gltf-loader",
+  "description" : "An opinionated webpack loader for glTF",
+  "link" : "https://github.com/vxna/gltf-loader",
+  "task" : [ "load" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "luma.gl",
+  "description" : "Framework for GPU-based visualization and computation\n\nDemo at https://luma.gl/#/examples/core-examples/gltf",
+  "link" : "https://luma.gl/",
+  "task" : [ "load", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "web components" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Diligent Engine",
+  "description" : "Cross-platform graphics API abstraction library.\n\nglTF sample at https://github.com/DiligentGraphics/DiligentSamples/tree/master/Samples/GLTFViewer",
+  "link" : "http://diligentgraphics.com/diligent-engine/",
+  "task" : [ "load", "view" ],
+  "license" : [ "Apache-2.0" ],
+  "type" : [ "library", "engine" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Candera CGI Studio",
+  "description" : "HMI Design Tool\n\nAnnounced in https://www.youtube.com/watch?v=uD3D-LLxgMw",
+  "link" : "https://cgistudio.at/",
+  "task" : [ "load", "view" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "cgtrader",
+  "description" : "\n\nglTF models at https://www.cgtrader.com/3d-models/ext/gltf",
+  "link" : "https://www.cgtrader.com",
+  "license" : [ "Multiple" ],
+  "type" : [ "asset library" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "WispRenderer",
+  "description" : "RTX Ray Tracing Renderer\n\nUses tinygltf for loading glTF assets",
+  "link" : "https://github.com/TeamWisp/WispRenderer",
+  "task" : [ "load", "view" ],
+  "license" : [ "Apache-2.0" ],
+  "type" : [ "application" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "meshoptimizer",
+  "description" : "Mesh optimization library that makes meshes smaller and faster to render \n\nDedicated glTF packer at https://github.com/zeux/meshoptimizer#gltfpack",
+  "link" : "https://github.com/zeux/meshoptimizer",
+  "task" : [ "process", "optimize" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application", "library" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Kitware VTK/ParaView",
+  "description" : "Visualization Toolkit and application",
+  "link" : "https://vtk.org/",
+  "task" : [ "load", "view", "export" ],
+  "license" : [ "BSD-3-Clause" ],
+  "type" : [ "application", "library" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "Multiple, glTF 2.0" ],
+  "outputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "Amethyst",
+  "description" : "Data-driven and data-oriented game engine",
+  "link" : "https://github.com/amethyst/amethyst",
+  "task" : [ "load", "view" ],
+  "license" : [ "Apache-2.0" ],
+  "type" : [ "library", "engine" ],
+  "language" : [ "Rust" ],
+  "inputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "EF EVE",
+  "description" : "3D asset library\n\nglTF assets at https://ef-eve.com/platform/?filterformat=gltf",
+  "link" : "https://ef-eve.com/platform",
+  "license" : [ "Multiple" ],
+  "type" : [ "asset library" ],
+  "inputs" : [ "Multiple, glTF 2.0" ]
+}, {
+  "name" : "BabylonJS Sandbox",
+  "description" : "Drag-and-drop online viewer for model preview and debugging, using BabylonJS",
+  "link" : "https://www.babylonjs.com/sandbox/",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "three.js glTF Viewer",
+  "description" : "Drag-and-drop viewer (web and [desktop](https://github.com/donmccurdy/three-gltf-viewer#gltf-viewer)) for model preview and debugging, using three.js",
+  "link" : "https://gltf-viewer.donmccurdy.com/",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "three.js Editor",
+  "description" : "Editor with drag-and-drop support",
+  "link" : "http://threejs.org/editor",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Clay Viewer",
+  "description" : "Drag-and-drop glTF2.0 viewer with high quality rendering and PBR material editing.",
+  "link" : "https://pissang.github.io/clay-viewer/editor/",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF Animation Visualizer",
+  "description" : "Frame-by-frame debugging for glTF animations.",
+  "link" : "https://bengfarrell.github.io/animation-visualizer/",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "VirtualGIS Viewer",
+  "description" : "Cesium-based glTF viewer.",
+  "link" : "https://www.virtualgis.io/gltfviewer/",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "GLTFQuickLook",
+  "description" : "macOS QuickLook plugin for glTF files",
+  "link" : "https://github.com/magicien/GLTFQuickLook",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF Viewer",
+  "description" : "Android and iOS apps for glTF 2.0 viewing and link sharing: supports embedded glTF 2.0 files and links",
+  "link" : "https://www.8thwall.com/gltf/",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "DirectX glTF Viewer",
+  "description" : "DirectX11, C++ desktop app for loading and rendering glTF files",
+  "link" : "https://github.com/Microsoft/glTF-DXViewer",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTFShowcase",
+  "description" : "Android and iOS app for viewing glTF 2.0 asset from local files (gltf/glb/zip): supports environment lighting change.",
+  "link" : "https://www.vispolygon.com/",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Hilo3d glTF Viewer",
+  "description" : "Drag-and-drop glTF2.0 viewer for model preview, using Hilo3d",
+  "link" : "https://hiloteam.github.io/Hilo3d/examples/glTFViewer/index.html",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "MeshViewer",
+  "description" : "OBJ / glTF2 mesh viewer for Windows and macOS",
+  "link" : "https://github.com/jing-interactive/MeshViewer",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Diligent GLTF Viewer",
+  "description" : "Cross-platform GLTF PBR viewer with multiple rendering back-ends",
+  "link" : "https://github.com/DiligentGraphics/DiligentSamples/tree/master/Samples/GLTFViewer",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Khronos glTF Sample Viewer",
+  "description" : "Engine-agnostic sample viewer with WebGL PBR shader for glTF 2.0 ([source code](https://github.com/KhronosGroup/glTF-Sample-Viewer))",
+  "link" : "http://github.khronos.org/glTF-Sample-Viewer/",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-utilities",
+  "description" : "JavaScript utility library to help load glTF",
+  "link" : "https://github.com/AnalyticalGraphicsInc/gltf-utilities",
+  "task" : [ "load" ],
+  "type" : [ "library" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "wetzel",
+  "description" : "Generate Markdown documentation from JSON Schema",
+  "link" : "https://github.com/AnalyticalGraphicsInc/wetzel",
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-enum",
+  "description" : "Simple site to help work with all the different enums in glTF spec",
+  "link" : "http://gltf-enum.com/",
+  "type" : [ "website" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-import-export",
+  "description" : "NPM package to convert between glb and gltf files",
+  "link" : "https://github.com/najadojo/gltf-import-export",
+  "type" : [ "library" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "makeglb",
+  "description" : "Drag and drop browser tool to convert gltf to self contained binary glb",
+  "link" : "https://github.com/sbtron/makeglb",
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-toolkit",
+  "description" : "Collection of tools and libraries to modify and optimize glTF assets for Windows Mixed Reality home",
+  "link" : "https://github.com/microsoft/gltf-toolkit",
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF Pipeline",
+  "description" : "Official Node.js command-line tool for optimizing glTF assets",
+  "link" : "https://github.com/AnalyticalGraphicsInc/gltf-pipeline",
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf2glb",
+  "description" : "Python tool to convert glTF to Binary glTF",
+  "link" : "https://github.com/Geopipe/gltf2glb",
+  "inputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "binary-gltf-utils",
+  "description" : "Node.js tool to convert glTF to Binary glTF",
+  "link" : "https://github.com/Qantas94Heavy/binary-gltf-utils",
+  "inputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "glTF Validator",
+  "description" : "Official command-line and drag-and-drop tool to validate glTF assets against the specification",
+  "link" : "https://github.com/KhronosGroup/glTF-Validator",
+  "task" : [ "validate" ],
+  "type" : [ "web application", "library" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF VSCode Extension",
+  "description" : "3D previews, built-in official glTF Validator, conversion to/from GLB",
+  "link" : "https://marketplace.visualstudio.com/items?itemName=cesium.gltf-vscode",
+  "task" : [ "edit", "view", "validate" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Khronos Group Blender Importer/Exporter",
+  "description" : "Official importer/exporter, included with Blender 2.80 and higher",
+  "link" : "https://github.com/KhronosGroup/glTF-Blender-IO",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "3DS Max Exporter",
+  "description" : "Export glTF files using [BabylonJS plugin](http://doc.babylonjs.com/resources/3dsmax#how-to-install-the-3ds-max-plugin) for 3DS Max 2015 or later",
+  "link" : "http://doc.babylonjs.com/resources/3dsmax_to_gltf",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "?" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Maya Exporter",
+  "description" : "Export glTF files using [BabylonJS plugin](http://doc.babylonjs.com/resources/maya) for Maya 2018 or later",
+  "link" : "http://doc.babylonjs.com/resources/maya_to_gltf",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "?" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Unity Exporter (Sketchfab fork)",
+  "description" : "Unity editor wizard that exports to glTF Format",
+  "link" : "https://github.com/sketchfab/Unity-glTF-Exporter",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "?" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Unity 2017",
+  "description" : "Commercial unity asset store editor extension to export COLLADA and glTF via collada2gltf",
+  "link" : "https://www.assetstore.unity3d.com/#!/content/99793",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "?" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "import",
+  "description" : "Separate extensions for export and import",
+  "link" : "http://extensions.sketchup.com/en/content/gltf-import",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "?" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "PBR extension for SketchUp",
+  "description" : "PBR Material Editor, glTF Exporter, PBR Viewport",
+  "link" : "https://github.com/SamuelTS/SketchUp-PBR-Plugin",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "SKP" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "obj2gltf",
+  "description" : "Command-line converter",
+  "link" : "https://github.com/AnalyticalGraphicsInc/OBJ2GLTF",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "OBJ" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Kupoman blendergltf",
+  "description" : "glTF exporter for Blender aimed at streaming scenes to other applications",
+  "link" : "https://github.com/Kupoman/blendergltf",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "?" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "ksons Blender Importer",
+  "description" : "Blender importer for glTF 2.0 (alpha)",
+  "link" : "https://github.com/ksons/gltf-blender-importer",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "?" ]
+}, {
+  "name" : "BlackThread.io converter",
+  "description" : "Online drag and drop converter powered by three.js",
+  "link" : "https://blackthread.io/gltf-converter/",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "[Multiple](https:", "", "blackthread.io", "gltf-converter", "#supported-formats)" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Assimp",
+  "description" : "General-purpose online conversion pipeline",
+  "link" : "http://www.assimp.org/",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "[Multiple](https:", "", "github.com", "assimp", "assimp#supported-file-formats)" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "PiXYZ Studio",
+  "description" : "Interactively prepare & optimize any CAD data",
+  "link" : "https://www.pixyz-software.com/studio/",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "[Multiple](https:", "", "docs.google.com", "spreadsheets", "d", "1aWdeBOvZsbnwHfbyhuVS4vBDwevsT2Bz65hEhc0CtnU", "pubhtml gid=786960864)" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "FBX2glTF (Facebook)",
+  "description" : "Command-line converter",
+  "link" : "https://github.com/facebookincubator/FBX2glTF",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "FBX" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "FBX2glTF (ClayGL)",
+  "description" : "Python tool to convert models to glTF2.0 format, model is parsed by FBX SDK.",
+  "link" : "https://github.com/pissang/clay-viewer#converter",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "FBX, COLLADA, OBJ" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF API",
+  "description" : "Web API to convert OBJ, FBX and COLLADA files to glTF or GLB",
+  "link" : "https://github.com/headjack-dev/gltf-api",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "FBX, COLLADA, OBJ" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Simplygon Cloud",
+  "description" : "Cloud based asset optimization pipeline",
+  "link" : "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/simplygon.simplygon",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "[Multiple](https:", "", "simplygonclouddoc.simplygon.com", "tutorials", "firstprocessing.html#asset)" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Verge3D",
+  "description" : "glTF 2.0 exporters for Blender and 3ds Max",
+  "link" : "http://www.soft8soft.com/verge3d/",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "?" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "COLLADA2GLTF",
+  "description" : "Official command-line converter, with updates for glTF 2.0 in progress",
+  "link" : "https://github.com/KhronosGroup/COLLADA2GLTF/",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "COLLADA" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Cesium drag-and-drop converter",
+  "description" : "Online drag and drop converter",
+  "link" : "http://cesiumjs.org/convertmodel.html",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "OBJ, COLLADA" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Maya2glTF",
+  "description" : "Export glTF from Autodesk Maya",
+  "link" : "https://github.com/WonderMediaProductions/Maya2glTF",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "?" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "batchgltf",
+  "description" : "Batch converter with GUI",
+  "link" : "https://github.com/feiss/batchgltf",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "COLLADA" ],
+  "outputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "FBX-glTF (Cyrillef)",
+  "description" : "Plug-in and command-line converter",
+  "link" : "https://github.com/cyrillef/FBX-glTF",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "FBX" ],
+  "outputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "jgltf-obj",
+  "description" : "Java programmatic and command-line converters",
+  "link" : "https://github.com/javagl/JglTF/tree/master/jgltf-obj",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "OBJ" ],
+  "outputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "Docker collada2gltf",
+  "description" : "Docker container for Python web service, built on COLLADA2GLTF",
+  "link" : "https://hub.docker.com/r/winsent/collada2gltf/",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "COLLADA" ],
+  "outputs" : [ "." ]
+}, {
+  "name" : "collada2gltf-web-service",
+  "description" : "Node.js web service, built on COLLADA2GLTF",
+  "link" : "https://github.com/AnalyticalGraphicsInc/collada2gltf-web-service",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "COLLADA" ],
+  "outputs" : [ "." ]
+}, {
+  "name" : "cqparts",
+  "description" : "Python CAD for programmers ([import / export doc](https://cqparts.github.io/cqparts/doc/cqparts/import-export.html)) ([GLTFExporter](https://cqparts.github.io/cqparts/doc/api/cqparts.codec.html#cqparts.codec.gltf.GLTFExporter))",
+  "link" : "https://github.com/cqparts/cqparts",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "STEP" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "FME Desktop",
+  "description" : "FME lets you move data between 400+ formats and applications using a drag-and-drop interface while preserving data quality throughout the conversion process.",
+  "link" : "https://www.safe.com/fme/fme-desktop/",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "[Multiple](https:", "", "www.safe.com", "integrate", ")" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "UModel (UE Viewer)",
+  "description" : "UModel allows you to view static and animated mesh assets from [Unreal engine games](http://www.gildor.org/projects/umodel/compat), and then export them into several formats including glTF 2.0",
+  "link" : "https://github.com/gildor2/UModel",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "Unreal engine" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "OPEN CASCADE CAD Assistant",
+  "description" : "Freeware multi-platform 3D Viewer and converter for 3D/CAD models with glTF 2.0 export support",
+  "link" : "https://www.opencascade.com/content/cad-assistant",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "[Multiple](https:", "", "www.opencascade.com", "content", "cad-assistant \"STEP, IGES, OBJ, PLY, STL\")" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Adobe Dimension",
+  "description" : "Share and Publish feature lets users export to glTF to view on the web. [Prerelease](https://www.adobeprerelease.com) build has explicit export option for glTF and GLB.",
+  "link" : "https://www.adobe.com/products/dimension.html",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "FBX, STL, SKP, OBJ" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "RapidCompact",
+  "description" : "Optimizes and converts 3D assets for efficient online presentation.",
+  "link" : "https://www.rapidcompact.com",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "[Multiple](https:", "", "www.rapidcompact.com", "doc", "cli", "00-overview", "index.html#import)" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Cinema 4D Exporter",
+  "description" : "Export glTF from MAXON Cinema 4D",
+  "link" : "https://labs.maxon.net/?p=3360",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "?" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF Exporter add-in for Autodesk Revit",
+  "description" : "Paid add-in to export glTF from Autodesk Revit 2019 or later",
+  "link" : "https://apps.autodesk.com/RVT/en/Detail/Index?id=8451869436709222290",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "?" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Adobe Animate",
+  "description" : "Publish 2D animations to glTF/glb using Animate 2019 or later. Also create 360 degree VR content and embed 3D glb assets in the scene.",
+  "link" : "https://www.adobe.com/products/animate.html",
+  "task" : [ "import", "export" ],
+  "inputs" : [ "?" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "three.js glTF loader",
+  "description" : "WebGL engine\n\n[`<model-viewer/>` component](https://github.com/GoogleWebComponents/model-viewer/), [drag-and-drop viewer](https://gltf-viewer.donmccurdy.com/)",
+  "link" : "https://threejs.org/docs/index.html#examples/loaders/GLTFLoader)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "BabylonJS glTF loader",
+  "description" : "WebGL engine\n\n[Viewer component](http://doc.babylonjs.com/extensions/the_babylon_viewer)",
+  "link" : "https://github.com/BabylonJS/Babylon.js/tree/master/loaders/src/glTF)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Cesium glTF loader",
+  "description" : "WebGL engine\n\n[Drag-and-drop viewer](https://www.virtualgis.io/gltfviewer/), [tutorial](https://cesiumjs.org/tutorials/3D-Models-Tutorial/)",
+  "link" : "https://github.com/AnalyticalGraphicsInc/cesium/blob/master/Source/Scene/Model.js)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "OSK glTF loader",
+  "description" : "WebGL engine",
+  "link" : "https://github.com/cedricpinson/osgjs/blob/master/sources/osgPlugins/ReaderWriterGLTF.js)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Grimoire.js glTF loader",
+  "description" : "WebGL engine",
+  "link" : "https://github.com/GrimoireGL/grimoirejs-gltf)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Hilo3d glTF loader",
+  "description" : "WebGL engine\n\n[Doc](https://hiloteam.github.io/Hilo3d/docs/)",
+  "link" : "https://github.com/hiloteam/Hilo3d/blob/master/src/loader/GLTFLoader.js)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "A-Frame glTF loader",
+  "description" : "WebGL engine\n\n[Doc](https://aframe.io/docs/0.7.0/components/gltf-model.html)",
+  "link" : "https://aframe.io/docs/0.6.0/components/gltf-model.html)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "xeogl glTF loader",
+  "description" : "WebGL engine\n\n[Tutorial](http://xeogl.org/docs/classes/GLTFModel.html)",
+  "link" : "http://xeogl.org/examples/#importing_gltf_BoomBox)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "ClayGL glTF loader",
+  "description" : "WebGL engine\n\n[Examples](http://examples.claygl.xyz/)",
+  "link" : "http://docs.claygl.xyz/api/clay.application.App3D.html#loadModel)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Verge3D glTF loader",
+  "description" : "WebGL engine",
+  "link" : "https://www.soft8soft.com/docs/examples/loaders/GLTFLoader.html)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "ReactVR",
+  "description" : "WebGL engine",
+  "link" : "https://facebook.github.io/react-vr/",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "CZPG glTF loader",
+  "description" : "WebGL engine\n\n[Examples](http://princessgod.github.io/CraZyPG)",
+  "link" : "https://github.com/PrincessGod/CraZyPG/blob/master/src/loaders/GLTFLoader.js)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "PEX glTF loader",
+  "description" : "WebGL engine",
+  "link" : "https://github.com/pex-gl/pex-gltf)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "GLBoost glTF loader",
+  "description" : "WebGL engine\n\n[Examples](https://gitcdn.xyz/repo/emadurandal/GLBoost/master/examples/index.html)",
+  "link" : "https://github.com/emadurandal/GLBoost/blob/master/src/js/middle_level/loader/GLTFLoader.js)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "xml3d.js glTF loader",
+  "description" : "WebGL engine",
+  "link" : "https://github.com/xml3d/xml3d-gltf-plugin)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "X3DOM glTF loader",
+  "description" : "WebGL engine",
+  "link" : "https://github.com/x3dom/x3dom/blob/master/src/util/glTF/glTFLoader.js)",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "RedGL",
+  "description" : "WebGL engine\n\n[Examples](https://redcamel.github.io/RedGL2/example)",
+  "link" : "https://github.com/redcamel/RedGL2/",
+  "task" : [ "import", "view" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-viewer",
+  "description" : "Web component to display glTF models on a website",
+  "link" : "https://github.com/avgp/gltf-viewer",
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "minimal-gltf-loader",
+  "description" : "A minimal, engine-agnostic JavaScript glTF Loader, with a raw WebGL 2 renderer example",
+  "link" : "https://github.com/shrekshao/minimal-gltf-loader",
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "THREE.GLTFLoader",
+  "description" : "Loads glTF assets into a three.js scene.",
+  "link" : "https://threejs.org/docs/#examples/loaders/GLTFLoader",
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "THREE.GLTFExporter",
+  "description" : "Exports three.js scenes to a glTF asset",
+  "link" : "https://threejs.org/docs/#examples/exporters/GLTFExporter",
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-walker",
+  "description" : "Convenience library for processing glTF",
+  "link" : "https://github.com/ksons/gltf-walker",
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "RedCube.js",
+  "description" : "glTF viewer without dependencies",
+  "link" : "https://github.com/Reon90/redcube",
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Tiny glTF loader",
+  "description" : "Header only C++ glTF parsing library, with [Alembic?glTF](https://github.com/syoyo/tinygltfloader/tree/master/examples/alembic_to_gltf) and [CyHair->glTF](https://github.com/syoyo/tinygltfloader/tree/master/examples/cyhair_to_gltf) converters",
+  "link" : "https://github.com/syoyo/tinygltf",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "yocto-gltf",
+  "description" : "Single file, header only, C++ glTF loading/writing automatically generated from the spec",
+  "link" : "https://github.com/xelatihy/yocto-gl",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF2-loader",
+  "description" : "C++14 glTF (2.0 only) parsing library, by Lugdunum3D",
+  "link" : "https://github.com/Lugdunum3D/glTF2-loader/tree/dev",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltfpp",
+  "description" : "glTF 2.0 loader for C++14",
+  "link" : "https://github.com/mmha/gltfpp",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "fx-gltf",
+  "description" : "A C++14/C++17 header-only library for simple, efficient, and robust serialization/deserialization of glTF 2.0",
+  "link" : "https://github.com/jessey-git/fx-gltf",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "TGen",
+  "description" : "Simple C++ Tangent Generator",
+  "link" : "https://github.com/mlimper/tgen/",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Microsoft.glTF.CPP",
+  "description" : "A C++ library for serializing and deserializing gltf/glb files.",
+  "link" : "https://www.nuget.org/packages/Microsoft.glTF.CPP/",
+  "language" : [ "2.0" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Qt 3D",
+  "description" : "Qt 3D provides functionality for near-realtime simulation systems",
+  "link" : "http://doc.qt.io/qt-5.6/qt3d-gltf-example.html",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Laugh Engine",
+  "description" : "Vulkan PBR and IBL renderer",
+  "link" : "https://github.com/jian-ru/laugh_engine#laugh-engine",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Lugdunum3D",
+  "description" : "A modern cross-platform 3D rendering engine built with Vulkan and modern C++14",
+  "link" : "https://github.com/Lugdunum3D/Lugdunum",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "UX3D Engine",
+  "description" : "Cross-platform multi-threaded Vulkan 3D Engine with glTF 2.0 import and export",
+  "link" : "http://www.ux3d.io/ux3d-engine/",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Cinder",
+  "description" : "Work-in-progress glTF importer",
+  "link" : "http://discourse.libcinder.org/t/gltf-initial-release-wip/212",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "nvpro-pipeline",
+  "description" : "Research rendering pipeline by NVIDIA for minimizing CPU cost",
+  "link" : "https://github.com/nvpro-pipeline/pipeline",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "libgltf_ue4",
+  "description" : "A third-party library for UE4.10+ to load glTF files",
+  "link" : "https://github.com/code4game/libgltf_ue4",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF for UE4",
+  "description" : "A plugin for UE4.10+ to import glTF files",
+  "link" : "https://github.com/code4game/glTFForUE4",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Diligent Engine",
+  "description" : "A modern cross-platform low-level graphics libarary and rendering framework",
+  "link" : "https://github.com/DiligentGraphics/DiligentEngine",
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "GLTFKit",
+  "description" : "An Objective-C glTF 2.0 loader and Metal-based renderer",
+  "link" : "https://github.com/warrenm/GLTFKit",
+  "language" : [ "Objective-C" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "C# glTF loader",
+  "description" : "C# reference loader for glTF",
+  "link" : "https://github.com/KhronosGroup/glTF-CSharp-Loader",
+  "language" : [ "C#" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Aspose.3D for .NET",
+  "description" : "Import, export, and convert glTF",
+  "link" : "http://www.aspose.com/products/3d/net",
+  "language" : [ "C#" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "MixedRealityToolkit-Unity",
+  "description" : "A collection of scripts and components intended to accelerate development of applications targeting Microsoft HoloLens and Windows Mixed Reality headsets.",
+  "link" : "https://github.com/Microsoft/MixedRealityToolkit-Unity",
+  "language" : [ "C#" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "SharpGLTF",
+  "description" : "C# toolkit for reading and writing glTF files.",
+  "link" : "https://github.com/VPenades/SharpGLTF",
+  "language" : [ "C#" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "DEM.Net",
+  "description" : "C# toolkit for Digital Elevation Models, exporting models with textures and normal maps to glTF files.",
+  "link" : "https://github.com/dem-net/DEM.Net",
+  "language" : [ "C#" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "AssetKit",
+  "description" : "3D asset importer, exporter library.",
+  "link" : "https://github.com/recp/assetkit",
+  "license" : [ "MIT" ],
+  "language" : [ "C" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf",
+  "description" : "go library for marshaling and unmarshaling glTF",
+  "link" : "https://github.com/sturfeeinc/glTF",
+  "language" : [ "Go" ],
+  "inputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "gltf 2.0",
+  "description" : "A Go glTF 2.0 writer, reader and validator",
+  "link" : "https://github.com/qmuntal/gltf",
+  "language" : [ "Go" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Loader",
+  "description" : "A crate for loading glTF 2.0",
+  "link" : "https://github.com/gltf-rs/gltf",
+  "language" : [ "Rust" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Viewer",
+  "description" : "glTF 2.0 Viewer written in Rust",
+  "link" : "https://github.com/bwasty/gltf-viewer",
+  "language" : [ "Rust" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "haxe-gltf",
+  "description" : "A Haxe library for reading glTF",
+  "link" : "https://github.com/FuzzyWuzzie/haxe-gltf",
+  "language" : [ "Haxe" ],
+  "inputs" : [ "glTF 1.0" ]
+}, {
+  "name" : "JglTF",
+  "description" : "Java libraries for glTF",
+  "link" : "https://github.com/javagl/JglTF",
+  "language" : [ "Java" ],
+  "inputs" : [ "glTF 1.0", "glTF 2.0" ]
+}, {
+  "name" : "Orka",
+  "description" : "The OpenGL 4.5 Rendering Kernel in Ada",
+  "link" : "https://github.com/onox/orka",
+  "language" : [ "Ada" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-typescript-generator",
+  "description" : "CLI to generate a TypeScript interface for glTF",
+  "link" : "https://github.com/robertlong/gltf-typescript-generator",
+  "language" : [ "TypeScript" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "GLTFSceneKit",
+  "description" : "glTF loader for SceneKit",
+  "link" : "https://github.com/magicien/GLTFSceneKit",
+  "language" : [ "Swift" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Blender 2.80",
+  "description" : "Khronos glTF importer/exporter ships with Blender 2.80 and higher",
+  "link" : "https://www.blender.org/",
+  "type" : [ "application" ]
+}, {
+  "name" : "Paint 3D",
+  "description" : "3D creation tool",
+  "link" : "https://www.microsoft.com/en-us/store/p/paint-3d/9nblggh5fv99",
+  "type" : [ "application" ]
+}, {
+  "name" : "Remix 3D",
+  "description" : "Share and print 3D creations",
+  "link" : "https://www.remix3d.com",
+  "type" : [ "application" ]
+}, {
+  "name" : "Facebook",
+  "description" : "Use .glb files to create 3D Posts",
+  "link" : "https://developers.facebook.com/docs/sharing/3d-posts",
+  "type" : [ "application" ]
+}, {
+  "name" : "Sketchfab",
+  "description" : "Platform to publish, share & discover 3D online and in VR",
+  "link" : "https://blog.sketchfab.com/sketchfab-now-supports-gltf/",
+  "type" : [ "application" ]
+}, {
+  "name" : "Wordpress",
+  "description" : "Inline glTF renderer for WordPress",
+  "link" : "plugin",
+  "type" : [ "application" ]
+}, {
+  "name" : "Modo",
+  "description" : "3D modeling, texturing & rendering tools",
+  "link" : "https://www.foundry.com/products/modo",
+  "type" : [ "application" ]
+}, {
+  "name" : "Substance Painter",
+  "description" : "3D painting software with glTF 2.0 export",
+  "link" : "https://www.allegorithmic.com/products/substance-painter",
+  "type" : [ "application" ]
+}, {
+  "name" : "Marmoset Toolbag",
+  "description" : "3D real-time rendering, animation, and baking suite",
+  "link" : "https://www.marmoset.co/toolbag/",
+  "type" : [ "application" ]
+}, {
+  "name" : "Aspose.3D",
+  "description" : "File Format APIs for creating, editing, and converting over 100 file formats",
+  "link" : "https://www.aspose.com/",
+  "type" : [ "application" ]
+}, {
+  "name" : "3D Slash",
+  "description" : "Web-based and app-based 3D modeling imitating a stonecutter",
+  "link" : "http://www.3dslash.net",
+  "type" : [ "application" ]
+}, {
+  "name" : "Archilogic",
+  "description" : "Web-based 3D platform for architecture and interiors",
+  "link" : "https://spaces.archilogic.com/blog/gltf-import-export",
+  "type" : [ "application" ]
+}, {
+  "name" : "Plex.Earth",
+  "description" : "Connects AutoCAD with Google Earth and the Real World.",
+  "link" : "https://plexearth.com/",
+  "type" : [ "application" ]
+}, {
+  "name" : "VECTARY",
+  "description" : "Online 3D content creation tool",
+  "link" : "https://vectary.com/",
+  "type" : [ "application" ]
+}, {
+  "name" : "Visual Studio Code",
+  "description" : "Preview, validate, inspect, and debug glTF files",
+  "link" : "https://code.visualstudio.com",
+  "type" : [ "application" ]
+}, {
+  "name" : "Babylon.js Viewer",
+  "description" : "HTML web component for viewing self-hosted glTF models.",
+  "link" : "https://doc.babylonjs.com/extensions/the_babylon_viewer",
+  "type" : [ "viewer, embeddable, self-hosted" ]
+}, {
+  "name" : "&lt;model-viewer>",
+  "description" : "HTML web component for viewing self-hosted glTF models.",
+  "link" : "https://github.com/GoogleWebComponents/model-viewer",
+  "type" : [ "viewer, embeddable, self-hosted" ]
+}, {
+  "name" : "Poly",
+  "description" : "glTF models hosted on Poly may be embedded in an iframe on any site.",
+  "link" : "https://poly.google.com/",
+  "task" : [ "service" ],
+  "type" : [ "viewer, embeddable, self-hosted" ]
+}, {
+  "name" : "Sketchfab",
+  "description" : "glTF models hosted on Sketchfab may be embedded in an iframe on any site, using the [embed models](https://help.sketchfab.com/hc/en-us/articles/203509907-Embed-Models) feature.",
+  "link" : "https://sketchfab.com/",
+  "type" : [ "viewer, embeddable, service" ]
+}, {
+  "name" : "UnityGLTF",
+  "description" : "Unity3D library for exporting, loading, parsing, and rendering glTF assets",
+  "link" : "https://github.com/KhronosGroup/UnityGLTF",
+  "type" : [ "engine" ]
+}, {
+  "name" : "GLTFUtility",
+  "description" : "glTF 2.0 loader plugin for Unity3D",
+  "link" : "https://github.com/Siccity/GLTFUtility",
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "notes",
+  "description" : "Unreal adds glTF import capability",
+  "link" : "https://docs.unrealengine.com/en-us/Builds/4_19)",
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Godot Game Engine",
+  "description" : "Godot 3.0 fully supports glTF import",
+  "link" : "https://godotengine.org/",
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "jMonkeyEngine",
+  "description" : "jME 3.2 supports glTF 2.0",
+  "link" : "http://jmonkeyengine.org/",
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Ogre_glTF",
+  "description" : "glTF 2.0 loader plugin for Ogre v2-1",
+  "link" : "https://ybalrid.github.io/Ogre_glTF/",
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "G3D Innovation Engine",
+  "description" : "glTF 2.0 import",
+  "link" : "https://casual-effects.com/g3d/www/index.html",
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "LÖVR",
+  "description" : "A framework for creating VR with Lua",
+  "link" : "https://lovr.org",
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "LibGDX glTF",
+  "description" : "[LibGDX](https://libgdx.badlogicgames.com/) library for loading and rendering glTF assets",
+  "link" : "https://github.com/mgsx-dev/gdx-gltf",
+  "type" : [ "engine" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "RoomVolumeDirectShape",
+  "description" : "Revit C# .NET add-in creating DirectShape elements representing room volume, with [glTF export](https://thebuildingcoder.typepad.com/blog/2019/06/room-volume-gltf-generator.html) library for loading and rendering glTF assets",
+  "link" : "https://github.com/jeremytammik/RoomVolumeDirectShape",
+  "task" : [ "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "plugin" ],
+  "language" : [ "C#" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "gltf-insight",
+  "description" : "C++11 based glTF 2.0 data insight tool",
+  "link" : "https://github.com/lighttransport/gltf-insight",
+  "task" : [ "load", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Radeon Cauldron",
+  "description" : "A simple framework for rapid prototyping on Vulkan or Direct3D 12",
+  "link" : "https://github.com/GPUOpen-LibrariesAndSDKs/Cauldron",
+  "task" : [ "load", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Autodesk BIM 360",
+  "description" : "Construction Management Software with [glTF import](https://knowledge.autodesk.com/support/bim-360/learn-explore/caas/CloudHelp/cloudhelp/ENU/BIM360D-Document-Management/files/GUID-0E5E18BC-343A-47FC-B921-BDD1A40DA9F4-html.html)",
+  "link" : "https://www.autodesk.com/bim-360/",
+  "task" : [ "load", "view" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "SimLab GLTF Exporter for Autodesk Revit",
+  "description" : "Export Revit designs directly from inside Revit to GLTF and GLB files",
+  "link" : "https://apps.autodesk.com/RVT/en/Detail/Index?id=531407844766561060&appLang=en&os=Win64",
+  "task" : [ "export" ],
+  "type" : [ "plugin" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "USD from glTF",
+  "description" : "Library, command-line tool, and import plugin for converting glTF models to USD",
+  "link" : "https://github.com/google/usd_from_gltf",
+  "task" : [ "convert" ],
+  "license" : [ "Apache-2.0" ],
+  "type" : [ "application", "library", "plugin" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "USD" ]
+}, {
+  "name" : "The-Forge",
+  "description" : "The Forge is a cross-platform rendering framework, including a [glTF model viewer](https://github.com/ConfettiFX/The-Forge#8-gltf-model-viewer)",
+  "link" : "https://github.com/ConfettiFX/The-Forge",
+  "task" : [ "load", "view" ],
+  "license" : [ "Apache-2.0" ],
+  "type" : [ "application", "library" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF-quicklook",
+  "description" : "Simple QuickLook plugin for previewing gltf-files on macOS",
+  "link" : "https://github.com/toshiks/glTF-quicklook",
+  "task" : [ "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "plugin" ],
+  "language" : [ "Objective-C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Elevation API",
+  "description" : "A simple open source API providing global elevation data and fast content pipeline, enabling live 3D textured terrain generation in both STL and glTF",
+  "link" : "https://elevationapi.com/",
+  "task" : [ "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "web-api" ],
+  "language" : [ "C#" ],
+  "outputs" : [ "glTF 2.0", "STL" ]
+}, {
+  "name" : "glTFVariantMeld",
+  "description" : "An application that accepts files on the glTF format, interprets them as variants of an over-arching whole, and melds them together.",
+  "link" : "https://github.com/facebookincubator/glTFVariantMeld/",
+  "task" : [ "import", "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application" ],
+  "language" : [ "Rust" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+} ]
