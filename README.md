@@ -2,6 +2,8 @@
 
 Tool to provide a filterable registry of glTF community projects.
 
+http://github.khronos.org/glTF-Project-Explorer/
+
 ## Developing
 
 The glTF Project Explorer tool uses Create React App to simplify maintenance.
