@@ -1359,10 +1359,10 @@
   "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Adobe Dimension",
-  "description" : "Share and Publish feature lets users export to glTF to view on the web. [Prerelease](https://www.adobeprerelease.com) build has explicit export option for glTF and GLB.",
+  "description" : "Dimension allows users to easily build and render photo-real scenes. Export to glTF/GLB or use the Publish feature to share your scene on the web.",
   "link" : "https://www.adobe.com/products/dimension.html",
   "task" : [ "import", "export" ],
-  "inputs" : [ "FBX, STL, SKP, OBJ" ],
+  "inputs" : [ "FBX, STL, SKP, OBJ, glTF, GLB" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "RapidCompact",
