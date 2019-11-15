@@ -21,7 +21,7 @@ are summarized in the following table:
 |------|--------|-------------|
 | `name` | `string` | The name of the project. This will be the title of the project card, and turned into a link, leading to the URL that is given as the `link` property |
 | `link` | `string` (URL) | The URL of the homepage of the project.  |
- | `description` | `string` | A short description of the project. This string can contain basic [Markdown](https://en.wikipedia.org/wiki/Markdown) formatting. |
+ | `description` | `string` | A short description of the project. This string can contain basic [Markdown](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) formatting. |
 | `task` | `string[]` | An array of strings, describing the basic tasks that are supported by the project. <br> <br> Common examples of tasks are `view`, `load`, `import`, `export`, `validate`, or `optimize` |
 | `type` | `string[]` | An array of strings characterizing the type of the project. <br> <br> Common types are `application`, `library`, `plugin`, `demo`, `web-api`, or `engine`. The types can be combined, for example, when a library can also be used as a standalone command-line application. <br> <br> Other types of projects may be `forum` or `website`, or `model-repository`. |
 | `license` | `string[]` | An array of strings describing the licenses under which the project is published. The strings should be the [license identifiers according to the SPDX license list](https://spdx.org/licenses/).<br> <br> Examples of licenses are `Apache-2.0`, `BSD-3-Clause`, or `MIT`. |
@@ -31,7 +31,8 @@ are summarized in the following table:
 All properties except for the `name` are optional. 
 
 An example of the JSON description of a project is shown here:
- ```
+
+ ```json
  {
   "name" : "Example",
   "link" : "http://example.com",
