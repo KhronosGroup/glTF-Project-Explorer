@@ -63,8 +63,9 @@ function applyTitleSearchFilter(
   if (!titleSubstring) {
     return projects;
   }
-
-  return projects.filter(p => p.name.includes(titleSubstring));
+  const titleSubstringLowerCase = titleSubstring.toLowerCase();
+  return projects.filter(p =>
+    p.name.toLowerCase().includes(titleSubstringLowerCase));
 }
 
 export function* applyFilters() {
