@@ -6,6 +6,13 @@ import * as actions from "./Actions";
 import { IFilter, FilterDimension } from "../../interfaces/IFilter";
 import { FilterActionTypes } from "../filters/Types";
 
+// Tags in these groups will be pulled to the top of the list.
+//   Priority is given to tags with lower index values.
+const tagPriority = ["Khronos Official", "Staff Picks"];
+const UNTAGGED_KEY = "UNTAGGED";
+
+type ResultsBuckets = { [key: string]: IProjectInfo[] };
+
 interface IGroupedFilters {
   [dimension: string]: IFilter[];
 }
@@ -65,7 +72,50 @@ function applyTitleSearchFilter(
   }
   const titleSubstringLowerCase = titleSubstring.toLowerCase();
   return projects.filter(p =>
-    p.name.toLowerCase().includes(titleSubstringLowerCase));
+    p.name.toLowerCase().includes(titleSubstringLowerCase)
+  );
+}
+
+function splitIntoBuckets(projects: IProjectInfo[]): ResultsBuckets {
+  const results: ResultsBuckets = {};
+
+  for (const tag of tagPriority) {
+    results[tag] = [];
+  }
+
+  results[UNTAGGED_KEY] = [];
+
+  for (const project of projects) {
+    if (!project.tags) {
+      results[UNTAGGED_KEY].push(project);
+      continue;
+    }
+
+    for (const tag of project.tags) {
+      if (results[tag]) {
+        results[tag].push(project);
+      } else {
+        results[UNTAGGED_KEY].push(project);
+      }
+    }
+  }
+
+  return results;
+}
+
+function applySort(buckets: ResultsBuckets): IProjectInfo[] {
+  const results: IProjectInfo[] = [];
+
+  for (const tag of [...tagPriority, UNTAGGED_KEY]) {
+    buckets[tag].sort((a, b) => {
+      if (a.name.toLocaleLowerCase() < b.name.toLocaleLowerCase()) return -1;
+      if (a.name.toLocaleUpperCase() > b.name.toLocaleUpperCase()) return 1;
+      return 0;
+    });
+    results.push(...buckets[tag]);
+  }
+
+  return results;
 }
 
 export function* applyFilters() {
@@ -79,8 +129,13 @@ export function* applyFilters() {
     select(filterSelectors.getTitleSubstring)
   ]);
 
-  const interimResults = applyTagFilters(projects, selectedFilters);
-  const results = applyTitleSearchFilter(interimResults, titleSubstring);
+  const filteredResults = applyTagFilters(projects, selectedFilters);
+  const searchedResults = applyTitleSearchFilter(
+    filteredResults,
+    titleSubstring
+  );
+  const bucketedResults = splitIntoBuckets(searchedResults);
+  const results = applySort(bucketedResults);
 
   yield put(actions.storeResults(results));
 }
