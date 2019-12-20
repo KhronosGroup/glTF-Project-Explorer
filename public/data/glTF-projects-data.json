@@ -1081,7 +1081,8 @@
   "link" : "http://github.khronos.org/glTF-Sample-Viewer/",
   "task" : [ "load", "view" ],
   "type" : [ "web application" ],
-  "inputs" : [ "glTF 2.0" ]
+  "inputs" : [ "glTF 2.0" ],
+  "tags": ["Khronos Official"]
 }, {
   "name" : "gltf-utilities",
   "description" : "JavaScript utility library to help load glTF",
@@ -1140,7 +1141,8 @@
   "link" : "https://github.com/KhronosGroup/glTF-Validator",
   "task" : [ "validate" ],
   "type" : [ "web application", "library" ],
-  "inputs" : [ "glTF 2.0" ]
+  "inputs" : [ "glTF 2.0" ],
+  "tags" : [ "Khronos Official" ]
 }, {
   "name" : "glTF VSCode Extension",
   "description" : "3D previews, built-in official glTF Validator, conversion to/from GLB",
@@ -1154,7 +1156,8 @@
   "link" : "https://github.com/KhronosGroup/glTF-Blender-IO",
   "task" : [ "import", "export" ],
   "inputs" : [ "glTF 2.0" ],
-  "outputs" : [ "glTF 2.0" ]
+  "outputs" : [ "glTF 2.0" ],
+  "tags" : [ "Khronos Official" ]
 }, {
   "name" : "3DS Max Exporter",
   "description" : "Export glTF files using [BabylonJS plugin](http://doc.babylonjs.com/resources/3dsmax#how-to-install-the-3ds-max-plugin) for 3DS Max 2015 or later",
@@ -1399,7 +1402,8 @@
   "link" : "https://github.com/BabylonJS/Babylon.js/tree/master/loaders/src/glTF)",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
-  "inputs" : [ "glTF 2.0" ]
+  "inputs" : [ "glTF 2.0" ],
+  "tags" : [ "Staff Picks" ]
 }, {
   "name" : "Cesium glTF loader",
   "description" : "WebGL engine\n\n[Drag-and-drop viewer](https://www.virtualgis.io/gltfviewer/), [tutorial](https://cesiumjs.org/tutorials/3D-Models-Tutorial/)",

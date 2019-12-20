@@ -8,6 +8,7 @@ export function filters(
     types: [],
     licenses: [],
     languages: [],
+    tags: [],
     titleSubstring: "",
     selected: new Set()
   },
@@ -21,6 +22,7 @@ export function filters(
         types: action.types,
         licenses: action.licenses,
         languages: action.languages,
+        tags: action.tags,
         titleSubstring: action.titleSubstring
       };
     case FilterActionTypes.UPDATE_SELECTED_FILTERS:

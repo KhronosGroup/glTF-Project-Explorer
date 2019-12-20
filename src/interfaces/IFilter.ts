@@ -2,7 +2,8 @@ export enum FilterDimension {
   Task = "task",
   Type = "type",
   License = "license",
-  Language = "language"
+  Language = "language",
+  Tags = "tags"
 }
 
 export interface IFilter {

@@ -12,6 +12,7 @@ export interface IUpdateFiltersAction {
   readonly types: IFilter[];
   readonly languages: IFilter[];
   readonly licenses: IFilter[];
+  readonly tags: IFilter[];
   readonly titleSubstring: string;
 }
 
