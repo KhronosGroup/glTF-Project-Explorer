@@ -76,46 +76,33 @@ function applyTitleSearchFilter(
   );
 }
 
-function splitIntoBuckets(projects: IProjectInfo[]): ResultsBuckets {
-  const results: ResultsBuckets = {};
+function sortResults(projects: IProjectInfo[]): IProjectInfo[] {
+  const buckets: ResultsBuckets = {};
 
   for (const tag of tagPriority) {
-    results[tag] = [];
+    buckets[tag] = [];
   }
 
-  results[UNTAGGED_KEY] = [];
+  buckets[UNTAGGED_KEY] = [];
 
   for (const project of projects) {
     if (!project.tags) {
-      results[UNTAGGED_KEY].push(project);
+      buckets[UNTAGGED_KEY].push(project);
       continue;
     }
 
     for (const tag of project.tags) {
-      if (results[tag]) {
-        results[tag].push(project);
+      if (buckets[tag]) {
+        buckets[tag].push(project);
       } else {
-        results[UNTAGGED_KEY].push(project);
+        buckets[UNTAGGED_KEY].push(project);
       }
     }
   }
 
-  return results;
-}
-
-function applySort(buckets: ResultsBuckets): IProjectInfo[] {
-  const results: IProjectInfo[] = [];
-
-  for (const tag of [...tagPriority, UNTAGGED_KEY]) {
-    buckets[tag].sort((a, b) => {
-      if (a.name.toLocaleLowerCase() < b.name.toLocaleLowerCase()) return -1;
-      if (a.name.toLocaleUpperCase() > b.name.toLocaleUpperCase()) return 1;
-      return 0;
-    });
-    results.push(...buckets[tag]);
-  }
-
-  return results;
+  return Object.entries(buckets).flatMap(([_, projects]) => {
+    return projects.sort((a, b) => a.name.localeCompare(b.name));
+  });
 }
 
 export function* applyFilters() {
@@ -134,8 +121,7 @@ export function* applyFilters() {
     filteredResults,
     titleSubstring
   );
-  const bucketedResults = splitIntoBuckets(searchedResults);
-  const results = applySort(bucketedResults);
+  const results = sortResults(searchedResults);
 
   yield put(actions.storeResults(results));
 }
