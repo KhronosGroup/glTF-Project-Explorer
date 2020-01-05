@@ -11,6 +11,7 @@ export function updateFilters(
   types: IFilter[],
   licenses: IFilter[],
   languages: IFilter[],
+  tags: IFilter[],
   titleSubstring: string
 ): IUpdateFiltersAction {
   return {
@@ -19,6 +20,7 @@ export function updateFilters(
     types,
     licenses,
     languages,
+    tags,
     titleSubstring
   };
 }

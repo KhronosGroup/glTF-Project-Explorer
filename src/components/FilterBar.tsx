@@ -12,6 +12,7 @@ export interface IFilterBarProps {
   typeFilters: IFilter[];
   licenseFilters: IFilter[];
   languageFilters: IFilter[];
+  tagFilters: IFilter[];
   selectedFilters: Set<IFilter>;
   updateSelectedFilters: typeof updateSelectedFilters;
 }
@@ -23,6 +24,7 @@ const FilterBar: React.FC<IFilterBarProps> = props => {
     licenseFilters,
     languageFilters,
     selectedFilters,
+    tagFilters,
     updateSelectedFilters
   } = props;
 
@@ -70,6 +72,11 @@ const FilterBar: React.FC<IFilterBarProps> = props => {
           resetAction={handleFilterResetClick}
         />
         <FilterBarOptions
+          filters={tagFilters}
+          label="Filter by Tag"
+          addAction={handleFilterAddClick}
+        />
+        <FilterBarOptions
           filters={taskFilters}
           label="Filter by Task"
           addAction={handleFilterAddClick}
@@ -101,6 +108,7 @@ function mapStateToProps(state: IAppState) {
       types: typeFilters,
       licenses: licenseFilters,
       languages: languageFilters,
+      tags: tagFilters,
       selected: selectedFilters
     }
   } = state;
@@ -110,6 +118,7 @@ function mapStateToProps(state: IAppState) {
     typeFilters,
     licenseFilters,
     languageFilters,
+    tagFilters,
     selectedFilters
   };
 }
@@ -118,7 +127,4 @@ const mapDispatchToProps = {
   updateSelectedFilters
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(FilterBar);
+export default connect(mapStateToProps, mapDispatchToProps)(FilterBar);

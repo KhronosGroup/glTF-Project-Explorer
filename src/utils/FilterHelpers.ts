@@ -10,6 +10,8 @@ export const determineClassName = (filter: IFilter) => {
       return "license-filter";
     case FilterDimension.Language:
       return "language-filter";
+    case FilterDimension.Tags:
+      return "tags-filter";
     default:
       return "";
   }

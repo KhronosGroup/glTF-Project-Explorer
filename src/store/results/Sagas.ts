@@ -6,6 +6,13 @@ import * as actions from "./Actions";
 import { IFilter, FilterDimension } from "../../interfaces/IFilter";
 import { FilterActionTypes } from "../filters/Types";
 
+// Tags in these groups will be pulled to the top of the list.
+//   Priority is given to tags with lower index values.
+const tagPriority = ["Khronos Official", "Staff Picks"];
+const UNTAGGED_KEY = "UNTAGGED";
+
+type ResultsBuckets = { [key: string]: IProjectInfo[] };
+
 interface IGroupedFilters {
   [dimension: string]: IFilter[];
 }
@@ -65,7 +72,37 @@ function applyTitleSearchFilter(
   }
   const titleSubstringLowerCase = titleSubstring.toLowerCase();
   return projects.filter(p =>
-    p.name.toLowerCase().includes(titleSubstringLowerCase));
+    p.name.toLowerCase().includes(titleSubstringLowerCase)
+  );
+}
+
+function sortResults(projects: IProjectInfo[]): IProjectInfo[] {
+  const buckets: ResultsBuckets = {};
+
+  for (const tag of tagPriority) {
+    buckets[tag] = [];
+  }
+
+  buckets[UNTAGGED_KEY] = [];
+
+  for (const project of projects) {
+    if (!project.tags) {
+      buckets[UNTAGGED_KEY].push(project);
+      continue;
+    }
+
+    for (const tag of project.tags) {
+      if (buckets[tag]) {
+        buckets[tag].push(project);
+      } else {
+        buckets[UNTAGGED_KEY].push(project);
+      }
+    }
+  }
+
+  return Object.entries(buckets).flatMap(([_, projects]) => {
+    return projects.sort((a, b) => a.name.localeCompare(b.name));
+  });
 }
 
 export function* applyFilters() {
@@ -79,8 +116,12 @@ export function* applyFilters() {
     select(filterSelectors.getTitleSubstring)
   ]);
 
-  const interimResults = applyTagFilters(projects, selectedFilters);
-  const results = applyTitleSearchFilter(interimResults, titleSubstring);
+  const filteredResults = applyTagFilters(projects, selectedFilters);
+  const searchedResults = applyTitleSearchFilter(
+    filteredResults,
+    titleSubstring
+  );
+  const results = sortResults(searchedResults);
 
   yield put(actions.storeResults(results));
 }

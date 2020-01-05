@@ -35,13 +35,21 @@ export function calculateLanguageFilters(projects: IProjectInfo[]) {
   return languages.map(l => createNewFilter(FilterDimension.Language, l));
 }
 
+export function calculateTagFilters(projects: IProjectInfo[]) {
+  const tags = [
+    ...new Set(projects.flatMap(p => p.tags).filter(x => x))
+  ] as string[];
+  return tags.map(t => createNewFilter(FilterDimension.Tags, t));
+}
+
 export function* calculateFilters() {
   const projects = yield select(projectSelectors.getProjects);
-  const [tasks, types, licenses, languages] = yield all([
+  const [tasks, types, licenses, languages, tags] = yield all([
     call(calculateTaskFilters, projects),
     call(calculateTypeFilters, projects),
     call(calculateLicenseFilters, projects),
-    call(calculateLanguageFilters, projects)
+    call(calculateLanguageFilters, projects),
+    call(calculateTagFilters, projects)
   ]);
   yield put(
     actions.updateFilters(
@@ -49,6 +57,7 @@ export function* calculateFilters() {
       types,
       licenses,
       languages,
+      tags,
       DEFAULT_FULL_TEXT_TITLE_VALUE
     )
   );
