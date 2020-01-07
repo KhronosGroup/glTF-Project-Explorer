@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/glTF-Project-Explorer/static/css/main.63721486.chunk.css",
-    "main.js": "/glTF-Project-Explorer/static/js/main.7aff43f2.chunk.js",
-    "main.js.map": "/glTF-Project-Explorer/static/js/main.7aff43f2.chunk.js.map",
+    "main.css": "/glTF-Project-Explorer/static/css/main.e5d5b008.chunk.css",
+    "main.js": "/glTF-Project-Explorer/static/js/main.2bef0f85.chunk.js",
+    "main.js.map": "/glTF-Project-Explorer/static/js/main.2bef0f85.chunk.js.map",
     "runtime-main.js": "/glTF-Project-Explorer/static/js/runtime-main.d28d9178.js",
     "runtime-main.js.map": "/glTF-Project-Explorer/static/js/runtime-main.d28d9178.js.map",
     "static/js/2.a5d58b0d.chunk.js": "/glTF-Project-Explorer/static/js/2.a5d58b0d.chunk.js",
     "static/js/2.a5d58b0d.chunk.js.map": "/glTF-Project-Explorer/static/js/2.a5d58b0d.chunk.js.map",
     "index.html": "/glTF-Project-Explorer/index.html",
-    "precache-manifest.690a5f35a01e51d995726c595c718c25.js": "/glTF-Project-Explorer/precache-manifest.690a5f35a01e51d995726c595c718c25.js",
+    "precache-manifest.796f09ba4d8da6ea50b3e1efc0530d00.js": "/glTF-Project-Explorer/precache-manifest.796f09ba4d8da6ea50b3e1efc0530d00.js",
     "service-worker.js": "/glTF-Project-Explorer/service-worker.js",
-    "static/css/main.63721486.chunk.css.map": "/glTF-Project-Explorer/static/css/main.63721486.chunk.css.map"
+    "static/css/main.e5d5b008.chunk.css.map": "/glTF-Project-Explorer/static/css/main.e5d5b008.chunk.css.map",
+    "static/media/App.css": "/glTF-Project-Explorer/static/media/external-link-icon.5072acbe.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d28d9178.js",
     "static/js/2.a5d58b0d.chunk.js",
-    "static/css/main.63721486.chunk.css",
-    "static/js/main.7aff43f2.chunk.js"
+    "static/css/main.e5d5b008.chunk.css",
+    "static/js/main.2bef0f85.chunk.js"
   ]
 }
