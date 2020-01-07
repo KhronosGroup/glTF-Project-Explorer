@@ -51,7 +51,7 @@ a:focus {
 }
 
 a[href*="http"] {
-  background: url("/external-link-icon.svg") no-repeat 100% 0;
+  background: url(./external-link-icon.svg) no-repeat 100% 0;
   background-size: 1rem 1rem;
   padding-right: 1.25rem;
 }
