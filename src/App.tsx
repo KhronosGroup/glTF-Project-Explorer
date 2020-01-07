@@ -9,7 +9,7 @@ const App: React.FC = () => {
   return (
     <>
       <div className="header">
-        <img src="/glTF_RGB_June16.svg" alt="glTF" />
+        <img src="./glTF_RGB_June16.svg" alt="glTF" />
         <h1>Project Explorer</h1>
       </div>
       <div className="content">
