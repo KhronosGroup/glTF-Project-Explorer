@@ -1666,11 +1666,14 @@
   "language" : [ "C#" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "SharpGLTF",
-  "description" : "C# toolkit for reading and writing glTF files.",
-  "link" : "https://github.com/VPenades/SharpGLTF",
-  "language" : [ "C#" ],
-  "inputs" : [ "glTF 2.0" ]
+  "name": "SharpGLTF",
+  "description": ".NET Standard toolkit for reading and writing glTF files.",
+  "link": "https://github.com/VPenades/SharpGLTF",
+  "task": [ "load", "validate", "export" ],
+  "license": [ "MIT" ],
+  "type": [ "library" ],
+  "language": [ "C#" ],
+  "inputs": [ "glTF 2.0" ]
 }, {
   "name" : "DEM.Net",
   "description" : "C# toolkit for Digital Elevation Models, exporting models with textures and normal maps to glTF files.",
