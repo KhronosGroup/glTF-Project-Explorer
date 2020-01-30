@@ -1822,7 +1822,7 @@
   "link" : "https://doc.babylonjs.com/extensions/the_babylon_viewer",
   "type" : [ "viewer, embeddable, self-hosted" ]
 }, {
-  "name" : "&lt;model-viewer>",
+  "name" : "<model-viewer>",
   "description" : "HTML web component for viewing self-hosted glTF models.",
   "link" : "https://github.com/GoogleWebComponents/model-viewer",
   "type" : [ "viewer, embeddable, self-hosted" ]
