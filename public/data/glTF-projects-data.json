@@ -1978,4 +1978,14 @@
   "language" : [ "Rust" ],
   "inputs" : [ "glTF 2.0" ],
   "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "forge-convert-utils",
+  "description" : "Node.js library and CLI tool for converting Autodesk Forge content to glTF.",
+  "link" : "https://github.com/petrbroz/forge-convert-utils",
+  "task" : [ "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application", "library" ],
+  "language" : [ "TypeScript", "JavaScript" ],
+  "inputs" : [ "SVF" ],
+  "outputs" : [ "glTF 2.0" ]
 } ]
