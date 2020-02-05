@@ -1996,4 +1996,14 @@
   "language" : [ "C++" ],
   "inputs" : [ "3Shape", "ACIS", "CADDS", "CATIA V4", "CATIA V5", "CATIA V6", "3DEXPERIENCE", "Cercon", "CEREC", "CGR", "Creo View", "DWG", "DXF", "IFC", "IGES", "Inventor", "JT", "LAVA", "OBJ", "Parasolid", "PLMXML", "Procera", "ProEngineer", "Creo Parametric", "Revit", "Rhino", "Solid Edge", "SOLIDWORKS", "STEP", "STL", "UNIGRAPHICS", "NX", "VDA" ],
   "outputs" : [ "3DXML", "3MF", "ACIS", "CATIA V5", "CGR", "COLLADA", "FBX", "glTF 2.0", "IGES", "JT", "OBJ", "Open CASCADE", "Parasolid", "3DPDF", "PRC", "SOLIDWORKS", "STEP", "STL", "NX" ]
+}, {
+  "name" : "forge-convert-utils",
+  "description" : "Node.js library and CLI tool for converting Autodesk Forge content to glTF.",
+  "link" : "https://github.com/petrbroz/forge-convert-utils",
+  "task" : [ "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application", "library" ],
+  "language" : [ "TypeScript", "JavaScript" ],
+  "inputs" : [ "SVF" ],
+  "outputs" : [ "glTF 2.0" ]
 } ]
