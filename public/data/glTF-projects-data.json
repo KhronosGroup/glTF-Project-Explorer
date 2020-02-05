@@ -744,6 +744,8 @@
   "link" : "https://www.comsol.com/",
   "task" : [ "export" ],
   "type" : [ "application" ],
+  "language" : [ "MATLAB" ],
+  "inputs" : [ "DWG" , "IPT" , "IAM" , "PRT" , "ASM" , "RVT" , "PAR" , "SLDPRT" , "SLDASM" , "3MF" , "SAT" , "SAB" , "ASAT" , "ASAB" , "DXF" , "CATPART" , "CATPRODUCT" , "MPHTXT" , "MPHBIN" , "IGS" , "IGES" , "PRT" , "X_T" , "X_B" , "XMT_TXT" , "XMT_BIN" , "STEP" , "STL" , "GDS" , "VRML" , "WRL" , "CVG" , "XML" , "ZIP" , "TAR" , "TGZ" , "TAR.GZ" , "DEM" ],
   "outputs" : [ "Multiple", "glTF 2.0" ]
 }, {
   "name" : "BIMData.io",
