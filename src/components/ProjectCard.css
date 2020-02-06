@@ -42,14 +42,12 @@ h6 {
 @media all and (max-width: 800px) {
   .project-card-content {
     grid-template-columns: 100%;
-    grid-template-rows: 100%;
   }
 }
 
 @media all and (min-width: 801px) and (max-width: 968px) {
   .project-card-content {
     grid-template-columns: 40% 30% 30%;
-    grid-template-rows: 33.33% 33.33% 33.33%;
   }
 
   .project-card-description {
@@ -60,7 +58,6 @@ h6 {
 @media all and (min-width: 969px) {
   .project-card-content {
     grid-template-columns: 34% 22% 22% 22%;
-    grid-template-rows: 50% 50%;
   }
 
   .project-card-description {
