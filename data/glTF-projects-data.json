@@ -744,6 +744,8 @@
   "link" : "https://www.comsol.com/",
   "task" : [ "export" ],
   "type" : [ "application" ],
+  "language" : [ "MATLAB" ],
+  "inputs" : [ "DWG" , "IPT" , "IAM" , "PRT" , "ASM" , "RVT" , "PAR" , "SLDPRT" , "SLDASM" , "3MF" , "SAT" , "SAB" , "ASAT" , "ASAB" , "DXF" , "CATPART" , "CATPRODUCT" , "MPHTXT" , "MPHBIN" , "IGS" , "IGES" , "PRT" , "X_T" , "X_B" , "XMT_TXT" , "XMT_BIN" , "STEP" , "STL" , "GDS" , "VRML" , "WRL" , "CVG" , "XML" , "ZIP" , "TAR" , "TGZ" , "TAR.GZ" , "DEM" ],
   "outputs" : [ "Multiple", "glTF 2.0" ]
 }, {
   "name" : "BIMData.io",
@@ -1666,11 +1668,14 @@
   "language" : [ "C#" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "SharpGLTF",
-  "description" : "C# toolkit for reading and writing glTF files.",
-  "link" : "https://github.com/VPenades/SharpGLTF",
-  "language" : [ "C#" ],
-  "inputs" : [ "glTF 2.0" ]
+  "name": "SharpGLTF",
+  "description": ".NET Standard toolkit for reading and writing glTF files.",
+  "link": "https://github.com/VPenades/SharpGLTF",
+  "task": [ "load", "validate", "export" ],
+  "license": [ "MIT" ],
+  "type": [ "library" ],
+  "language": [ "C#" ],
+  "inputs": [ "glTF 2.0" ]
 }, {
   "name" : "DEM.Net",
   "description" : "C# toolkit for Digital Elevation Models, exporting models with textures and normal maps to glTF files.",
@@ -1819,7 +1824,7 @@
   "link" : "https://doc.babylonjs.com/extensions/the_babylon_viewer",
   "type" : [ "viewer, embeddable, self-hosted" ]
 }, {
-  "name" : "&lt;model-viewer>",
+  "name" : "<model-viewer>",
   "description" : "HTML web component for viewing self-hosted glTF models.",
   "link" : "https://github.com/GoogleWebComponents/model-viewer",
   "type" : [ "viewer, embeddable, self-hosted" ]
@@ -1974,5 +1979,33 @@
   "type" : [ "application" ],
   "language" : [ "Rust" ],
   "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Datakit CrossManager",
+  "description" : "File converter. Supports multiple 3D formats inputs and outputs, including glTF output. Graphical interface or command-line",
+  "link" : "https://www.datakit.com/en/cross_manager.php",
+  "task" : [ "convert", "export" ],
+  "type" : [ "application", "engine" ],
+  "language" : [ "Python", "Command-line" ],
+  "inputs" : [ "3Shape", "ACIS", "CADDS", "CATIA V4", "CATIA V5", "CATIA V6", "3DEXPERIENCE", "CEREC", "CGR", "Creo View", "DWG", "DXF", "IFC", "IGES", "Inventor", "JT", "OBJ", "Parasolid", "PLMXML", "Procera", "ProEngineer", "Creo Parametric", "Revit", "Rhino", "Robcad", "Solid Edge", "SOLIDWORKS", "STEP", "STL", "UNIGRAPHICS", "NX", "VDA" ],
+  "outputs" : [ "3DXML", "3MF", "ACIS", "CADDS", "CATIA V4", "CATIA V5", "CGR", "COLLADA", "DXF", "EMF", "FBX", "glTF 2.0", "IGES", "JT", "OBJ", "Open CASCADE", "Parasolid", "PDF", "3DPDF", "PRC", "Robcad", "SOLIDWORKS", "STEP", "STL", "NX", "Unisurf", "VDA", "VRML" ]
+}, {
+  "name" : "Datakit CrossCad/Ware SDK",
+  "description" : "A library to write glTF or glb files. Can also read and write multiple 3D formats",
+  "link" : "https://www.datakit.com/en/crosscad_ware.php",
+  "task" : [ "export" ],
+  "type" : [ "library" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "3Shape", "ACIS", "CADDS", "CATIA V4", "CATIA V5", "CATIA V6", "3DEXPERIENCE", "Cercon", "CEREC", "CGR", "Creo View", "DWG", "DXF", "IFC", "IGES", "Inventor", "JT", "LAVA", "OBJ", "Parasolid", "PLMXML", "Procera", "ProEngineer", "Creo Parametric", "Revit", "Rhino", "Solid Edge", "SOLIDWORKS", "STEP", "STL", "UNIGRAPHICS", "NX", "VDA" ],
+  "outputs" : [ "3DXML", "3MF", "ACIS", "CATIA V5", "CGR", "COLLADA", "FBX", "glTF 2.0", "IGES", "JT", "OBJ", "Open CASCADE", "Parasolid", "3DPDF", "PRC", "SOLIDWORKS", "STEP", "STL", "NX" ]
+}, {
+  "name" : "forge-convert-utils",
+  "description" : "Node.js library and CLI tool for converting Autodesk Forge content to glTF.",
+  "link" : "https://github.com/petrbroz/forge-convert-utils",
+  "task" : [ "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "application", "library" ],
+  "language" : [ "TypeScript", "JavaScript" ],
+  "inputs" : [ "SVF" ],
   "outputs" : [ "glTF 2.0" ]
 } ]
