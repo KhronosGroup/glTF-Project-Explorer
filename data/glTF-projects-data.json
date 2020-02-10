@@ -1679,9 +1679,13 @@
 }, {
   "name" : "DEM.Net",
   "description" : "C# toolkit for Digital Elevation Models, exporting models with textures and normal maps to glTF files.",
-  "link" : "https://github.com/dem-net/DEM.Net",
+  "link" : "https://elevationapi.com",
+  "task": [ "view", "load", "export" ],
+  "license": [ "MIT" ],
+  "type": [ "library", "website", "web-api" ],
   "language" : [ "C#" ],
-  "inputs" : [ "glTF 2.0" ]
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "AssetKit",
   "description" : "3D asset importer, exporter library.",
