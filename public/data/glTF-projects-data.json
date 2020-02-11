@@ -920,8 +920,8 @@
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Diligent Engine",
-  "description" : "Cross-platform graphics API abstraction library.\n\nglTF sample at https://github.com/DiligentGraphics/DiligentSamples/tree/master/Samples/GLTFViewer",
-  "link" : "http://diligentgraphics.com/diligent-engine/",
+  "description" : "A modern cross-platform graphics API abstraction library and rendering framework.\n\nglTF sample at https://github.com/DiligentGraphics/DiligentSamples/tree/master/Samples/GLTFViewer",
+  "link" : "https://github.com/DiligentGraphics/DiligentEngine",
   "task" : [ "load", "view" ],
   "license" : [ "Apache-2.0" ],
   "type" : [ "library", "engine" ],
@@ -1075,7 +1075,7 @@
   "description" : "Cross-platform GLTF PBR viewer with multiple rendering back-ends",
   "link" : "https://github.com/DiligentGraphics/DiligentSamples/tree/master/Samples/GLTFViewer",
   "task" : [ "load", "view" ],
-  "type" : [ "web application" ],
+  "type" : [ "application" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Khronos glTF Sample Viewer",
@@ -1635,12 +1635,6 @@
   "name" : "glTF for UE4",
   "description" : "A plugin for UE4.10+ to import glTF files",
   "link" : "https://github.com/code4game/glTFForUE4",
-  "language" : [ "C++" ],
-  "inputs" : [ "glTF 2.0" ]
-}, {
-  "name" : "Diligent Engine",
-  "description" : "A modern cross-platform low-level graphics libarary and rendering framework",
-  "link" : "https://github.com/DiligentGraphics/DiligentEngine",
   "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
