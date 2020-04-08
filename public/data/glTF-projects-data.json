@@ -849,13 +849,6 @@
   "inputs" : [ "Multiple", "glTF 2.0" ],
   "outputs" : [ "Multiple", "glTF 2.0" ]
 }, {
-  "name" : "esri ArcGIS",
-  "description" : "Spatial data management platform\n\nglTF import demo at https://developers.arcgis.com/javascript/latest/sample-code/import-gltf/index.html",
-  "link" : "https://developers.arcgis.com/",
-  "task" : [ "import", "view" ],
-  "type" : [ "web application" ],
-  "inputs" : [ "Multiple", "glTF 2.0" ]
-}, {
   "name" : "Tech Soft 3D HOOPS",
   "description" : "3D development and engineering tools",
   "link" : "https://www.techsoft3d.com/",
@@ -951,8 +944,8 @@
   "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "meshoptimizer",
-  "description" : "Mesh optimization library that makes meshes smaller and faster to render \n\nDedicated glTF packer at https://github.com/zeux/meshoptimizer#gltfpack",
+  "name" : "gltfpack",
+  "description" : "C++ tool for optimizing glTF assets for rendering performance and transmission size",
   "link" : "https://github.com/zeux/meshoptimizer",
   "task" : [ "process", "optimize" ],
   "license" : [ "MIT" ],
@@ -1086,13 +1079,6 @@
   "inputs" : [ "glTF 2.0" ],
   "tags": ["Khronos Official"]
 }, {
-  "name" : "gltf-utilities",
-  "description" : "JavaScript utility library to help load glTF",
-  "link" : "https://github.com/AnalyticalGraphicsInc/gltf-utilities",
-  "task" : [ "load" ],
-  "type" : [ "library" ],
-  "inputs" : [ "glTF 2.0" ]
-}, {
   "name" : "wetzel",
   "description" : "Generate Markdown documentation from JSON Schema",
   "link" : "https://github.com/AnalyticalGraphicsInc/wetzel",
@@ -1182,13 +1168,6 @@
   "inputs" : [ "Multiple" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "Unity 2017",
-  "description" : "Commercial unity asset store editor extension to export COLLADA and glTF via collada2gltf",
-  "link" : "https://www.assetstore.unity3d.com/#!/content/99793",
-  "task" : [ "import", "export" ],
-  "inputs" : [ "Multiple" ],
-  "outputs" : [ "glTF 2.0" ]
-}, {
   "name" : "import",
   "description" : "Separate extensions for export and import",
   "link" : "http://extensions.sketchup.com/en/content/gltf-import",
@@ -1257,13 +1236,6 @@
   "link" : "https://github.com/headjack-dev/gltf-api",
   "task" : [ "import", "export" ],
   "inputs" : [ "FBX", "COLLADA", "OBJ" ],
-  "outputs" : [ "glTF 2.0" ]
-}, {
-  "name" : "Simplygon Cloud",
-  "description" : "Cloud based asset optimization pipeline",
-  "link" : "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/simplygon.simplygon",
-  "task" : [ "import", "export" ],
-  "inputs" : [ "Multiple" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Verge3D",
@@ -1463,9 +1435,9 @@
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "ReactVR",
+  "name" : "React 360",
   "description" : "WebGL engine",
-  "link" : "https://facebook.github.io/react-vr/",
+  "link" : "https://facebook.github.io/react-360/",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
@@ -1486,7 +1458,7 @@
 }, {
   "name" : "GLBoost glTF loader",
   "description" : "WebGL engine\n\n[Examples](https://gitcdn.xyz/repo/emadurandal/GLBoost/master/examples/index.html)",
-  "link" : "https://github.com/emadurandal/GLBoost/blob/master/src/js/middle_level/loader/GLTFLoader.js)",
+  "link" : "https://github.com/emadurandal/GLBoost/",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 1.0" ]
@@ -1586,7 +1558,7 @@
 }, {
   "name" : "Microsoft.glTF.CPP",
   "description" : "A C++ library for serializing and deserializing gltf/glb files.",
-  "link" : "https://www.nuget.org/packages/Microsoft.glTF.CPP/",
+  "link" : "https://github.com/microsoft/glTF-SDK",
   "language" : [ "2.0" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
@@ -2006,4 +1978,97 @@
   "language" : [ "TypeScript", "JavaScript" ],
   "inputs" : [ "SVF" ],
   "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Esri CityEngine",
+  "description" : "Advanced 3D city design software supports glTF to [import](https://doc.arcgis.com/en/cityengine/latest/help/help-import-gltf.htm) and [export](https://doc.arcgis.com/en/cityengine/latest/help/help-export-gltf.htm)",
+  "link" : "https://www.esri.com/en-us/arcgis/products/esri-cityengine/overview",
+  "task" : [ "import", "export" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "ArcGIS Pro",
+  "description" : "Desktop GIS for 2D and 3D and supports usage of [glTF content](https://pro.arcgis.com/en/pro-app/help/mapping/layer-properties/gltf-markers.htm) as markers in 3D.",
+  "link" : "https://pro.arcgis.com",
+  "task" : [ "import" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "JglTF-mesh",
+  "description" : "Generate glTF meshes and geometry in Java",
+  "link" : "https://github.com/chadj2/jgltf-mesh",
+  "task" : [ "export" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "Java" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "pygltflib",
+  "description" : "Python library for reading, writing and converting glTF 2.0 files.",
+  "link" : "https://github.com/chadj2/jgltf-mesh",
+  "task" : [ "import", "export", "convert" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "Python" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Gestaltor",
+  "description" : "Native application for viewing, inspecting, editing, composing and optimizing glTF.",
+  "link" : "https://gestaltor.io/",
+  "task" : [ "import", "export", "optimize" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "acl-gltf",
+  "description" : "Animation Compression Library glTF toolkit",
+  "link" : "https://github.com/nfrechette/acl-gltf",
+  "task" : [ "import", "export", "optimize" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Gru",
+  "description" : "glTF runtime importer for Unity3D",
+  "link" : "https://github.com/ashikns/Gru",
+  "task" : [ "import" ],
+  "license" : [ "MIT" ],
+  "type" : [ "plugin" ],
+  "language" : [ "C#" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Apple Reality Converter",
+  "description" : "An application to convert different file formats, including glTF, to USD",
+  "link" : "https://developer.apple.com/news/?id=01132020a&1578956733",
+  "task" : [ "import", "convert", "view" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "USD" ]
+}, {
+  "name" : "SimpleGLTF2",
+  "description" : "A deserializer/loader and viewer for GLTF2 written in Java.",
+  "link" : "https://github.com/MESLewis/SimpleGLTF2",
+  "task" : [ "import", "view" ],
+  "type" : [ "library" ],
+  "language" : [ "Java" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Amazon Sumerian",
+  "description" : "An augmented reality and virtual reality applications service with glTF export",
+  "link" : "https://aws.amazon.com/about-aws/whats-new/2020/04/amazon-sumerian-supports-exporting-scenes-to-gltf/",
+  "task" : [ "export" ],
+  "type" : [ "service" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Arvizio Auganix",
+  "description" : "A software platform for mixed reality, with glTF support",
+  "link" : "https://www.auganix.org/arvizio-announces-enhancements-to-its-enterprise-xr-platform-and-increased-data-format-support/",
+  "task" : [ "import" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ]
 } ]
