@@ -1239,9 +1239,30 @@
   "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Verge3D",
-  "description" : "glTF 2.0 exporters for Blender and 3ds Max",
+  "description" : "WebGL engine with [glTF loader](https://www.soft8soft.com/docs/examples/loaders/GLTFLoader.html). [Examples](https://www.soft8soft.com/gallery/)",
   "link" : "http://www.soft8soft.com/verge3d/",
-  "task" : [ "import", "export" ],
+  "task" : [ "import", "view", "export" ],
+  "type" : [ "engine" ],
+  "inputs" : [ "Multiple", "glTF 2.0" ]
+}, {
+  "name" : "Verge3D for Blender",
+  "description" : "glTF 2.0 exporter for Blender 2.80+. Supports Blender EEVEE materials and lights via S8S extensions",
+  "link" : "https://www.soft8soft.com/docs/examples/loaders/GLTFLoader.html",
+  "task" : [ "export" ],
+  "inputs" : [ "Multiple" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Verge3D for 3ds Max",
+  "description" : "glTF 2.0 exporter for Autodesk 3ds Max 2018+. In addition to standard PBR model supports Scanline and Arnold materials via S8S_v3d_material_data extension",
+  "link" : "https://www.soft8soft.com/docs/manual/en/max/Beginners-Guide.html",
+  "task" : [ "export" ],
+  "inputs" : [ "Multiple" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Verge3D for Maya",
+  "description" : "glTF 2.0 exporter for Maya 2017+",
+  "link" : "https://www.soft8soft.com/docs/manual/en/maya/Beginners-Guide.html",
+  "task" : [ "export" ],
   "inputs" : [ "Multiple" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
@@ -1366,14 +1387,14 @@
 }, {
   "name" : "three.js glTF loader",
   "description" : "WebGL engine\n\n[`<model-viewer/>` component](https://github.com/GoogleWebComponents/model-viewer/), [drag-and-drop viewer](https://gltf-viewer.donmccurdy.com/)",
-  "link" : "https://threejs.org/docs/index.html#examples/loaders/GLTFLoader)",
+  "link" : "https://threejs.org/docs/index.html#examples/loaders/GLTFLoader",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "BabylonJS glTF loader",
   "description" : "WebGL engine\n\n[Viewer component](http://doc.babylonjs.com/extensions/the_babylon_viewer)",
-  "link" : "https://github.com/BabylonJS/Babylon.js/tree/master/loaders/src/glTF)",
+  "link" : "https://github.com/BabylonJS/Babylon.js/tree/master/loaders/src/glTF",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ],
@@ -1381,56 +1402,49 @@
 }, {
   "name" : "Cesium glTF loader",
   "description" : "WebGL engine\n\n[Drag-and-drop viewer](https://www.virtualgis.io/gltfviewer/), [tutorial](https://cesiumjs.org/tutorials/3D-Models-Tutorial/)",
-  "link" : "https://github.com/AnalyticalGraphicsInc/cesium/blob/master/Source/Scene/Model.js)",
+  "link" : "https://github.com/AnalyticalGraphicsInc/cesium/blob/master/Source/Scene/Model.js",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "OSK glTF loader",
+  "name" : "OSG.JS glTF loader",
   "description" : "WebGL engine",
-  "link" : "https://github.com/cedricpinson/osgjs/blob/master/sources/osgPlugins/ReaderWriterGLTF.js)",
+  "link" : "https://github.com/cedricpinson/osgjs/blob/master/sources/osgPlugins/ReaderWriterGLTF.js",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Grimoire.js glTF loader",
   "description" : "WebGL engine",
-  "link" : "https://github.com/GrimoireGL/grimoirejs-gltf)",
+  "link" : "https://github.com/GrimoireGL/grimoirejs-gltf",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Hilo3d glTF loader",
   "description" : "WebGL engine\n\n[Doc](https://hiloteam.github.io/Hilo3d/docs/)",
-  "link" : "https://github.com/hiloteam/Hilo3d/blob/master/src/loader/GLTFLoader.js)",
+  "link" : "https://github.com/hiloteam/Hilo3d/blob/master/src/loader/GLTFLoader.js",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "A-Frame glTF loader",
   "description" : "WebGL engine\n\n[Doc](https://aframe.io/docs/0.7.0/components/gltf-model.html)",
-  "link" : "https://aframe.io/docs/0.6.0/components/gltf-model.html)",
+  "link" : "https://aframe.io/docs/0.6.0/components/gltf-model.html",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "xeogl glTF loader",
   "description" : "WebGL engine\n\n[Tutorial](http://xeogl.org/docs/classes/GLTFModel.html)",
-  "link" : "http://xeogl.org/examples/#importing_gltf_BoomBox)",
+  "link" : "http://xeogl.org/examples/#importing_gltf_BoomBox",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "ClayGL glTF loader",
   "description" : "WebGL engine\n\n[Examples](http://examples.claygl.xyz/)",
-  "link" : "http://docs.claygl.xyz/api/clay.application.App3D.html#loadModel)",
-  "task" : [ "import", "view" ],
-  "type" : [ "engine" ],
-  "inputs" : [ "glTF 2.0" ]
-}, {
-  "name" : "Verge3D glTF loader",
-  "description" : "WebGL engine",
-  "link" : "https://www.soft8soft.com/docs/examples/loaders/GLTFLoader.html)",
+  "link" : "http://docs.claygl.xyz/api/clay.application.App3D.html#loadModel",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
@@ -1444,14 +1458,14 @@
 }, {
   "name" : "CZPG glTF loader",
   "description" : "WebGL engine\n\n[Examples](http://princessgod.github.io/CraZyPG)",
-  "link" : "https://github.com/PrincessGod/CraZyPG/blob/master/src/loaders/GLTFLoader.js)",
+  "link" : "https://github.com/PrincessGod/CraZyPG/blob/master/src/loaders/GLTFLoader.js",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "PEX glTF loader",
   "description" : "WebGL engine",
-  "link" : "https://github.com/pex-gl/pex-gltf)",
+  "link" : "https://github.com/pex-gl/pex-gltf",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 1.0" ]
@@ -1465,14 +1479,14 @@
 }, {
   "name" : "xml3d.js glTF loader",
   "description" : "WebGL engine",
-  "link" : "https://github.com/xml3d/xml3d-gltf-plugin)",
+  "link" : "https://github.com/xml3d/xml3d-gltf-plugin",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 1.0" ]
 }, {
   "name" : "X3DOM glTF loader",
   "description" : "WebGL engine",
-  "link" : "https://github.com/x3dom/x3dom/blob/master/src/util/glTF/glTFLoader.js)",
+  "link" : "https://github.com/x3dom/x3dom/blob/master/src/util/glTF/glTFLoader.js",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 1.0" ]
@@ -1582,7 +1596,7 @@
 }, {
   "name" : "UX3D Engine",
   "description" : "Cross-platform multi-threaded Vulkan 3D Engine with glTF 2.0 import and export",
-  "link" : "http://www.ux3d.io/ux3d-engine/",
+  "link" : "https://www.ux3d.io/",
   "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
@@ -1771,7 +1785,7 @@
 }, {
   "name" : "Archilogic",
   "description" : "Web-based 3D platform for architecture and interiors",
-  "link" : "https://spaces.archilogic.com/blog/gltf-import-export",
+  "link" : "https://www.archilogic.com/",
   "type" : [ "application" ]
 }, {
   "name" : "Plex.Earth",
@@ -1823,7 +1837,7 @@
 }, {
   "name" : "notes",
   "description" : "Unreal adds glTF import capability",
-  "link" : "https://docs.unrealengine.com/en-us/Builds/4_19)",
+  "link" : "https://docs.unrealengine.com/en-us/Builds/4_19",
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
