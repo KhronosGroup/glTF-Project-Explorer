@@ -1,10 +1,13 @@
+os: linux
+dist: xenial
 language: node_js
 script:
   - yarn build
 deploy:
+  strategy: git
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  cleanup: true
+  token: $GITHUB_TOKEN
   keep_history: true
   on:
     branch: master
