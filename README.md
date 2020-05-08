@@ -1,6 +1,6 @@
 # gltf-project-explorer
 
-[![Build Status](https://travis-ci.org/KhronosGroup/glTF-Project-Explorer.svg?branch=master)](https://travis-ci.org/KhronosGroup/glTF-Project-Explorer)
+[![Build Status](https://travis-ci.com/KhronosGroup/glTF-Project-Explorer.svg?branch=master)](https://travis-ci.com/KhronosGroup/glTF-Project-Explorer)
 
 Tool to provide a filterable registry of glTF community projects.
 
