@@ -2085,4 +2085,13 @@
   "task" : [ "import" ],
   "type" : [ "application" ],
   "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Model Viewer for Flutter",
+  "description" : "A Flutter plugin for rendering interactive 3D models in the glTF and GLB formats.",
+  "link" : "https://github.com/drydart/model_viewer.dart",
+  "task" : [ "view" ],
+  "type" : [ "plugin", "library" ],
+  "license" : [ "Unlicense" ],
+  "language": [ "Dart" ],
+  "inputs" : [ "glTF 1.0", "glTF 2.0" ]
 } ]
