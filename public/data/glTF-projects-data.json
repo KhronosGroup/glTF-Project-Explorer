@@ -2085,4 +2085,15 @@
   "task" : [ "import" ],
   "type" : [ "application" ],
   "inputs" : [ "glTF 2.0" ]
-} ]
+}, {
+  "name" : "glTF-Transform",
+  "description" : "glTF 2.0 SDK for JavaScript, TypeScript, and Node.js",
+  "link" : "https://gltf-transform.donmccurdy.com/",
+  "license" : [ "MIT" ],
+  "task" : [ "edit", "import", "export" ],
+  "type" : [ "library", "sdk" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}
+]
