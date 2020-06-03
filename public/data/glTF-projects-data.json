@@ -2086,6 +2086,16 @@
   "type" : [ "application" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
+  "name" : "glTF-Transform",
+  "description" : "glTF 2.0 SDK for JavaScript, TypeScript, and Node.js",
+  "link" : "https://gltf-transform.donmccurdy.com/",
+  "license" : [ "MIT" ],
+  "task" : [ "edit", "import", "export" ],
+  "type" : [ "library", "sdk" ],
+  "language" : [ "JavaScript" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
   "name" : "Model Viewer for Flutter",
   "description" : "A Flutter plugin for rendering interactive 3D models in the glTF and GLB formats.",
   "link" : "https://github.com/drydart/model_viewer.dart",
@@ -2094,4 +2104,4 @@
   "license" : [ "Unlicense" ],
   "language": [ "Dart" ],
   "inputs" : [ "glTF 1.0", "glTF 2.0" ]
-} ]
+}]
