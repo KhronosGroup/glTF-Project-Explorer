@@ -1,4 +1,0 @@
-export enum ResultsActionTypes {
-  RECALCULATE_RESULTS = "RECALCULATE_RESULTS",
-  STORE_RESULTS = "STORE_RESULTS"
-}
