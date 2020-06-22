@@ -2095,5 +2095,14 @@
   "language" : [ "JavaScript" ],
   "inputs" : [ "glTF 2.0" ],
   "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "glTF Editor",
+  "description" : "glTF viewer and editor web application",
+  "link" : "https://www.gltfeditor.com/",
+  "task" : [ "edit", "view", "import", "export" ],
+  "type" : [ "application", "engine" ],
+  "language" : [ "TypeScript" ],
+  "inputs" : [ "OBJ", "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
 }
 ]
