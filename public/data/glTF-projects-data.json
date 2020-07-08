@@ -2104,4 +2104,54 @@
   "license" : [ "Unlicense" ],
   "language": [ "Dart" ],
   "inputs" : [ "glTF 1.0", "glTF 2.0" ]
-}]
+}, {
+  "name" : "glTF Editor",
+  "description" : "glTF viewer and editor web application",
+  "link" : "https://www.gltfeditor.com/",
+  "task" : [ "edit", "view", "import", "export" ],
+  "type" : [ "application", "engine" ],
+  "language" : [ "TypeScript" ],
+  "inputs" : [ "OBJ", "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "ProtoTech glTF Exporter For Inventor",
+  "description" : "Export Inventor model to GLTF and GLB files",
+  "link" : "https://prototechsolutions.com/3d-products/inventor/gltf-exporter/",
+  "task" : [ "export" ],
+  "type" : [ "plugin", "sdk" ],
+  "language" : [ "c#" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "ProtoTech glTF Exporter For Fusion 360",
+  "description" : "Export Fusion 360 model to GLTF and GLB files",
+  "link" : "https://prototechsolutions.com/3d-products/fusion-360/gltf-exporter/",
+  "task" : [ "export" ],
+  "type" : [ "plugin", "sdk" ],
+  "language" : [ "c#" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "ProtoTech glTF Exporter For Revit",
+  "description" : "Export Revit design to GLTF and GLB files",
+  "link" : "https://prototechsolutions.com/3d-products/revit/gltf-exporter/",
+   "task" : [ "export" ],
+  "type" : [ "plugin", "sdk" ],
+  "language" : [ "c#" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "ProtoTech glTF Exporter For SolidEdge",
+  "description" : "Export SolidEdge model to GLTF and GLB files",
+  "link" : "https://prototechsolutions.com/3d-products/solidedge/gltf-exporter/",
+  "task" : [ "export" ],
+  "type" : [ "plugin", "sdk" ],
+  "language" : [ "c#" ],
+  "outputs" : [ "glTF 2.0" ]
+ }, {
+  "name" : "ProtoTech glTF Exporter For SolidWorks",
+  "description" : "Export Solidworks model to GLTF and GLB files",
+  "link" : "https://prototechsolutions.com/3d-products/solidworks/gltf-exporter/",
+  "task" : [ "export" ],
+  "type" : [ "plugin", "sdk" ],
+  "language" : [ "c#" ],
+  "outputs" : [ "glTF 2.0" ]
+}
+]
