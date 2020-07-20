@@ -252,6 +252,16 @@
   "inputs" : [ "glTF 2.0" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
+  "name" : "glTFRuntime",
+  "description" : "Unreal Engine plugin for loading glTF assets at runtime",
+  "link" : "https://github.com/rdeioris/glTFRuntime/",
+  "task" : [ "load", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "plugin" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
   "name" : "Vulkan-glTF-PBR",
   "description" : "Physically-Based Rendering example implementation with image based lighting in Vulkan using glTF 2.0",
   "link" : "https://github.com/SaschaWillems/Vulkan-glTF-PBR",
