@@ -255,7 +255,7 @@
   "name" : "glTFRuntime",
   "description" : "Unreal Engine plugin for loading glTF assets at runtime",
   "link" : "https://github.com/rdeioris/glTFRuntime/",
-  "task" : [ "load", "runtime", "modding" ],
+  "task" : [ "load", "view" ],
   "license" : [ "MIT" ],
   "type" : [ "plugin" ],
   "language" : [ "C++" ],
