@@ -151,15 +151,6 @@
   "inputs" : [ "glTF 2.0" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "playcanvas-gltf",
-  "description" : "Adds glTF support to the PlayCanvas engine",
-  "link" : "https://github.com/playcanvas/playcanvas-gltf",
-  "task" : [ "load", "view" ],
-  "license" : [ "MIT" ],
-  "type" : [ "engine extension" ],
-  "language" : [ "JavaScript" ],
-  "inputs" : [ "glTF 2.0" ]
-}, {
   "name" : "glTFSceneKit",
   "description" : "glTF extension for Apple SceneKit",
   "link" : "https://github.com/3D4Medical/glTFSceneKit",
@@ -989,6 +980,13 @@
   "license" : [ "Multiple" ],
   "type" : [ "asset library" ],
   "inputs" : [ "Multiple", "glTF 2.0" ]
+}, {
+  "name" : "PlayCanvas glTF Viewer",
+  "description" : "Drag-and-drop online viewer for model preview and debugging, using PlayCanvas",
+  "link" : "https://playcanvas.com/viewer",
+  "task" : [ "load", "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "BabylonJS Sandbox",
   "description" : "Drag-and-drop online viewer for model preview and debugging, using BabylonJS",
