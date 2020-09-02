@@ -2161,5 +2161,13 @@
   "type" : [ "plugin", "sdk" ],
   "language" : [ "c#" ],
   "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "F3D",
+  "description" : "A fast and minimalist 3D viewer",
+  "link" : "https://kitware.github.io/F3D/",
+  "task" : [ "view" ],
+  "type" : [ "application" ],
+  "language" : [ "c++" ],
+  "inputs" : [ "glTF 2.0" ]
 }
 ]
