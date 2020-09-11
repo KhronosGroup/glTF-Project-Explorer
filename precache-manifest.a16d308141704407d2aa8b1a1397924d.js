@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1b931021694c4dc94fd02d49a2deb1ac",
+    "revision": "6b8db4fee883626306a1500c8235ce25",
     "url": "/glTF-Project-Explorer/index.html"
   },
   {
-    "revision": "16ca4ba9b12da6867810",
+    "revision": "17a225059cca9b6d9e25",
     "url": "/glTF-Project-Explorer/static/css/main.d6c572fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/glTF-Project-Explorer/static/js/2.49e1fd41.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "16ca4ba9b12da6867810",
-    "url": "/glTF-Project-Explorer/static/js/main.c1e40521.chunk.js"
+    "revision": "17a225059cca9b6d9e25",
+    "url": "/glTF-Project-Explorer/static/js/main.4a84c81f.chunk.js"
   },
   {
     "revision": "00935828b27f4bb01502",

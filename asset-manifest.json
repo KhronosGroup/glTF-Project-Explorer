@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/glTF-Project-Explorer/static/css/main.d6c572fb.chunk.css",
-    "main.js": "/glTF-Project-Explorer/static/js/main.c1e40521.chunk.js",
-    "main.js.map": "/glTF-Project-Explorer/static/js/main.c1e40521.chunk.js.map",
+    "main.js": "/glTF-Project-Explorer/static/js/main.4a84c81f.chunk.js",
+    "main.js.map": "/glTF-Project-Explorer/static/js/main.4a84c81f.chunk.js.map",
     "runtime-main.js": "/glTF-Project-Explorer/static/js/runtime-main.e9b6e753.js",
     "runtime-main.js.map": "/glTF-Project-Explorer/static/js/runtime-main.e9b6e753.js.map",
     "static/js/2.49e1fd41.chunk.js": "/glTF-Project-Explorer/static/js/2.49e1fd41.chunk.js",
     "static/js/2.49e1fd41.chunk.js.map": "/glTF-Project-Explorer/static/js/2.49e1fd41.chunk.js.map",
     "index.html": "/glTF-Project-Explorer/index.html",
-    "precache-manifest.adbc40858b7b2a0728bb65eebd27cce1.js": "/glTF-Project-Explorer/precache-manifest.adbc40858b7b2a0728bb65eebd27cce1.js",
+    "precache-manifest.a16d308141704407d2aa8b1a1397924d.js": "/glTF-Project-Explorer/precache-manifest.a16d308141704407d2aa8b1a1397924d.js",
     "service-worker.js": "/glTF-Project-Explorer/service-worker.js",
     "static/css/main.d6c572fb.chunk.css.map": "/glTF-Project-Explorer/static/css/main.d6c572fb.chunk.css.map",
     "static/js/2.49e1fd41.chunk.js.LICENSE.txt": "/glTF-Project-Explorer/static/js/2.49e1fd41.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.e9b6e753.js",
     "static/js/2.49e1fd41.chunk.js",
     "static/css/main.d6c572fb.chunk.css",
-    "static/js/main.c1e40521.chunk.js"
+    "static/js/main.4a84c81f.chunk.js"
   ]
 }
