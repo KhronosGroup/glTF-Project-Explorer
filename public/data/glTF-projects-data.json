@@ -832,8 +832,8 @@
   "language" : [ "JavaScript" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "qmuntal gltf",
-  "description" : "Go package for simple, efficient, and robust serialization/deserialization of glTF 2.0",
+  "name" : "Go glTF",
+  "description" : "The Go language implementation of glTF 2.0",
   "link" : "https://github.com/qmuntal/gltf",
   "task" : [ "import", "export", "validate" ],
   "license" : [ "BSD-2-Clause" ],
@@ -1687,12 +1687,6 @@
   "link" : "https://github.com/sturfeeinc/glTF",
   "language" : [ "Go" ],
   "inputs" : [ "glTF 1.0" ]
-}, {
-  "name" : "gltf 2.0",
-  "description" : "A Go glTF 2.0 writer, reader and validator",
-  "link" : "https://github.com/qmuntal/gltf",
-  "language" : [ "Go" ],
-  "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Loader",
   "description" : "A crate for loading glTF 2.0",
