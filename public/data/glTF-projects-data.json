@@ -81,24 +81,6 @@
   "language" : [ "Rust" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "libgltf",
-  "description" : "glTF 2.0 parser for C++11",
-  "link" : "https://github.com/code4game/libgltf",
-  "task" : [ "load" ],
-  "license" : [ "MIT" ],
-  "type" : [ "library" ],
-  "language" : [ "C++" ],
-  "inputs" : [ "glTF 2.0" ]
-}, {
-  "name" : "glTFForUE4",
-  "description" : "Toolkit for loading glTF for Unreal Engine 4",
-  "link" : "https://github.com/code4game/glTFForUE4",
-  "task" : [ "load" ],
-  "license" : [ "MIT" ],
-  "type" : [ "library" ],
-  "language" : [ "C#" ],
-  "inputs" : [ "glTF 2.0" ]
-}, {
   "name" : "lazy-gltf2",
   "description" : "Header-only C++11 glTF 2.0 loader",
   "link" : "https://github.com/dgough/lazy-gltf2",
@@ -1620,15 +1602,30 @@
   "language" : [ "C++" ],
   "inputs" : [ "glTF 1.0" ]
 }, {
+  "name" : "libgltf",
+  "description" : "glTF 2.0 parser for C++11",
+  "link" : "https://github.com/code4game/libgltf",
+  "task" : [ "load" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
   "name" : "libgltf_ue4",
   "description" : "A third-party library for UE4.10+ to load glTF files",
   "link" : "https://github.com/code4game/libgltf_ue4",
+  "task" : [ "load" ],
+  "license" : [ "MIT" ],
+  "type" : [ "library" ],
   "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "glTF for UE4",
-  "description" : "A plugin for UE4.10+ to import glTF files",
+  "description" : "A plugin to import glTF files for Unreal Engine 4.10+",
   "link" : "https://github.com/code4game/glTFForUE4",
+  "task" : [ "import", "load", "view" ],
+  "license" : [ "MIT" ],
+  "type" : [ "plugin" ],
   "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
