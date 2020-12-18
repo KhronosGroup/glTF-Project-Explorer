@@ -11,7 +11,7 @@
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
     "@types/react-redux": "^7.1.2",
-    "dompurify": "^2.0.6",
+    "dompurify": "^2.0.17",
     "gh-pages": "^2.1.1",
     "marked": "^0.7.0",
     "react": "^16.9.0",
