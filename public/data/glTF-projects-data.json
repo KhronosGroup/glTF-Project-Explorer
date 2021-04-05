@@ -2149,7 +2149,7 @@
 }, {
   "name": "Cesium for Unreal",
   "link": "https://cesium.com/platform/cesium-for-unreal/",
-  "description": "A plugin for the Unreal Engine that allows streaming assets from the cloud, using the 3D Tiles format that is based on glTF",
+  "description": "A plugin for the Unreal Engine that allows streaming assets from the cloud, using the 3D Tiles format that is based on glTF.",
   "task": ["view"],
   "type": ["plugin"],
   "license": ["Apache-2.0"],
@@ -2158,7 +2158,7 @@
 }, {
   "name": "Cesium Native",
   "link": "https://github.com/CesiumGS/cesium-native",
-  "description": "A base library for 3D geospatial applications, including lightweight glTF serialization and deserialization",
+  "description": "A base library for 3D geospatial applications, including lightweight glTF serialization and deserialization.",
   "task": ["load", "import", "export"],
   "type": ["library"],
   "license": ["Apache-2.0"],
@@ -2168,7 +2168,7 @@
 }, {
   "name": "CesiumJS",
   "link": "https://cesium.com/platform/cesiumjs/",
-  "description": "A library for creating geospatial web applications, and visualize data in the 3D Tiles format that is based on glTF",
+  "description": "A library for creating geospatial web applications that can load and visualize glTF assets in a geospatial context.",
   "task": ["view"],
   "type": ["library", "application"],
   "license": ["Apache-2.0"],
@@ -2177,13 +2177,13 @@
 }, {
   "name": "Cesium ion",
   "link": "https://cesium.com/platform/cesium-ion/",
-  "description": "A platform for hosting, optimizing, and streaming massive amounts of geospatial data, using the 3D Tiles format that is based on glTF",
+  "description": "A platform for hosting, optimizing, and streaming massive amounts of geospatial data. It can import glTF and other file formats, and convert them into the 3D Tiles format for efficient streaming and rendering.",
   "task": ["import", "optimize"],
   "type": ["web-api"],
   "inputs": ["glTF 1.0", "glTF 2.0", "FBX", "CityGML", "CZML", "KML", "LAS", "LAZ", "DAE", "OBJ", "FLT", "ASC", "SRC", "TIFF", "DEM", "JPG", "PNG", "TERRAINDB"],
   "outputs": ["3D Tiles", "glTF 2.0"]
 }, {
-  "name": "Cesium gltf-pipeline",
+  "name": "gltf-pipeline",
   "link": "https://github.com/CesiumGS/gltf-pipeline",
   "description": "A content pipeline for converting, optmizing, and compressing glTF assets",
   "task": ["import", "optimize", "export"],
