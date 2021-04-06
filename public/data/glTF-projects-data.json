@@ -1,4 +1,12 @@
-[ {
+[ 
+  {
+  "name" : "Onirix",
+  "description" : "Augmented Reality Web Platform. Provides a CMS and SDKs to easily create AR experiences.",
+  "link" : "https://www.onirix.com/",
+  "task" : [ "view" ],
+  "type" : [ "web application" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
   "name" : "flatGLTF",
   "description" : "Flatbuffers-based glTF 2.0 asset API.",
   "link" : "https://github.com/KageKirin/flatGLTF",
