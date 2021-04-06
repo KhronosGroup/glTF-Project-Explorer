@@ -2200,5 +2200,14 @@
   "language": ["JavaScript"],
   "inputs": ["glTF 1.0", "glTF 2.0" ],
   "outputs": ["glTF 2.0"]
+}, {
+  "name": "gltf-codec",
+  "link": "https://hackage.haskell.org/package/gltf-codec",
+  "description": "Haskell library for loading glTF 2.0 files in JSON and binary formats.",
+  "task": ["load"],
+  "type": ["library"],
+  "license": ["MIT"],
+  "language": ["Haskell"],
+  "inputs": ["glTF 2.0"]
 }
 ]
