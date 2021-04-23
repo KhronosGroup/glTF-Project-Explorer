@@ -5,12 +5,12 @@ import { IRecalculateResultsAction, IStoreResultsAction } from "./Interfaces";
 export function storeResults(results: IProjectInfo[]): IStoreResultsAction {
   return {
     type: ResultsActionTypes.STORE_RESULTS,
-    results
+    results,
   };
 }
 
 export function recalculateResults(): IRecalculateResultsAction {
   return {
-    type: ResultsActionTypes.RECALCULATE_RESULTS
+    type: ResultsActionTypes.RECALCULATE_RESULTS,
   };
 }

@@ -4,7 +4,7 @@ import { ResultsActionTypes } from "./Types";
 
 export function results(
   state: IResultsState = {
-    values: []
+    values: [],
   },
   action: ResultsActions
 ) {

@@ -5,7 +5,7 @@ import { IProjectsState } from "../../interfaces/IAppState";
 export function projects(
   state: IProjectsState = {
     isFetchingProjects: false,
-    values: []
+    values: [],
   },
   action: ProjectsActions
 ) {

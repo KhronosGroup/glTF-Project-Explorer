@@ -1,14 +1,14 @@
 import {
   IRequestProjectsAction,
   ISuccessfulProjectsAction,
-  IFailedProjectsAction
+  IFailedProjectsAction,
 } from "./Interfaces";
 import { ProjectsActionTypes } from "./Types";
 import { IProjectInfo } from "../../interfaces/IProjectInfo";
 
 export function requestProjects(): IRequestProjectsAction {
   return {
-    type: ProjectsActionTypes.PROJECTS_REQUESTED
+    type: ProjectsActionTypes.PROJECTS_REQUESTED,
   };
 }
 
@@ -17,13 +17,13 @@ export function successfulProjects(
 ): ISuccessfulProjectsAction {
   return {
     type: ProjectsActionTypes.PROJECTS_SUCCESSFUL,
-    projects
+    projects,
   };
 }
 
 export function failedProjects(error: Error): IFailedProjectsAction {
   return {
     type: ProjectsActionTypes.PROJECTS_FAILED,
-    error: error
+    error: error,
   };
 }

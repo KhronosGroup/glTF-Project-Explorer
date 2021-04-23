@@ -18,7 +18,7 @@ const ProjectList: React.FC<IProjectListProps> = props => {
 
 function mapStateToProps(state: IAppState): IProjectListProps {
   const {
-    results: { values: projects }
+    results: { values: projects },
   } = state;
 
   return { projects };
