@@ -2209,5 +2209,13 @@
   "license": ["MIT"],
   "language": ["Haskell"],
   "inputs": ["glTF 2.0"]
+}, {
+  "name": "Unreal4Web",
+  "link": "https://animech.com/en/unreal4web-2/",
+  "description": "A plugin that exports 3D models from the Unreal Engine as glTF assets",
+  "task": ["export"],
+  "type": ["plugin"],
+  "inputs" : [ "Multiple" ],
+  "outputs": ["glTF 2.0"]
 }
 ]
