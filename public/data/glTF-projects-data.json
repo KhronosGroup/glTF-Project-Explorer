@@ -1,4 +1,4 @@
-[ 
+[
   {
   "name" : "Onirix",
   "description" : "Augmented Reality Web Platform. Provides a CMS and SDKs to easily create AR experiences.",
@@ -2209,5 +2209,14 @@
   "license": ["MIT"],
   "language": ["Haskell"],
   "inputs": ["glTF 2.0"]
+}, {
+  "name": "Emersya",
+  "link": "https://emersya.com/en/home",
+  "description": "Authoring Platform for online 3D & AR product visualization, customization and collaborative product development ",
+  "task": ["view", "import", "export", "load", "edit", "embed"],
+  "type": ["viewer", "embeddable", "service"],
+  "language": ["JavaScript"],
+  "inputs": ["Multiple", "glTF 2.0", "DAE", "FBX", "OBJ", "STP", "IGS"],
+  "outputs": ["glTF 2.0","usdz"]
 }
 ]
