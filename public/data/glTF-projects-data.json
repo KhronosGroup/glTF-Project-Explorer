@@ -2210,7 +2210,7 @@
   "outputs": ["glTF 2.0"]
 }, {
   "name": "Zea Engine glTF loader",
-  "link": "http://example.com",
+  "link": "https://github.com/ZeaInc/gltf-loader",
   "description": "The glTF loader enables loading of glTF, glTF Binary, and glTF Draco files into Zea Engine.",
   "task": ["view", "import"],
   "type": ["plugin"],
