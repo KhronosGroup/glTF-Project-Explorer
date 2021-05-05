@@ -736,7 +736,7 @@
   "task" : [ "export" ],
   "type" : [ "application" ],
   "language" : [ "MATLAB" ],
-  "inputs" : [ "DWG" , "IPT" , "IAM" , "PRT" , "ASM" , "RVT" , "PAR" , "SLDPRT" , "SLDASM" , "3MF" , "SAT" , "SAB" , "ASAT" , "ASAB" , "DXF" , "CATPART" , "CATPRODUCT" , "MPHTXT" , "MPHBIN" , "IGS" , "IGES" , "PRT" , "X_T" , "X_B" , "XMT_TXT" , "XMT_BIN" , "STEP" , "STL" , "GDS" , "VRML" , "WRL" , "CVG" , "XML" , "ZIP" , "TAR" , "TGZ" , "TAR.GZ" , "DEM" ],
+  "inputs" : [ "DWG" , "IPT" , "IAM" , "ASM" , "RVT" , "PAR" , "SLDPRT" , "SLDASM" , "3MF" , "SAT" , "SAB" , "ASAT" , "ASAB" , "DXF" , "CATPART" , "CATPRODUCT" , "MPHTXT" , "MPHBIN" , "IGS" , "IGES" , "PRT" , "X_T" , "X_B" , "XMT_TXT" , "XMT_BIN" , "STEP" , "STL" , "GDS" , "VRML" , "WRL" , "CVG" , "XML" , "ZIP" , "TAR" , "TGZ" , "TAR.GZ" , "DEM" ],
   "outputs" : [ "Multiple", "glTF 2.0" ]
 }, {
   "name" : "BIMData.io",
@@ -2209,5 +2209,13 @@
   "license": ["MIT"],
   "language": ["Haskell"],
   "inputs": ["glTF 2.0"]
+}, {
+  "name": "Unreal4Web",
+  "link": "https://animech.com/en/unreal4web-2/",
+  "description": "A plugin that exports 3D models from the Unreal Engine as glTF assets",
+  "task": ["export"],
+  "type": ["plugin"],
+  "inputs" : [ "Multiple" ],
+  "outputs": ["glTF 2.0"]
 }
 ]
