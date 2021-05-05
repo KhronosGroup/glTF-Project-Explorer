@@ -2217,5 +2217,44 @@
   "type": ["plugin"],
   "inputs" : [ "Multiple" ],
   "outputs": ["glTF 2.0"]
+}, {
+  "name": "Zea Engine glTF loader",
+  "link": "http://example.com",
+  "description": "The glTF loader enables loading of glTF, glTF Binary, and glTF Draco files into Zea Engine.",
+  "task": ["view", "import"],
+  "type": ["plugin"],
+  "license": ["MIT"],
+  "language": ["JavaScript"],
+  "inputs": ["glTF 2.0"]
+}, {
+  "name": "Unreal Datasmith",
+  "link": "https://www.unrealengine.com/marketplace/en-US/product/unreal-datasmith",
+  "description": "Workflow tools to import data in various formats, including glTF, into Unreal Engine.",
+  "task": ["view", "import"],
+  "type": ["plugin"],
+  "inputs": ["glTF 2.0", "3DREP", "3DXML", "ASM", "C4D", "CATPART", "CATPRODUCT", "CGR", "CREO", "DWG", "FBX", "FBX", "GLTF", "IAM", "IFC", "IGES", "IGS", "IPT", "JT", "NEU", "PLMXML", "PRT", "SAT", "SLDASM", "SLDPRT", "STEP", "STP", "UDATASMITH", "WIRE", "XML", "X_T"]
+}, {
+  "name": "Unreal glTF Exporter",
+  "link": "https://www.unrealengine.com/marketplace/en-US/product/gltf-exporter",
+  "description": "An Unreal Editor plugin that allows exporting selected actors, selected assets or a full level into glTF files.",
+  "task": ["export"],
+  "type": ["plugin"],
+  "outputs": ["glTF 2.0"]
+}, {
+  "name": "NVIDIA DesignWorks vk_raytrace sample",
+  "link": "https://github.com/nvpro-samples/vk_raytrace",
+  "description": "A glTF 2.0 sample viewer using Vulkan ray tracing, using tinygltf to load glTF 2.0 assets",
+  "task": ["view"],
+  "type": ["application", "demo"],
+  "license": ["(custom)"],
+  "language": ["C++"],
+  "inputs": ["glTF 2.0"]
+}, {
+  "name": "NVIDIA Omniverse",
+  "link": "https://docs.omniverse.nvidia.com/",
+  "description": "An editing, rendering and analysis tool, which can connect to different content creation applications, and import glTF.",
+  "task": ["view", "import", "export", "analyze"],
+  "type": ["application"],
+  "inputs": ["glTF 2.0", "Multiple"]
 }
 ]
