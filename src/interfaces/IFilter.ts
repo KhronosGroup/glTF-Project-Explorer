@@ -18,7 +18,7 @@ export function createNewFilter(
 ): IFilter {
   return {
     dimension,
-    value
+    value,
     // selected: false
   };
 }

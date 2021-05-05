@@ -6,5 +6,5 @@ import { results } from "./results/Reducers";
 export default combineReducers({
   projects,
   filters,
-  results
+  results,
 });

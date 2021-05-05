@@ -113,7 +113,7 @@ export function* applyFilters() {
   ] = yield all([
     select(projectSelectors.getProjects),
     select(filterSelectors.getSelectedFilters),
-    select(filterSelectors.getTitleSubstring)
+    select(filterSelectors.getTitleSubstring),
   ]);
 
   const filteredResults = applyTagFilters(projects, selectedFilters);

@@ -34,16 +34,16 @@ const SearchBar: React.FC<ISearchBarProps> = props => {
 
 function mapStateToProps(state: IAppState) {
   const {
-    filters: { titleSubstring }
+    filters: { titleSubstring },
   } = state;
 
   return {
-    titleSubstring
+    titleSubstring,
   };
 }
 
 const mapDispatchToProps = {
-  updateTitleSubstringFilter
+  updateTitleSubstringFilter,
 };
 
 export default connect(

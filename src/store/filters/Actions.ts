@@ -1,7 +1,7 @@
 import {
   IUpdateFiltersAction,
   IUpdateSelectedFiltersAction,
-  IUpdateTitleSubstringFilterAction
+  IUpdateTitleSubstringFilterAction,
 } from "./Interfaces";
 import { FilterActionTypes } from "./Types";
 import { IFilter } from "../../interfaces/IFilter";
@@ -21,7 +21,7 @@ export function updateFilters(
     licenses,
     languages,
     tags,
-    titleSubstring
+    titleSubstring,
   };
 }
 
@@ -32,7 +32,7 @@ export function updateSelectedFilters(
   selected = new Set(selected);
   return {
     type: FilterActionTypes.UPDATE_SELECTED_FILTERS,
-    selected
+    selected,
   };
 }
 
@@ -41,6 +41,6 @@ export function updateTitleSubstringFilter(
 ): IUpdateTitleSubstringFilterAction {
   return {
     type: FilterActionTypes.UPDATE_TITLE_SUBSTRING_FILTER,
-    titleSubstring
+    titleSubstring,
   };
 }

@@ -10,7 +10,7 @@ export function filters(
     languages: [],
     tags: [],
     titleSubstring: "",
-    selected: new Set()
+    selected: new Set(),
   },
   action: FiltersActions
 ) {
@@ -23,17 +23,17 @@ export function filters(
         licenses: action.licenses,
         languages: action.languages,
         tags: action.tags,
-        titleSubstring: action.titleSubstring
+        titleSubstring: action.titleSubstring,
       };
     case FilterActionTypes.UPDATE_SELECTED_FILTERS:
       return {
         ...state,
-        selected: action.selected
+        selected: action.selected,
       };
     case FilterActionTypes.UPDATE_TITLE_SUBSTRING_FILTER:
       return {
         ...state,
-        titleSubstring: action.titleSubstring
+        titleSubstring: action.titleSubstring,
       };
     default:
       return state;

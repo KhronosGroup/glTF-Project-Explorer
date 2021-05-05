@@ -25,7 +25,7 @@ const FilterBar: React.FC<IFilterBarProps> = props => {
     languageFilters,
     selectedFilters,
     tagFilters,
-    updateSelectedFilters
+    updateSelectedFilters,
   } = props;
 
   const [isVisible, setIsVisible] = useState(false);
@@ -109,8 +109,8 @@ function mapStateToProps(state: IAppState) {
       licenses: licenseFilters,
       languages: languageFilters,
       tags: tagFilters,
-      selected: selectedFilters
-    }
+      selected: selectedFilters,
+    },
   } = state;
 
   return {
@@ -119,12 +119,12 @@ function mapStateToProps(state: IAppState) {
     licenseFilters,
     languageFilters,
     tagFilters,
-    selectedFilters
+    selectedFilters,
   };
 }
 
 const mapDispatchToProps = {
-  updateSelectedFilters
+  updateSelectedFilters,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(FilterBar);
