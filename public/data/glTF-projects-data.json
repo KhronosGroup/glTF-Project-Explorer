@@ -307,15 +307,6 @@
   "language" : [ "TypeScript" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "blackthread.io",
-  "description" : "Web application for converting files to glTF, based on three.js",
-  "link" : "https://blackthread.io/gltf-converter/",
-  "task" : [ "convert" ],
-  "type" : [ "web application" ],
-  "language" : [ "JavaScript" ],
-  "inputs" : [ "3MF", "AMF", "FBX", "OBJ", "glTF 1.0", "glTF 2.0", "COLLADA", "PCD", "PLY", "STL" ],
-  "outputs" : [ "glTF 2.0" ]
-}, {
   "name" : "vectary",
   "description" : "Online application for creating 3D content",
   "link" : "https://www.vectary.com/",
