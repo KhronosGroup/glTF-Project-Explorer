@@ -2256,5 +2256,32 @@
   "language": ["JavaScript"],
   "inputs": ["Multiple", "glTF 2.0", "DAE", "FBX", "OBJ", "STP", "IGS"],
   "outputs": ["glTF 2.0","usdz"]
+}, {
+  "name": "Spark AR Studio",
+  "link": "https://sparkar.facebook.com/ar-studio/",
+  "description": "A tool for creating interactive augmented reality projects, that allows integrating glTF assets directly from [Sketchfab](https://sketchfab.com/)",
+  "task": ["view", "import"],
+  "type": ["application"],
+  "inputs": ["glTF 2.0", "FBX", "DAE", "OBJ"]
+}, {
+  "name": "Asobo Studio - Microsoft Flight Simulator glTF Exporter for 3ds Max",
+  "link": "https://github.com/AsoboStudio/FlightSim-glTF-exporter",
+  "description": "A fork of the BabylonJS 3ds Max exporter that exports glTF assets for the Microsoft Flight Simulator, using materials that are based on the Asobo glTF extensions",
+  "task": ["export"],
+  "type": ["plugin"],
+  "license": ["Apache-2.0"],
+  "language": ["C#"],
+  "inputs": ["Multiple"],
+  "outputs": ["glTF 2.0"]
+}, {
+  "name": "Blender2MSFS toolkit",
+  "link": "https://www.fsdeveloper.com/wiki/index.php?title=Blender2MSFS",
+  "description": "A Blender addon for creating glTF assets for the Microsoft Flight Simulator",
+  "task": ["export"],
+  "type": ["plugin"],
+  "license": ["Apache-2.0"],
+  "language": ["Python"],
+  "inputs": ["Multiple"],
+  "outputs": ["glTF 2.0"]
 }
 ]
