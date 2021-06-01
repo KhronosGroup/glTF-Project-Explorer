@@ -2283,5 +2283,44 @@
   "language": ["Python"],
   "inputs": ["Multiple"],
   "outputs": ["glTF 2.0"]
+}, {
+  "name": "Poimandres Market",
+  "link": "https://market.pmnd.rs/",
+  "description": "A repository of free, ready-to-use low-poly public-domain glTF models",
+  "type": ["model-repository"],
+  "license": ["CC0"],
+  "outputs": ["glTF 2.0"]
+}, {
+  "name": "Nomad Sculpt",
+  "link": "https://nomadsculpt.com/",
+  "description": "A sculpting and painting mobile application with glTF import and export",
+  "task": ["import", "view", "edit", "export"],
+  "type": ["application"],
+  "inputs": ["glTF 2.0", "OBJ", "STL"],
+  "outputs": ["glTF 2.0", "OBJ", "STL"]
+}, {
+  "name": "Spiraloid 3D Comic Toolkit for Blender",
+  "link": "https://github.com/spiraloid/Spiraloid-Toolkit-for-Blender-3DComicToolkit",
+  "description": "A Blender addon for creating 3D comics, where each scene is a glTF asset",
+  "task": ["export"],
+  "type": ["plugin"],
+  "language": ["Python"],
+  "outputs": ["glTF 2.0"]
+}, {
+  "name": "ReadyPlayerMe",
+  "link": "https://readyplayer.me/",
+  "description": "A customizable avatar creator for games and VR, with glTF export. Offers integrations for web applications, as well as plugins for Unity and Unreal.",
+  "task": ["export"],
+  "type": ["application", "plugin"],
+  "outputs": ["glTF 2.0"]
+}, {
+  "name": "V-Ray glTF viewer",
+  "link": "https://github.com/ChaosGroup/vray_gltf",
+  "description": "A set of Python scripts for the V-Ray App SDK for parsing and rendering glTF",
+  "task": ["load", "view", "import"],
+  "type": ["application", "library"],
+  "license": ["MIT"],
+  "language": ["Python"],
+  "inputs": ["glTF 2.0"]
 }
 ]
