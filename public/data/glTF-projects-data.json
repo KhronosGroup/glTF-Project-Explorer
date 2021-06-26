@@ -1340,7 +1340,7 @@
   "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Adobe Substance 3D Stager",
-  "description" : "Stager allows users to easily build and render photo-real scenes. Export to glTF/GLB or use the Publish feature to share your scene on the web.",
+  "description" : "Build and assemble 3D scenes in this intuitive staging tool. Set up assets, materials, lights, and cameras. Export and share media, from images to web and AR experiences.",
   "link" : "https://www.adobe.com/products/substance3d-stager.html",
   "task" : [ "import", "export" ],
   "inputs" : [ "FBX", "STL", "SKP", "OBJ", "glTF 2.0", "GLB" ],
