@@ -2322,5 +2322,12 @@
   "license": ["MIT"],
   "language": ["Python"],
   "inputs": ["glTF 2.0"]
+}, {
+  "name": "Virtual Try-On",
+  "link": "https://tryon.technology/",
+  "description": "Introducing virtual try-on for rings, bracelets, and watches. Benefit from the state-of-the-art, real-time rendering of fine jewelry combining with the cutting-edge AR technology.",
+  "task": ["view", "virtual try-on", "augmented reality"],
+  "type": ["application", "service"],
+  "inputs": ["glTF 2.0", "KTX 2.0"]
 }
 ]
