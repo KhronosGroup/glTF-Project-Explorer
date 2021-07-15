@@ -2329,5 +2329,12 @@
   "task": ["view"],
   "type": ["application", "service"],
   "inputs": ["glTF 2.0", "KTX 2.0"]
+}, {
+  "name": "Dassault Systèmes 3DEXCITE ",
+  "link": "https://www.3ds.com/products-services/3dexcite",
+  "description": "A cloud-based marketing content creation platform with glTF export.\n\nThe glTF export was announced in https://twitter.com/bsfea/status/1397120960873078784",
+  "task": ["export"],
+  "type": ["application", "service"],
+  "outputs": ["glTF 2.0"]
 }
 ]
