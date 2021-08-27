@@ -466,7 +466,7 @@
   "language" : [ "JavaScript" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "glTFast",
+  "name" : "Unity glTFast",
   "description" : "Unity Plug-In for loading glTF 3D files at runtime",
   "link" : "https://github.com/atteneder/glTFast",
   "task" : [ "import" ],
