@@ -467,9 +467,9 @@
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Unity glTFast",
-  "description" : "Unity Plug-In for loading glTF 3D files at runtime",
+  "description" : "Unity package for loading glTF files at runtime or import them into the asset database in the Editor",
   "link" : "https://github.com/atteneder/glTFast",
-  "task" : [ "import" ],
+  "task" : [ "load", "import" ],
   "license" : [ "MIT" ],
   "type" : [ "plugin" ],
   "language" : [ "C#" ],
