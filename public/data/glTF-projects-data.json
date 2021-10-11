@@ -2344,6 +2344,14 @@
   "type": ["application", "service"],
   "outputs": ["glTF 2.0"]
 }, {
+  "name": "rgl2gltf",
+  "link": "https://github.com/dmurdoch/rgl2gltf",
+  "description": "An R package with functions to read and write `.gltf` and `.glb` files.",
+  "task": ["view", "import", "export"],
+  "type": ["library"],
+  "outputs": ["glTF 2.0", "Multiple"],
+  "language" : [ "R" ]
+}, {
   "name": "gltf.report",
   "link": "https://gltf.report/",
   "description": "A website that allows viewing, validating and inspecting glTF assets, analyzing their memory requirements, and exporting them with different compression settings",
