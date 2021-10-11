@@ -2337,7 +2337,7 @@
   "type": ["application", "service"],
   "inputs": ["glTF 2.0", "KTX 2.0"]
 }, {
-  "name": "Dassault Systèmes 3DEXCITE ",
+  "name": "Dassault Systèmes 3DEXCITE",
   "link": "https://www.3ds.com/products-services/3dexcite",
   "description": "A cloud-based marketing content creation platform with glTF export.\n\nThe glTF export was announced in https://twitter.com/bsfea/status/1397120960873078784",
   "task": ["export"],
@@ -2351,5 +2351,13 @@
   "type": ["library"],
   "outputs": ["glTF 2.0", "Multiple"],
   "language" : [ "R" ]
+}, {
+  "name": "gltf.report",
+  "link": "https://gltf.report/",
+  "description": "A website that allows viewing, validating and inspecting glTF assets, analyzing their memory requirements, and exporting them with different compression settings",
+  "task": ["view", "analyze", "optimize", "validate", "export"],
+  "type": ["web-application"],
+  "inputs": ["glTF 2.0"],
+  "outputs": ["glTF 2.0"]
 }
 ]
