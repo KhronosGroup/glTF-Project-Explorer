@@ -466,10 +466,10 @@
   "language" : [ "JavaScript" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "glTFast",
-  "description" : "Unity Plug-In for loading glTF 3D files at runtime",
+  "name" : "Unity glTFast",
+  "description" : "Unity package for loading glTF files at runtime or import them into the asset database in the Editor",
   "link" : "https://github.com/atteneder/glTFast",
-  "task" : [ "import" ],
+  "task" : [ "load", "import" ],
   "license" : [ "MIT" ],
   "type" : [ "plugin" ],
   "language" : [ "C#" ],
@@ -2337,11 +2337,27 @@
   "type": ["application", "service"],
   "inputs": ["glTF 2.0", "KTX 2.0"]
 }, {
-  "name": "Dassault Systèmes 3DEXCITE ",
+  "name": "Dassault Systèmes 3DEXCITE",
   "link": "https://www.3ds.com/products-services/3dexcite",
   "description": "A cloud-based marketing content creation platform with glTF export.\n\nThe glTF export was announced in https://twitter.com/bsfea/status/1397120960873078784",
   "task": ["export"],
   "type": ["application", "service"],
+  "outputs": ["glTF 2.0"]
+}, {
+  "name": "rgl2gltf",
+  "link": "https://github.com/dmurdoch/rgl2gltf",
+  "description": "An R package with functions to read and write `.gltf` and `.glb` files.",
+  "task": ["view", "import", "export"],
+  "type": ["library"],
+  "outputs": ["glTF 2.0", "Multiple"],
+  "language" : [ "R" ]
+}, {
+  "name": "gltf.report",
+  "link": "https://gltf.report/",
+  "description": "A website that allows viewing, validating and inspecting glTF assets, analyzing their memory requirements, and exporting them with different compression settings",
+  "task": ["view", "analyze", "optimize", "validate", "export"],
+  "type": ["web-application"],
+  "inputs": ["glTF 2.0"],
   "outputs": ["glTF 2.0"]
 }
 ]
