@@ -1957,22 +1957,22 @@
   "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Datakit CrossManager",
-  "description" : "File converter. Supports multiple 3D formats inputs and outputs, including glTF output. Graphical interface or command-line",
+  "description" : "File converter. Supports multiple 3D formats inputs and outputs, including glTF input and output. Graphical interface or command-line",
   "link" : "https://www.datakit.com/en/cross_manager.php",
-  "task" : [ "convert", "export" ],
+  "task" : [ "convert", "import", "export" ],
   "type" : [ "application", "engine" ],
   "language" : [ "Python", "Command-line" ],
-  "inputs" : [ "3Shape", "ACIS", "CADDS", "CATIA V4", "CATIA V5", "CATIA V6", "3DEXPERIENCE", "CEREC", "CGR", "Creo View", "DWG", "DXF", "IFC", "IGES", "Inventor", "JT", "OBJ", "Parasolid", "PLMXML", "Procera", "ProEngineer", "Creo Parametric", "Revit", "Rhino", "Robcad", "Solid Edge", "SOLIDWORKS", "STEP", "STL", "UNIGRAPHICS", "NX", "VDA" ],
-  "outputs" : [ "3DXML", "3MF", "ACIS", "CADDS", "CATIA V4", "CATIA V5", "CGR", "COLLADA", "DXF", "EMF", "FBX", "glTF 2.0", "IGES", "JT", "OBJ", "Open CASCADE", "Parasolid", "PDF", "3DPDF", "PRC", "Robcad", "SOLIDWORKS", "STEP", "STL", "NX", "Unisurf", "VDA", "VRML" ]
+  "inputs" : [ "3DVIA / CATIA / SOLIDWORKS Composer", "3Shape", "ACIS", "CADDS", "CATIA V4", "CATIA V5", "CATIA V6", "3DEXPERIENCE", "CEREC", "CGR", "Creo View", "DWG", "DXF", "FBX', "glTF 2.0", "IFC", "IGES", "Inventor", "JT", "OBJ", "Parasolid", "PLMXML", "Procera", "ProEngineer", "Creo Parametric", "Revit", "Rhino", "Robcad", "Solid Edge", "SOLIDWORKS", "STEP", "STL", "UNIGRAPHICS", "NX", "VDA" ],
+  "outputs" : [ "3DXML", "3MF", "ACIS", "CADDS", "CATIA V4", "CATIA V5", "CGR", "COLLADA", "DXF", "EMF", "FBX", "glTF 2.0", "IFC", "IGES", "JT", "OBJ", "Open CASCADE", "Parasolid", "PDF", "3DPDF", "PRC", "Robcad", "SOLIDWORKS", "STEP", "STL", "NX", "Unisurf", "VDA", "VRML" ]
 }, {
   "name" : "Datakit CrossCad/Ware SDK",
-  "description" : "A library to write glTF or glb files. Can also read and write multiple 3D formats",
+  "description" : "A library to read and write glTF or glb files. Can also read and write multiple 3D formats",
   "link" : "https://www.datakit.com/en/crosscad_ware.php",
-  "task" : [ "export" ],
+  "task" : [ "import", "export" ],
   "type" : [ "library" ],
   "language" : [ "C++" ],
-  "inputs" : [ "3Shape", "ACIS", "CADDS", "CATIA V4", "CATIA V5", "CATIA V6", "3DEXPERIENCE", "Cercon", "CEREC", "CGR", "Creo View", "DWG", "DXF", "IFC", "IGES", "Inventor", "JT", "LAVA", "OBJ", "Parasolid", "PLMXML", "Procera", "ProEngineer", "Creo Parametric", "Revit", "Rhino", "Solid Edge", "SOLIDWORKS", "STEP", "STL", "UNIGRAPHICS", "NX", "VDA" ],
-  "outputs" : [ "3DXML", "3MF", "ACIS", "CATIA V5", "CGR", "COLLADA", "FBX", "glTF 2.0", "IGES", "JT", "OBJ", "Open CASCADE", "Parasolid", "3DPDF", "PRC", "SOLIDWORKS", "STEP", "STL", "NX" ]
+  "inputs" : [ "3DVIA / CATIA / SOLIDWORKS Composer", "3Shape", "ACIS", "CADDS", "CATIA V4", "CATIA V5", "CATIA V6", "3DEXPERIENCE", "Cercon", "CEREC", "CGR", "Creo View", "DWG", "DXF", "FBX", "glTF 2.0", "IFC", "IGES", "Inventor", "JT", "LAVA", "OBJ", "Parasolid", "PLMXML", "Procera", "ProEngineer", "Creo Parametric", "Revit", "Rhino", "Solid Edge", "SOLIDWORKS", "STEP", "STL", "UNIGRAPHICS", "NX", "VDA" ],
+  "outputs" : [ "3DXML", "3MF", "ACIS", "CATIA V5", "CGR", "COLLADA", "FBX", "glTF 2.0", "IFC", "IGES", "JT", "OBJ", "Open CASCADE", "Parasolid", "3DPDF", "PRC", "SOLIDWORKS", "STEP", "STL", "NX" ]
 }, {
   "name" : "forge-convert-utils",
   "description" : "Node.js library and CLI tool for converting Autodesk Forge content to glTF.",
