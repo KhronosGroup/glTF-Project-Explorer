@@ -2164,7 +2164,7 @@
 }, {
   "name" : "F3D",
   "description" : "A fast and minimalist 3D viewer",
-  "link" : "https://kitware.github.io/F3D/",
+  "link" : "https://f3d-app.github.io/f3d/",
   "task" : [ "view" ],
   "type" : [ "application" ],
   "language" : [ "c++" ],
