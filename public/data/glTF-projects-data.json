@@ -1833,10 +1833,11 @@
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Godot Game Engine",
-  "description" : "Godot 3.0 fully supports glTF import",
+  "description" : "Version 3.2+ has support for glTF import. Version 3.4+ has support for glTF export.",
   "link" : "https://godotengine.org/",
   "type" : [ "engine" ],
-  "inputs" : [ "glTF 2.0" ]
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "jMonkeyEngine",
   "description" : "jME 3.2 supports glTF 2.0",
