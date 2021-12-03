@@ -1836,7 +1836,7 @@
   "description" : "Version 3.2+ has support for glTF import. Version 3.4+ has support for glTF export.",
   "link" : "https://godotengine.org/",
   "type" : [ "engine" ],
-  "inputs" : [ "glTF 2.0" ],
+  "inputs" : [ "glTF 2.0", "OBJ", "FBX", "COLLADA" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "jMonkeyEngine",
