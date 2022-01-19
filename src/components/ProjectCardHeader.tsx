@@ -1,11 +1,10 @@
-import React from "react";
 import { IProjectInfo } from "../interfaces/IProjectInfo";
 
 interface IProjectCardHeader {
   project: IProjectInfo;
 }
 
-const ProjectCardHeader: React.FC<IProjectCardHeader> = props => {
+const ProjectCardHeader: React.FC<IProjectCardHeader> = (props) => {
   const { project } = props;
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { IFilter } from "../interfaces/IFilter";
 import { determineClassName } from "../utils/FilterHelpers";
 import "./FilterBarOptions.css";
@@ -9,7 +9,7 @@ export interface IFilterBarOptionsProps {
   addAction: (f: IFilter) => (_: React.MouseEvent) => void;
 }
 
-const FilterBarOptions: React.FC<IFilterBarOptionsProps> = props => {
+const FilterBarOptions: React.FC<IFilterBarOptionsProps> = (props) => {
   const { filters, label, addAction } = props;
 
   const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +27,7 @@ const FilterBarOptions: React.FC<IFilterBarOptionsProps> = props => {
           </h2>
           <div className={isVisible ? "" : "hide"}>
             <ul>
-              {filters.map(f => (
+              {filters.map((f) => (
                 <li key={f.value}>
                   <button
                     className={determineClassName(f)}

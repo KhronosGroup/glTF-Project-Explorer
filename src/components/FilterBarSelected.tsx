@@ -1,4 +1,3 @@
-import React from "react";
 import { IFilter } from "../interfaces/IFilter";
 import "./FilterBarSelected.css";
 import { determineClassName } from "../utils/FilterHelpers";
@@ -9,7 +8,7 @@ export interface IFilterBarSelectedProps {
   resetAction: (_: React.MouseEvent) => void;
 }
 
-const FilterBarSelected: React.FC<IFilterBarSelectedProps> = props => {
+const FilterBarSelected: React.FC<IFilterBarSelectedProps> = (props) => {
   const { selectedFilters, removeAction, resetAction } = props;
 
   const selectedFiltersArray = Array.from(selectedFilters);
@@ -20,7 +19,7 @@ const FilterBarSelected: React.FC<IFilterBarSelectedProps> = props => {
       <ul>
         {selectedFiltersArray.length > 0 ? (
           <>
-            {selectedFiltersArray.map(f => (
+            {selectedFiltersArray.map((f) => (
               <li key={f.value}>
                 <button
                   className={determineClassName(f)}

@@ -10,7 +10,7 @@ export function* retrieveProjects() {
     let id = 0;
     yield put(
       actions.successfulProjects(
-        projects.map(p => {
+        projects.map((p) => {
           // This work gives us a stable key. Eventually when this is database
           // backed the ID will be provided by the DB and this can be removed.
           p.id = id++;
@@ -19,7 +19,7 @@ export function* retrieveProjects() {
       )
     );
   } catch (err) {
-    yield put(actions.failedProjects(err));
+    yield put(actions.failedProjects(err as Error));
   }
 }
 

@@ -1,4 +1,3 @@
-import React from "react";
 import "./ProjectDetailList.css";
 
 export interface IProjectDetailListProps {
@@ -6,7 +5,7 @@ export interface IProjectDetailListProps {
   items?: string[];
 }
 
-const ProjectDetailList: React.FC<IProjectDetailListProps> = props => {
+const ProjectDetailList: React.FC<IProjectDetailListProps> = (props) => {
   const { header, items } = props;
 
   if (!items) {
@@ -17,7 +16,7 @@ const ProjectDetailList: React.FC<IProjectDetailListProps> = props => {
     <div className="project-card-details">
       <h2>{header}</h2>
       <ul>
-        {items.map(item => (
+        {items.map((item) => (
           <li key={item}>{item}</li>
         ))}
       </ul>
