@@ -1,21 +1,14 @@
 {
   "files": {
-    "main.css": "/glTF-Project-Explorer/static/css/main.16b2f82a.chunk.css",
-    "main.js": "/glTF-Project-Explorer/static/js/main.407f150a.chunk.js",
-    "main.js.map": "/glTF-Project-Explorer/static/js/main.407f150a.chunk.js.map",
-    "runtime-main.js": "/glTF-Project-Explorer/static/js/runtime-main.8340c191.js",
-    "runtime-main.js.map": "/glTF-Project-Explorer/static/js/runtime-main.8340c191.js.map",
-    "static/js/2.995d2002.chunk.js": "/glTF-Project-Explorer/static/js/2.995d2002.chunk.js",
-    "static/js/2.995d2002.chunk.js.map": "/glTF-Project-Explorer/static/js/2.995d2002.chunk.js.map",
+    "main.css": "/glTF-Project-Explorer/static/css/main.64188527.css",
+    "main.js": "/glTF-Project-Explorer/static/js/main.fa8eb89f.js",
+    "static/media/external-link-icon.svg": "/glTF-Project-Explorer/static/media/external-link-icon.b36dcdd10143d60d15c4.svg",
     "index.html": "/glTF-Project-Explorer/index.html",
-    "static/css/main.16b2f82a.chunk.css.map": "/glTF-Project-Explorer/static/css/main.16b2f82a.chunk.css.map",
-    "static/js/2.995d2002.chunk.js.LICENSE.txt": "/glTF-Project-Explorer/static/js/2.995d2002.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/glTF-Project-Explorer/static/media/external-link-icon.b36dcdd1.svg"
+    "main.64188527.css.map": "/glTF-Project-Explorer/static/css/main.64188527.css.map",
+    "main.fa8eb89f.js.map": "/glTF-Project-Explorer/static/js/main.fa8eb89f.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.8340c191.js",
-    "static/js/2.995d2002.chunk.js",
-    "static/css/main.16b2f82a.chunk.css",
-    "static/js/main.407f150a.chunk.js"
+    "static/css/main.64188527.css",
+    "static/js/main.fa8eb89f.js"
   ]
 }
