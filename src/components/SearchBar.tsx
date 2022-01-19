@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import { connect } from "react-redux";
 import { IAppState } from "../interfaces/IAppState";
 import { updateTitleSubstringFilter } from "../store/filters/Actions";
@@ -9,7 +9,7 @@ export interface ISearchBarProps {
   updateTitleSubstringFilter: typeof updateTitleSubstringFilter;
 }
 
-const SearchBar: React.FC<ISearchBarProps> = props => {
+const SearchBar: React.FC<ISearchBarProps> = (props) => {
   const { titleSubstring, updateTitleSubstringFilter } = props;
 
   const handleSearch = useCallback(
@@ -46,7 +46,4 @@ const mapDispatchToProps = {
   updateTitleSubstringFilter,
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SearchBar);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);

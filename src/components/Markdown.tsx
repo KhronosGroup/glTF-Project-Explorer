@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import marked from "marked";
+import { marked } from "marked";
 import purify from "dompurify";
 
 interface IMarkdown {
@@ -18,7 +18,7 @@ const parseAndSanitizeMarkdown = (md: string): Promise<string> => {
   });
 };
 
-const Markdown: React.FC<IMarkdown> = props => {
+const Markdown: React.FC<IMarkdown> = (props) => {
   const { className, body: unsafeMarkdown } = props;
 
   const [safeHtml, setSafeHtml] = useState({ __html: "" });
@@ -26,7 +26,7 @@ const Markdown: React.FC<IMarkdown> = props => {
   // This effect is for performance reasons. It will only execute if the value
   //   of the body prop is updated.
   useEffect(() => {
-    parseAndSanitizeMarkdown(unsafeMarkdown).then(result =>
+    parseAndSanitizeMarkdown(unsafeMarkdown).then((result) =>
       setSafeHtml({ __html: result })
     );
   }, [unsafeMarkdown]);

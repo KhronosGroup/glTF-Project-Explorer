@@ -1,4 +1,3 @@
-import React from "react";
 import { connect } from "react-redux";
 import { IProjectInfo } from "../interfaces/IProjectInfo";
 import { IAppState } from "../interfaces/IAppState";
@@ -8,11 +7,13 @@ export interface IProjectListProps {
   projects: IProjectInfo[];
 }
 
-const ProjectList: React.FC<IProjectListProps> = props => {
+const ProjectList: React.FC<IProjectListProps> = (props) => {
   const { projects } = props;
 
   return (
-    <>{projects && projects.map(p => <ProjectCard project={p} key={p.id} />)}</>
+    <>
+      {projects && projects.map((p) => <ProjectCard project={p} key={p.id} />)}
+    </>
   );
 };
 

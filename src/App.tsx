@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import ProjectList from "./components/ProjectList";
 import FilterBar from "./components/FilterBar";

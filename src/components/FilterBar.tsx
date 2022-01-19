@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { connect } from "react-redux";
 import { IFilter } from "../interfaces/IFilter";
 import { IAppState } from "../interfaces/IAppState";
@@ -17,7 +17,7 @@ export interface IFilterBarProps {
   updateSelectedFilters: typeof updateSelectedFilters;
 }
 
-const FilterBar: React.FC<IFilterBarProps> = props => {
+const FilterBar: React.FC<IFilterBarProps> = (props) => {
   const {
     taskFilters,
     typeFilters,
@@ -51,7 +51,7 @@ const FilterBar: React.FC<IFilterBarProps> = props => {
   );
 
   const handleFilterResetClick = useCallback(
-    _ => {
+    (_) => {
       selectedFilters.clear();
       updateSelectedFilters(selectedFilters);
     },

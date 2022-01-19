@@ -1,4 +1,3 @@
-import React from "react";
 import { IProjectInfo } from "../interfaces/IProjectInfo";
 import ProjectDetailList from "./ProjectDetailList";
 import ProjectCardHeader from "./ProjectCardHeader";
@@ -11,7 +10,7 @@ export interface IProjectCardProps {
   project: IProjectInfo;
 }
 
-const ProjectCard: React.FC<IProjectCardProps> = props => {
+const ProjectCard: React.FC<IProjectCardProps> = (props) => {
   const { project } = props;
 
   return (
