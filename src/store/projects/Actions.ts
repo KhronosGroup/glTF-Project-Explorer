@@ -5,6 +5,8 @@ import {
 } from "./Interfaces";
 import { ProjectsActionTypes } from "./Types";
 import { IProjectInfo } from "../../interfaces/IProjectInfo";
+import { Document } from "flexsearch";
+import { IProjectSearchDoc } from "../../interfaces/IAppState";
 
 export function requestProjects(): IRequestProjectsAction {
   return {
@@ -13,11 +15,13 @@ export function requestProjects(): IRequestProjectsAction {
 }
 
 export function successfulProjects(
-  projects: IProjectInfo[]
+  projects: IProjectInfo[],
+  searchIndex: Document<IProjectSearchDoc>
 ): ISuccessfulProjectsAction {
   return {
     type: ProjectsActionTypes.PROJECTS_SUCCESSFUL,
     projects,
+    searchIndex,
   };
 }
 
