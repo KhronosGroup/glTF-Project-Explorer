@@ -1,6 +1,6 @@
+import { IProjectsState } from "../../interfaces/IAppState";
 import { ProjectsActions } from "./Interfaces";
 import { ProjectsActionTypes } from "./Types";
-import { IProjectsState } from "../../interfaces/IAppState";
 
 export function projects(
   state: IProjectsState = {

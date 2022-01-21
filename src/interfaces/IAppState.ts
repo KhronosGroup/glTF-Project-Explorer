@@ -1,6 +1,6 @@
-import { IProjectInfo } from "./IProjectInfo";
-import { IFilter } from "./IFilter";
 import { Document } from "flexsearch";
+import { IFilter } from "./IFilter";
+import { IProjectInfo } from "./IProjectInfo";
 
 /**
  * This is the document layout used for indexing the Projects.

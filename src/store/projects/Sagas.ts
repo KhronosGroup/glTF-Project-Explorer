@@ -1,10 +1,10 @@
-import { call, takeEvery, put } from "redux-saga/effects";
-import { fetchProjectsWithId } from "../../services/DataService";
 import * as actions from "./Actions";
-import { ProjectsActionTypes } from "./Types";
-import { IProjectInfo } from "../../interfaces/IProjectInfo";
+import { call, put, takeEvery } from "redux-saga/effects";
 import { Document } from "flexsearch";
+import { fetchProjectsWithId } from "../../services/DataService";
+import { IProjectInfo } from "../../interfaces/IProjectInfo";
 import { IProjectSearchDoc } from "../../interfaces/IAppState";
+import { ProjectsActionTypes } from "./Types";
 
 export function* retrieveProjects() {
   try {
@@ -13,6 +13,8 @@ export function* retrieveProjects() {
     // This probably isn't the best way to do this, but should be okay. In practice we only ever call `retrieveProjects()`
     //   once, so we shouldn't be creating (and leaking) multiple Document indices in memory.
     const searchIndex = new Document<IProjectSearchDoc>({
+      preset: "memory",
+      tokenize: "full",
       document: {
         id: "id",
         index: ["name", "description"],

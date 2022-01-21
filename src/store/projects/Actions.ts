@@ -1,12 +1,12 @@
+import { Document } from "flexsearch";
+import { IProjectInfo } from "../../interfaces/IProjectInfo";
+import { IProjectSearchDoc } from "../../interfaces/IAppState";
+import { ProjectsActionTypes } from "./Types";
 import {
   IRequestProjectsAction,
   ISuccessfulProjectsAction,
   IFailedProjectsAction,
 } from "./Interfaces";
-import { ProjectsActionTypes } from "./Types";
-import { IProjectInfo } from "../../interfaces/IProjectInfo";
-import { Document } from "flexsearch";
-import { IProjectSearchDoc } from "../../interfaces/IAppState";
 
 export function requestProjects(): IRequestProjectsAction {
   return {
