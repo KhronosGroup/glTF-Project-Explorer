@@ -1,6 +1,6 @@
+import { IProjectsState } from "../../interfaces/IAppState";
 import { ProjectsActions } from "./Interfaces";
 import { ProjectsActionTypes } from "./Types";
-import { IProjectsState } from "../../interfaces/IAppState";
 
 export function projects(
   state: IProjectsState = {
@@ -13,7 +13,12 @@ export function projects(
     case ProjectsActionTypes.PROJECTS_REQUESTED:
       return { ...state, isFetchingProjects: true };
     case ProjectsActionTypes.PROJECTS_SUCCESSFUL:
-      return { ...state, values: action.projects, isFetchingProjects: false };
+      return {
+        ...state,
+        values: action.projects,
+        searchIndex: action.searchIndex,
+        isFetchingProjects: false,
+      };
     case ProjectsActionTypes.PROJECTS_FAILED:
       return { ...state, isFetchingProjects: false };
     default:

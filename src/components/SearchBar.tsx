@@ -1,7 +1,7 @@
-import { useCallback } from "react";
 import { connect } from "react-redux";
 import { IAppState } from "../interfaces/IAppState";
 import { updateTitleSubstringFilter } from "../store/filters/Actions";
+import { useCallback } from "react";
 import "./SearchBar.css";
 
 export interface ISearchBarProps {
@@ -22,7 +22,7 @@ const SearchBar: React.FC<ISearchBarProps> = (props) => {
 
   return (
     <div className="search-bar">
-      <h1>Search by Title</h1>
+      <h1>Search by Title or Description</h1>
       <input
         placeholder="Type to search"
         value={titleSubstring}

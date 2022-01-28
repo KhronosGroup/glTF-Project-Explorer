@@ -1,10 +1,12 @@
-import { takeEvery, all, put, select, debounce } from "redux-saga/effects";
-import * as projectSelectors from "../projects/Selectors";
-import * as filterSelectors from "../filters/Selectors";
-import { IProjectInfo } from "../../interfaces/IProjectInfo";
 import * as actions from "./Actions";
-import { IFilter, FilterDimension } from "../../interfaces/IFilter";
+import * as filterSelectors from "../filters/Selectors";
+import * as projectSelectors from "../projects/Selectors";
+import { all, debounce, put, select, takeEvery } from "redux-saga/effects";
+import { Document } from "flexsearch";
 import { FilterActionTypes } from "../filters/Types";
+import { FilterDimension, IFilter } from "../../interfaces/IFilter";
+import { IProjectInfo } from "../../interfaces/IProjectInfo";
+import { IProjectSearchDoc } from "../../interfaces/IAppState";
 
 // Tags in these groups will be pulled to the top of the list.
 //   Priority is given to tags with lower index values.
@@ -39,16 +41,16 @@ function applyTagFilters(
     {}
   );
 
-  return projects.filter(project => {
+  return projects.filter((project) => {
     let match = false;
 
     for (const dimension of dimensions) {
       if (!groupedFilters[dimension]) continue;
 
-      match = groupedFilters[dimension].some(filter => {
+      match = groupedFilters[dimension].some((filter) => {
         if (project[dimension]) {
           // Within the dimension we do an OR.
-          return project[dimension]!.some(v => v === filter.value);
+          return project[dimension]!.some((v) => v === filter.value);
         }
 
         return false;
@@ -63,17 +65,22 @@ function applyTagFilters(
   });
 }
 
-function applyTitleSearchFilter(
+function applyIndexedSearch(
   projects: IProjectInfo[],
-  titleSubstring?: string
+  index: Document<IProjectSearchDoc> | undefined,
+  query: string
 ): IProjectInfo[] {
-  if (!titleSubstring) {
+  if (!index || !query) {
     return projects;
   }
-  const titleSubstringLowerCase = titleSubstring.toLowerCase();
-  return projects.filter(p =>
-    p.name.toLowerCase().includes(titleSubstringLowerCase)
-  );
+
+  const results = index
+    .search(query, 1000)
+    .flatMap((r) => r.result)
+    .filter((r, i, arr) => arr.indexOf(r) === i)
+    .sort();
+
+  return projects.filter((p) => results.includes(p.id));
 }
 
 function sortResults(projects: IProjectInfo[]): IProjectInfo[] {
@@ -106,21 +113,25 @@ function sortResults(projects: IProjectInfo[]): IProjectInfo[] {
 }
 
 export function* applyFilters() {
-  const [projects, selectedFilters, titleSubstring]: [
+  const [projects, searchIndex, selectedFilters, query]: [
     IProjectInfo[],
+    Document<IProjectSearchDoc> | undefined,
     Set<IFilter>,
     string
   ] = yield all([
     select(projectSelectors.getProjects),
+    select(projectSelectors.getSearchIndex),
     select(filterSelectors.getSelectedFilters),
     select(filterSelectors.getTitleSubstring),
   ]);
 
   const filteredResults = applyTagFilters(projects, selectedFilters);
-  const searchedResults = applyTitleSearchFilter(
+  const searchedResults = applyIndexedSearch(
     filteredResults,
-    titleSubstring
+    searchIndex,
+    query
   );
+
   const results = sortResults(searchedResults);
 
   yield put(actions.storeResults(results));

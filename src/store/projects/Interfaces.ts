@@ -1,3 +1,5 @@
+import { Document } from "flexsearch";
+import { IProjectSearchDoc } from "../../interfaces/IAppState";
 import { IProjectInfo } from "../../interfaces/IProjectInfo";
 import { ProjectsActionTypes } from "./Types";
 
@@ -13,6 +15,7 @@ export interface IRequestProjectsAction {
 export interface ISuccessfulProjectsAction {
   readonly type: ProjectsActionTypes.PROJECTS_SUCCESSFUL;
   readonly projects: IProjectInfo[];
+  readonly searchIndex: Document<IProjectSearchDoc>;
 }
 
 export interface IFailedProjectsAction {
