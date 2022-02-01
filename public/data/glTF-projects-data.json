@@ -2360,5 +2360,14 @@
   "type": ["web-application"],
   "inputs": ["glTF 2.0"],
   "outputs": ["glTF 2.0"]
+}, {
+  "name": "smapshot",
+  "link": "https://smapshot.heig-vd.ch/",
+  "description": "smapshot is a web participatory platform based on citizen science which makes use of a 3D virtual globe for georeferencing landscape historical images.",
+  "task": ["view", "export"],
+  "type": ["application", "web-api", "website"],
+  "license": ["BSD-3-Clause"],
+  "outputs": ["glTF 2.0"],
+  "language" : ["JavaScript"]
 }
 ]
