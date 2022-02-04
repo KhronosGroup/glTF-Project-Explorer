@@ -2360,5 +2360,14 @@
   "type": ["web-application"],
   "inputs": ["glTF 2.0"],
   "outputs": ["glTF 2.0"]
+}, {
+  "name": "Smapshot",
+  "link": "https://smapshot.heig-vd.ch/",
+  "description": "Smapshot is a web participatory platform based on citizen science which makes use of a 3D virtual globe (CesiumJS) for georeferencing landscape historical images. The development of the platform began in 2017 and is still being carried out at the University of Applied Sciences and Arts of Western Switzerland, School of Engineering and Management Vaud.",
+  "task": ["view", "export"],
+  "type": ["application", "web-api", "website"],
+  "license": ["BSD-3-Clause"],
+  "outputs": ["glTF 2.0"],
+  "language" : ["JavaScript"]
 }
 ]
