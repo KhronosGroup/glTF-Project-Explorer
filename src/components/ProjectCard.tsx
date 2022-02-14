@@ -14,12 +14,12 @@ const ProjectCard: React.FC<IProjectCardProps> = (props) => {
   const { project } = props;
 
   return (
-    <div className="project-card">
+    <div className="project-card m-4 rounded p-4 shadow-sharp">
       <ProjectCardHeader project={project} />
-      <div className="project-card-content">
+      <div className="project-card-content mt-4">
         {project.description && (
           <Markdown
-            className="project-card-description"
+            className="break-words text-sm"
             body={project.description}
           />
         )}
