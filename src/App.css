@@ -2,50 +2,44 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
-  color: #222;
+  color: theme("colors.primary");
 }
 
 h1 {
-  font-size: 2rem;
-  font-weight: bold;
+  @apply font-bold text-4xl;
 }
 
 h2 {
-  font-size: 1.75rem;
-  font-weight: bold;
+  @apply font-bold text-3xl;
 }
 
 h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
+  @apply font-bold text-2xl;
 }
 
 h4 {
-  font-size: 1.25rem;
-  font-weight: bold;
+  @apply font-bold text-xl;
 }
 
 h5 {
-  font-size: 1.25rem;
-  font-weight: normal;
+  @apply font-normal text-xl;
 }
 
 h6 {
-  font-size: 1rem;
-  font-weight: bold;
+  @apply font-bold text-base;
 }
 
 a,
 a:active,
 a:visited {
-  color: #222;
+  color: theme("colors.primary");
   outline: none;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #5772ce;
+  color: theme("colors.link-focus");
   outline: none;
   text-decoration: none;
 }
@@ -59,23 +53,6 @@ a[href*="http"] {
 h1 a[href*="http"] {
   background-size: 1.5rem 1.5rem;
   padding-right: 2rem;
-}
-
-.header {
-  color: #87c540;
-  background-color: #222;
-  display: flex;
-  align-items: center;
-  padding: 1.5rem 2rem 1.5rem;
-}
-
-.header h1 {
-  margin: 0;
-  padding: 0 0 0 0.5rem;
-}
-
-.header img {
-  height: 2.5rem;
 }
 
 .content {

@@ -7,9 +7,13 @@ import GitHubForkRibbon from "react-github-fork-ribbon";
 const App: React.FC = () => {
   return (
     <>
-      <div className="header">
-        <img src={`${process.env.PUBLIC_URL}/glTF_RGB_June16.svg`} alt="glTF" />
-        <h1>Project Explorer</h1>
+      <div className="flex items-center px-8 py-5 text-gltf-green bg-primary">
+        <img
+          className="h-10"
+          src={`${process.env.PUBLIC_URL}/glTF_RGB_June16.svg`}
+          alt="glTF"
+        />
+        <h1 className="pl-2">Project Explorer</h1>
       </div>
       <div className="content">
         <SearchBar></SearchBar>

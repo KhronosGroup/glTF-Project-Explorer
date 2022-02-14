@@ -2,7 +2,6 @@ import { connect } from "react-redux";
 import { IAppState } from "../interfaces/IAppState";
 import { updateTitleSubstringFilter } from "../store/filters/Actions";
 import { useCallback } from "react";
-import "./SearchBar.css";
 
 export interface ISearchBarProps {
   titleSubstring: string;
@@ -21,9 +20,10 @@ const SearchBar: React.FC<ISearchBarProps> = (props) => {
   );
 
   return (
-    <div className="search-bar">
-      <h1>Search by Title or Description</h1>
+    <div className="m-4 flex flex-col items-stretch rounded bg-near-white p-4 shadow-sharp">
+      <h1 className="m-0 p-0 text-2xl">Search by Title or Description</h1>
       <input
+        className="mt-2 h-12 border border-slate-200 p-4 text-base leading-6"
         placeholder="Type to search"
         value={titleSubstring}
         onChange={handleSearch}
