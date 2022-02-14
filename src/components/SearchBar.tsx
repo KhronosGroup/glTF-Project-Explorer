@@ -23,7 +23,7 @@ const SearchBar: React.FC<ISearchBarProps> = (props) => {
     <div className="m-4 flex flex-col items-stretch rounded bg-near-white p-4 shadow-sharp">
       <h1 className="m-0 p-0 text-2xl">Search by Title or Description</h1>
       <input
-        className="mt-2 h-12 border border-slate-200 p-4 text-base leading-6"
+        className="mt-2 h-12 border border-slate-300 p-4 text-base leading-6"
         placeholder="Type to search"
         value={titleSubstring}
         onChange={handleSearch}
