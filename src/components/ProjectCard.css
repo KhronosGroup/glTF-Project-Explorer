@@ -1,34 +1,4 @@
 /* Needed due to the Markdown processing. */
 .project-card p {
-  margin: 0 1rem 1rem 0;
-}
-
-.project-card-content {
-  display: grid;
-}
-
-@media all and (max-width: 800px) {
-  .project-card-content {
-    grid-template-columns: 100%;
-  }
-}
-
-@media all and (min-width: 801px) and (max-width: 968px) {
-  .project-card-content {
-    grid-template-columns: 40% 30% 30%;
-  }
-
-  .project-card-description {
-    grid-row-start: span 3;
-  }
-}
-
-@media all and (min-width: 969px) {
-  .project-card-content {
-    grid-template-columns: 34% 22% 22% 22%;
-  }
-
-  .project-card-description {
-    grid-row-start: span 2;
-  }
+  @apply mr-4 mb-4;
 }
