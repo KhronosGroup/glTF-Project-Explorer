@@ -1,5 +1,4 @@
 import { IFilter } from "../interfaces/IFilter";
-import "./FilterBarSelected.css";
 import { determineClassName } from "../utils/FilterHelpers";
 
 export interface IFilterBarSelectedProps {
@@ -14,30 +13,38 @@ const FilterBarSelected: React.FC<IFilterBarSelectedProps> = (props) => {
   const selectedFiltersArray = Array.from(selectedFilters);
 
   return (
-    <div className="filter-bar-selected">
-      <h2>Selected Filters</h2>
-      <ul>
+    <div className="mt-2 py-2 px-3">
+      <h2 className="m-0 text-xl">Selected Filters</h2>
+      <ul className="mt-2 list-none border border-slate-300 bg-white pt-2">
         {selectedFiltersArray.length > 0 ? (
           <>
             {selectedFiltersArray.map((f) => (
-              <li key={f.value}>
+              <li className="inline-block" key={f.value}>
                 <button
-                  className={determineClassName(f)}
+                  className={`${determineClassName(
+                    f
+                  )} mb-2 ml-2 cursor-pointer rounded-sm border-none p-1 text-xs`}
                   onClick={removeAction(f)}
                 >
-                  {f.value} <span className="clear-cross">✕</span>
+                  {f.value}{" "}
+                  <span className="text-sm font-semibold leading-3">✕</span>
                 </button>
               </li>
             ))}
-            <li>
-              <button className="clear-all-filters" onClick={resetAction}>
+            <li className="inline-block">
+              <button
+                className="mb-2 ml-2 cursor-pointer rounded-sm border-none p-1 text-xs"
+                onClick={resetAction}
+              >
                 Clear All Filters
               </button>
             </li>
           </>
         ) : (
-          <li>
-            <p className="no-filters-message">No filters selected.</p>
+          <li className="inline-block">
+            <p className="m-2 mt-0 cursor-default p-0 text-slate-500">
+              No filters selected.
+            </p>
           </li>
         )}
       </ul>

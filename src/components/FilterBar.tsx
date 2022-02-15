@@ -59,13 +59,14 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
   );
 
   return (
-    <div className="filter-bar">
-      <div className="filter-bar-header">
-        <h1 onClick={toggleVisibility}>
-          Filter Results {isVisible ? "▲" : "▼"}
-        </h1>
-      </div>
-      <div className={isVisible ? "filter-bar-expando" : "hide"}>
+    <div className="m-4 rounded bg-near-white p-4 shadow-sharp transition ease-in-out hover:shadow-hover">
+      <h1
+        className="m-0 block cursor-pointer p-0 text-2xl"
+        onClick={toggleVisibility}
+      >
+        Filter Results {isVisible ? "▲" : "▼"}
+      </h1>
+      <div className={isVisible ? "" : "hidden"}>
         <FilterBarSelected
           selectedFilters={selectedFilters}
           removeAction={handleFilterRemoveClick}

@@ -1,39 +1,20 @@
+/* These class names are used by FilterHelpers.ts */
 .task-filter {
-  background-color: #ffdac1;
+  @apply bg-filter-task;
 }
 
 .type-filter {
-  background-color: #e2f0cb;
+  @apply bg-filter-type;
 }
 
 .license-filter {
-  background-color: #c7ceea;
+  @apply bg-filter-license;
 }
 
 .language-filter {
-  background-color: #ffb7b2;
+  @apply bg-filter-language;
 }
 
 .tags-filter {
-  background-color: #c3b2e0;
-}
-
-.filter-bar {
-  background-color: #fcfcfc;
-  border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.25);
-  margin: 1rem;
-  padding: 1rem;
-  transition: all 0.1s ease-in-out;
-}
-
-.filter-bar:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-.filter-bar-header h1 {
-  cursor: pointer;
-  font-size: 1.5rem;
-  margin: 0;
-  padding: 0;
+  @apply bg-filter-tags;
 }
