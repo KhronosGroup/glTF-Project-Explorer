@@ -44,15 +44,11 @@ a,
 a:active,
 a:visited {
   color: theme("colors.primary");
-  outline: none;
-  text-decoration: none;
 }
 
 a:hover,
 a:focus {
   color: theme("colors.link-focus");
-  outline: none;
-  text-decoration: none;
 }
 
 a[href*="http"] {
