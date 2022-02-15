@@ -26,6 +26,13 @@ module.exports = {
       sans: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;",
       mono: "source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;",
     },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1400px",
+    },
   },
   plugins: [],
 };

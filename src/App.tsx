@@ -1,4 +1,3 @@
-import "./App.css";
 import ProjectList from "./components/ProjectList";
 import FilterBar from "./components/FilterBar";
 import SearchBar from "./components/SearchBar";
@@ -7,7 +6,7 @@ import GitHubForkRibbon from "react-github-fork-ribbon";
 const App: React.FC = () => {
   return (
     <>
-      <div className="flex items-center px-8 py-5 text-gltf-green bg-primary">
+      <div className="flex items-center bg-primary px-8 py-5 text-gltf-green">
         <img
           className="h-10"
           src={`${process.env.PUBLIC_URL}/glTF_RGB_June16.svg`}
@@ -15,7 +14,7 @@ const App: React.FC = () => {
         />
         <h1 className="pl-2">Project Explorer</h1>
       </div>
-      <div className="content">
+      <div className="container mx-auto">
         <SearchBar></SearchBar>
         <FilterBar></FilterBar>
         <ProjectList></ProjectList>
