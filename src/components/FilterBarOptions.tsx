@@ -27,7 +27,7 @@ const FilterBarOptions: React.FC<IFilterBarOptionsProps> = (props) => {
           >
             {label} {isVisible ? "▲" : "▼"}
           </h2>
-          <div className={isVisible ? "" : "hide"}>
+          <div className={isVisible ? "" : "hidden"}>
             <ul className="mt-2 list-none border border-slate-300 bg-white pt-2">
               {filters.map((f) => (
                 <li className="inline-block" key={f.value}>

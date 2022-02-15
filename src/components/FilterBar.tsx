@@ -66,7 +66,7 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
       >
         Filter Results {isVisible ? "▲" : "▼"}
       </h1>
-      <div className={isVisible ? "filter-bar-expando" : "hide"}>
+      <div className={isVisible ? "" : "hidden"}>
         <FilterBarSelected
           selectedFilters={selectedFilters}
           removeAction={handleFilterRemoveClick}
