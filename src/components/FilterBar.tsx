@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { IFilter } from "../interfaces/IFilter";
 import { IAppState } from "../interfaces/IAppState";
@@ -7,6 +7,10 @@ import FilterBarOptions from "./FilterBarOptions";
 import "./FilterBar.css";
 import FilterBarSelected from "./FilterBarSelected";
 
+export interface IFilterBarOwnProps {
+  allowCollapse: boolean;
+}
+
 export interface IFilterBarProps {
   taskFilters: IFilter[];
   typeFilters: IFilter[];
@@ -14,6 +18,7 @@ export interface IFilterBarProps {
   languageFilters: IFilter[];
   tagFilters: IFilter[];
   selectedFilters: Set<IFilter>;
+  allowCollapse: boolean;
   updateSelectedFilters: typeof updateSelectedFilters;
 }
 
@@ -25,14 +30,23 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
     languageFilters,
     selectedFilters,
     tagFilters,
+    allowCollapse,
     updateSelectedFilters,
   } = props;
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(!allowCollapse);
+
+  // This effect updates the collapse state preventing edge cases where the user can't see
+  //   the expanded filter bar in a desktop layout.
+  useEffect(() => {
+    setIsVisible(!allowCollapse);
+  }, [allowCollapse]);
 
   const toggleVisibility = useCallback(() => {
-    setIsVisible(!isVisible);
-  }, [isVisible, setIsVisible]);
+    if (allowCollapse) {
+      setIsVisible(!isVisible);
+    }
+  }, [allowCollapse, isVisible, setIsVisible]);
 
   const handleFilterAddClick = useCallback(
     (filter: IFilter) => (_: React.MouseEvent) => {
@@ -59,12 +73,14 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
   );
 
   return (
-    <div className="m-4 rounded bg-near-white p-4 shadow-sharp transition ease-in-out hover:shadow-hover">
+    <div className="m-4 rounded bg-near-white p-4 shadow-sharp">
       <h1
-        className="m-0 block cursor-pointer p-0 text-2xl"
+        className={`m-0 block p-0 text-2xl ${
+          allowCollapse && "cursor-pointer"
+        }`}
         onClick={toggleVisibility}
       >
-        Filter Results {isVisible ? "▲" : "▼"}
+        Filter Results {allowCollapse && (isVisible ? "▲" : "▼")}
       </h1>
       <div className={isVisible ? "" : "hidden"}>
         <FilterBarSelected
@@ -75,26 +91,31 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
         <FilterBarOptions
           filters={tagFilters}
           label="Filter by Tag"
+          allowCollapse={allowCollapse}
           addAction={handleFilterAddClick}
         />
         <FilterBarOptions
           filters={taskFilters}
           label="Filter by Task"
+          allowCollapse={allowCollapse}
           addAction={handleFilterAddClick}
         />
         <FilterBarOptions
           filters={typeFilters}
           label="Filter by Type"
+          allowCollapse={allowCollapse}
           addAction={handleFilterAddClick}
         />
         <FilterBarOptions
           filters={licenseFilters}
           label="Filter by License"
+          allowCollapse={allowCollapse}
           addAction={handleFilterAddClick}
         />
         <FilterBarOptions
           filters={languageFilters}
           label="Filter by Language"
+          allowCollapse={allowCollapse}
           addAction={handleFilterAddClick}
         />
       </div>
@@ -102,7 +123,7 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
   );
 };
 
-function mapStateToProps(state: IAppState) {
+function mapStateToProps(state: IAppState, ownProps: IFilterBarOwnProps) {
   const {
     filters: {
       tasks: taskFilters,
@@ -114,6 +135,8 @@ function mapStateToProps(state: IAppState) {
     },
   } = state;
 
+  const { allowCollapse } = ownProps;
+
   return {
     taskFilters,
     typeFilters,
@@ -121,6 +144,7 @@ function mapStateToProps(state: IAppState) {
     languageFilters,
     tagFilters,
     selectedFilters,
+    allowCollapse: allowCollapse,
   };
 }
 
