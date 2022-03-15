@@ -2369,5 +2369,13 @@
   "license": ["BSD-3-Clause"],
   "outputs": ["glTF 2.0"],
   "language" : ["JavaScript"]
-}
+}, {
+  "name" : "Pixi3D",
+  "description" : "The 3D renderer for PixiJS. Seamless integration with 2D applications.",
+  "link" : "https://github.com/jnsmalm/pixi3d",
+  "task" : [ "load", "view" ],
+  "type" : [ "engine" ],
+  "language" : [ "JavaScript", "TypeScript" ],
+  "inputs" : [ "glTF 2.0" ]
+} 
 ]
