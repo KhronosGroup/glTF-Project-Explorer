@@ -4,6 +4,7 @@ export type ProjectType = string;
 export type ProjectLanguage = string;
 export type ProjectLicense = string;
 export type ProjectTag = string;
+export type ProjectExtension = string;
 
 export interface IProjectInfo {
   id: number;
@@ -17,4 +18,6 @@ export interface IProjectInfo {
   inputs?: string[];
   outputs?: string[];
   tags?: ProjectTag[];
+  inputExtensions?: ProjectExtension[];
+  outputExtensions?: ProjectExtension[];
 }

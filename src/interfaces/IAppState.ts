@@ -46,8 +46,13 @@ export interface IResultsState {
   values: IProjectInfo[];
 }
 
+export interface IDetailScreenState {
+  projectId?: number;
+}
+
 export interface IAppState {
   projects: IProjectsState;
   filters: IFiltersState;
   results: IResultsState;
+  detailScreen: IDetailScreenState;
 }
