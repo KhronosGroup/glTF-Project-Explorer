@@ -2377,5 +2377,14 @@
   "type" : [ "engine" ],
   "language" : [ "JavaScript", "TypeScript" ],
   "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "GLTF-tool",
+  "description" : "A tool to view most of the data contained in a glTF file, with hyperlinks to follow the references across different sections within the file.",
+  "link" : "https://github.com/fferri/GLTF-tool",
+  "task" : [ "load", "inspect" ],
+  "type" : [ "application" ],
+  "license" : [ "GPL-3.0-or-later" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
 } 
 ]
