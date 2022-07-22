@@ -3,7 +3,6 @@ import { updateProjects as watchForProjectUpdates } from "./projects/Sagas";
 import { ProjectsActionTypes } from "./projects/Types";
 import { watchForFilterRecalculate } from "./filters/Sagas";
 import { watchForResultUpdates } from "./results/Sagas";
-import { watchForDetailScreenUpdates } from "./detailScreen/Sagas";
 
 export function* startup() {
   yield put({ type: ProjectsActionTypes.PROJECTS_REQUESTED });
@@ -14,5 +13,4 @@ export default function* root() {
   yield fork(watchForProjectUpdates);
   yield fork(watchForFilterRecalculate);
   yield fork(watchForResultUpdates);
-  yield fork(watchForDetailScreenUpdates);
 }

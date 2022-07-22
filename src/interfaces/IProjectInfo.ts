@@ -18,6 +18,4 @@ export interface IProjectInfo {
   inputs?: string[];
   outputs?: string[];
   tags?: ProjectTag[];
-  inputExtensions?: ProjectExtension[];
-  outputExtensions?: ProjectExtension[];
 }
