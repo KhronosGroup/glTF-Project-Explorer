@@ -1564,7 +1564,7 @@
 }, {
   "name" : "UX3D Engine",
   "description" : "Cross-platform multi-threaded Vulkan 3D Engine with glTF 2.0 import and export",
-  "link" : "https://www.ux3d.io/",
+  "link" : "http://www.ux3d.io/",
   "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
