@@ -780,14 +780,6 @@
   "language" : [ "TypeScript" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "point105ar",
-  "description" : "Online converter with glTF output",
-  "link" : "https://www.point105ar.com/",
-  "task" : [ "convert" ],
-  "type" : [ "web-application" ],
-  "inputs" : [ "Multiple" ],
-  "outputs" : [ "glTF 2.0, USDZ" ]
-}, {
   "name" : "The Wild",
   "description" : "VR/AR collaboration platform",
   "link" : "https://thewild.com/",
