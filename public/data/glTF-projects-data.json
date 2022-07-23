@@ -1417,9 +1417,9 @@
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "React 360",
+  "name" : "React 360 (archived)",
   "description" : "WebGL engine",
-  "link" : "https://facebook.github.io/react-360/",
+  "link" : "https://github.com/facebookarchive/react-360",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
