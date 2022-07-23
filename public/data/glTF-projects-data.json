@@ -1411,8 +1411,8 @@
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "ClayGL glTF loader",
-  "description" : "WebGL engine\n\n[Examples](https://examples.claygl.xyz/)",
-  "link" : "https://docs.claygl.xyz/api/clay.application.App3D.html#loadModel",
+  "description" : "WebGL engine\n\n[Examples](http://examples.claygl.xyz/)",
+  "link" : "http://docs.claygl.xyz/api/clay.application.App3D.html#loadModel",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
