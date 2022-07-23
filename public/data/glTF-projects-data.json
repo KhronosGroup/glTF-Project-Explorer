@@ -1341,7 +1341,7 @@
 }, {
   "name" : "Cinema 4D Exporter",
   "description" : "Export glTF from MAXON Cinema 4D",
-  "link" : "https://labs.maxon.net/?p=3360",
+  "link" : "https://www.maxon.net/en/cinema-4d/integration/file-exchange",
   "task" : [ "import", "export" ],
   "inputs" : [ "Multiple" ],
   "outputs" : [ "glTF 2.0" ]
