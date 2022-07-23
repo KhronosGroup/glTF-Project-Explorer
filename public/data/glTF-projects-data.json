@@ -254,7 +254,7 @@
 }, {
   "name" : "Unbound.io",
   "description" : "Content creation with glTF export",
-  "link" : "http://unbound.io/",
+  "link" : "https://unbound.io/",
   "task" : [ "view", "export" ],
   "type" : [ "application" ],
   "outputs" : [ "glTF 2.0" ]
@@ -334,7 +334,7 @@
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "SOLIDWORKS",
-  "description" : "CAD application with option for glTF export\n\nExport described at http://help.solidworks.com/2019/english/SolidWorks/sldworks/t_export_using_extended_reality.htm",
+  "description" : "CAD application with option for glTF export\n\nExport described at https://help.solidworks.com/2019/english/SolidWorks/sldworks/t_export_using_extended_reality.htm",
   "link" : "https://www.solidworks.com",
   "task" : [ "export" ],
   "type" : [ "application" ],
@@ -692,7 +692,7 @@
 }, {
   "name" : "AGI Systems Tool Kit",
   "description" : "Modeling environment",
-  "link" : "http://www.agi.com/products",
+  "link" : "https://www.agi.com/products",
   "task" : [ "import" ],
   "type" : [ "application" ],
   "inputs" : [ "glTF 2.0" ]
@@ -731,7 +731,7 @@
   "outputs" : [ "Multiple", "glTF 2.0" ]
 }, {
   "name" : "BIMData.io",
-  "description" : "Tool to deal with IFC files\n\nViewer at http://bimsurfer.org/",
+  "description" : "Tool to deal with IFC files\n\nViewer at https://bimsurfer.org/",
   "link" : "https://bimdata.io/",
   "task" : [ "import", "view" ],
   "type" : [ "web api" ],
@@ -825,7 +825,7 @@
 }, {
   "name" : "Noesis",
   "description" : "A tool for converting between model file formats",
-  "link" : "http://richwhitehouse.com/index.php?content=inc_projects.php&showproject=91",
+  "link" : "https://richwhitehouse.com/index.php?content=inc_projects.php&showproject=91",
   "task" : [ "import", "view", "export" ],
   "type" : [ "application" ],
   "inputs" : [ "Multiple", "glTF 2.0" ],
@@ -848,7 +848,7 @@
 }, {
   "name" : "Xiratech Module Viewer",
   "description" : "A viewer for a (fixed?) glTF asset",
-  "link" : "http://www.pasamson.net/",
+  "link" : "https://www.pasamson.net/",
   "task" : [ "view" ],
   "type" : [ "web application" ],
   "inputs" : [ "glTF 2.0" ]
@@ -985,7 +985,7 @@
 }, {
   "name" : "three.js Editor",
   "description" : "Editor with drag-and-drop support",
-  "link" : "http://threejs.org/editor",
+  "link" : "https://threejs.org/editor",
   "task" : [ "load", "view" ],
   "type" : [ "web application" ],
   "inputs" : [ "glTF 2.0" ]
@@ -1062,7 +1062,7 @@
 }, {
   "name" : "Khronos glTF Sample Viewer",
   "description" : "Engine-agnostic sample viewer with WebGL PBR shader for glTF 2.0 ([source code](https://github.com/KhronosGroup/glTF-Sample-Viewer))",
-  "link" : "http://github.khronos.org/glTF-Sample-Viewer/",
+  "link" : "https://github.khronos.org/glTF-Sample-Viewer/",
   "task" : [ "load", "view" ],
   "type" : [ "web application" ],
   "inputs" : [ "glTF 2.0" ],
@@ -1076,7 +1076,7 @@
 }, {
   "name" : "gltf-enum",
   "description" : "Simple site to help work with all the different enums in glTF spec",
-  "link" : "http://gltf-enum.com/",
+  "link" : "https://gltf-enum.com/",
   "type" : [ "website" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
@@ -1137,15 +1137,15 @@
   "tags" : [ "Khronos Official" ]
 }, {
   "name" : "3DS Max Exporter",
-  "description" : "Export glTF files using [BabylonJS plugin](http://doc.babylonjs.com/resources/3dsmax#how-to-install-the-3ds-max-plugin) for 3DS Max 2015 or later",
-  "link" : "http://doc.babylonjs.com/resources/3dsmax_to_gltf",
+  "description" : "Export glTF files using [BabylonJS plugin](https://doc.babylonjs.com/resources/3dsmax#how-to-install-the-3ds-max-plugin) for 3DS Max 2015 or later",
+  "link" : "https://doc.babylonjs.com/resources/3dsmax_to_gltf",
   "task" : [ "import", "export" ],
   "inputs" : [ "Multiple" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Maya Exporter",
-  "description" : "Export glTF files using [BabylonJS plugin](http://doc.babylonjs.com/resources/maya) for Maya 2018 or later",
-  "link" : "http://doc.babylonjs.com/resources/maya_to_gltf",
+  "description" : "Export glTF files using [BabylonJS plugin](https://doc.babylonjs.com/resources/maya) for Maya 2018 or later",
+  "link" : "https://doc.babylonjs.com/resources/maya_to_gltf",
   "task" : [ "import", "export" ],
   "inputs" : [ "Multiple" ],
   "outputs" : [ "glTF 2.0" ]
@@ -1159,7 +1159,7 @@
 }, {
   "name" : "import",
   "description" : "Separate extensions for export and import",
-  "link" : "http://extensions.sketchup.com/en/content/gltf-import",
+  "link" : "https://extensions.sketchup.com/en/content/gltf-import",
   "task" : [ "import", "export" ],
   "inputs" : [ "Multiple" ],
   "outputs" : [ "glTF 2.0" ]
@@ -1194,7 +1194,7 @@
 }, {
   "name" : "Assimp",
   "description" : "General-purpose online conversion pipeline",
-  "link" : "http://www.assimp.org/",
+  "link" : "https://www.assimp.org/",
   "task" : [ "import", "export" ],
   "inputs" : [ "3D", "3DS", "3MF", "AC", "AC3D", "ACC", "AMJ", "ASE", "ASK", "B3D", "BLEND", "BVH", "CMS", "COB", "COLLADA", "DXF", "ENFF", "FBX", "glTF 1.0", "glTF 2.0", "HMB", "IFC-STEP", "IRR", "LWO", "LWS", "LXO", "M3D", "MD2", "MD3", "MD5", "MDC", "MDL", "MESH", "MOT", "MS3D", "NDO", "NFF", "OBJ", "OFF", "OGEX", "PLY", "PMX", "PRJ", "Q3O", "Q3S", "RAW", "SCN", "SIB", "SMD", "STP", "STL", "TER", "UC", "VTA", "X", "X3D", "XGL", "ZGL" ],
   "outputs" : [ "DAE", "STL", "OBJ", "PLY", "X", "3DS", "ASSBIN", "STEP", "glTF 1.0", "glTF 2.0", "3MF", "FBX"  ]
@@ -1229,7 +1229,7 @@
 }, {
   "name" : "Verge3D",
   "description" : "WebGL engine with [glTF loader](https://www.soft8soft.com/docs/examples/loaders/GLTFLoader.html). [Examples](https://www.soft8soft.com/gallery/)",
-  "link" : "http://www.soft8soft.com/verge3d/",
+  "link" : "https://www.soft8soft.com/verge3d/",
   "task" : [ "import", "view", "export" ],
   "type" : [ "engine" ],
   "inputs" : [ "Multiple", "glTF 2.0" ]
@@ -1319,7 +1319,7 @@
   "outputs" : [ "Multiple", "glTF 2.0" ]
 }, {
   "name" : "UModel (UE Viewer)",
-  "description" : "UModel allows you to view static and animated mesh assets from [Unreal engine games](http://www.gildor.org/projects/umodel/compat), and then export them into several formats including glTF 2.0",
+  "description" : "UModel allows you to view static and animated mesh assets from [Unreal engine games](https://www.gildor.org/projects/umodel/compat), and then export them into several formats including glTF 2.0",
   "link" : "https://github.com/gildor2/UModel",
   "task" : [ "import", "export" ],
   "inputs" : [ "Unreal engine" ],
@@ -1382,7 +1382,7 @@
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "BabylonJS glTF loader",
-  "description" : "WebGL engine\n\n[Viewer component](http://doc.babylonjs.com/extensions/the_babylon_viewer)",
+  "description" : "WebGL engine\n\n[Viewer component](https://doc.babylonjs.com/extensions/the_babylon_viewer)",
   "link" : "https://github.com/BabylonJS/Babylon.js/tree/master/loaders/src/glTF",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
@@ -1418,15 +1418,15 @@
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "xeogl glTF loader",
-  "description" : "WebGL engine\n\n[Tutorial](http://xeogl.org/docs/classes/GLTFModel.html)",
-  "link" : "http://xeogl.org/examples/#importing_gltf_BoomBox",
+  "description" : "WebGL engine\n\n[Tutorial](https://xeogl.org/docs/classes/GLTFModel.html)",
+  "link" : "https://xeogl.org/examples/#importing_gltf_BoomBox",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "ClayGL glTF loader",
-  "description" : "WebGL engine\n\n[Examples](http://examples.claygl.xyz/)",
-  "link" : "http://docs.claygl.xyz/api/clay.application.App3D.html#loadModel",
+  "description" : "WebGL engine\n\n[Examples](https://examples.claygl.xyz/)",
+  "link" : "https://docs.claygl.xyz/api/clay.application.App3D.html#loadModel",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
@@ -1439,7 +1439,7 @@
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "CZPG glTF loader",
-  "description" : "WebGL engine\n\n[Examples](http://princessgod.github.io/CraZyPG)",
+  "description" : "WebGL engine\n\n[Examples](https://princessgod.github.io/CraZyPG)",
   "link" : "https://github.com/PrincessGod/CraZyPG/blob/master/src/loaders/GLTFLoader.js",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
@@ -1560,7 +1560,7 @@
 }, {
   "name" : "Qt 3D",
   "description" : "Qt 3D provides functionality for near-realtime simulation systems",
-  "link" : "http://doc.qt.io/qt-5.6/qt3d-gltf-example.html",
+  "link" : "https://doc.qt.io/qt-5.6/qt3d-gltf-example.html",
   "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
@@ -1584,7 +1584,7 @@
 }, {
   "name" : "Cinder",
   "description" : "Work-in-progress glTF importer",
-  "link" : "http://discourse.libcinder.org/t/gltf-initial-release-wip/212",
+  "link" : "https://discourse.libcinder.org/t/gltf-initial-release-wip/212",
   "language" : [ "C++" ],
   "inputs" : [ "glTF 1.0" ]
 }, {
@@ -1635,7 +1635,7 @@
 }, {
   "name" : "Aspose.3D for .NET",
   "description" : "Import, export, and convert glTF",
-  "link" : "http://www.aspose.com/products/3d/net",
+  "link" : "https://www.aspose.com/products/3d/net",
   "language" : [ "C#" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
@@ -1771,7 +1771,7 @@
 }, {
   "name" : "3D Slash",
   "description" : "Web-based and app-based 3D modeling imitating a stonecutter",
-  "link" : "http://www.3dslash.net",
+  "link" : "https://www.3dslash.net",
   "type" : [ "application" ]
 }, {
   "name" : "Archilogic",
@@ -1841,7 +1841,7 @@
 }, {
   "name" : "jMonkeyEngine",
   "description" : "jME 3.2 supports glTF 2.0",
-  "link" : "http://jmonkeyengine.org/",
+  "link" : "https://jmonkeyengine.org/",
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
