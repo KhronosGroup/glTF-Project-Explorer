@@ -1369,7 +1369,7 @@
 }, {
   "name" : "BabylonJS glTF loader",
   "description" : "WebGL engine\n\n[Viewer component](https://doc.babylonjs.com/extensions/the_babylon_viewer)",
-  "link" : "https://github.com/BabylonJS/Babylon.js/tree/master/loaders/src/glTF",
+  "link" : "https://github.com/BabylonJS/Babylon.js/tree/master/packages/dev/loaders/src/glTF",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 2.0" ],
