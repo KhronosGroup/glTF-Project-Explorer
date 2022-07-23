@@ -493,9 +493,9 @@
   "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "MeshroomVR",
+  "name" : "WEWIZ",
   "description" : "3D visualization software",
-  "link" : "https://meshroomvr.com/",
+  "link" : "https://weviz.com/",
   "task" : [ "import", "view" ],
   "type" : [ "application" ],
   "inputs" : [ "Multiple", "glTF 2.0" ]
