@@ -1066,12 +1066,6 @@
   "type" : [ "application" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "gltf-enum",
-  "description" : "Simple site to help work with all the different enums in glTF spec",
-  "link" : "https://gltf-enum.com/",
-  "type" : [ "website" ],
-  "inputs" : [ "glTF 2.0" ]
-}, {
   "name" : "gltf-import-export",
   "description" : "NPM package to convert between glb and gltf files",
   "link" : "https://github.com/najadojo/gltf-import-export",
