@@ -1454,7 +1454,7 @@
 }, {
   "name" : "X3DOM glTF loader",
   "description" : "WebGL engine",
-  "link" : "https://github.com/x3dom/x3dom/blob/master/src/util/glTF/glTFLoader.js",
+  "link" : "https://github.com/x3dom/x3dom/tree/master/src/util/glTF",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
   "inputs" : [ "glTF 1.0" ]
