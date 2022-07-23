@@ -1797,23 +1797,23 @@
   "name" : "Babylon.js Viewer",
   "description" : "HTML web component for viewing self-hosted glTF models.",
   "link" : "https://doc.babylonjs.com/extensions/the_babylon_viewer",
-  "type" : [ "viewer, embeddable, self-hosted" ]
+  "type" : [ "viewer", "embeddable", "self-hosted" ]
 }, {
   "name" : "<model-viewer>",
   "description" : "HTML web component for viewing self-hosted glTF models.",
   "link" : "https://github.com/GoogleWebComponents/model-viewer",
-  "type" : [ "viewer, embeddable, self-hosted" ]
+  "type" : [ "viewer", "embeddable", "self-hosted" ]
 }, {
   "name" : "Poly",
   "description" : "glTF models hosted on Poly may be embedded in an iframe on any site.",
   "link" : "https://poly.google.com/",
   "task" : [ "service" ],
-  "type" : [ "viewer, embeddable, self-hosted" ]
+  "type" : [ "viewer", "embeddable", "self-hosted" ]
 }, {
   "name" : "Sketchfab",
   "description" : "glTF models hosted on Sketchfab may be embedded in an iframe on any site, using the [embed models](https://help.sketchfab.com/hc/en-us/articles/203509907-Embed-Models) feature.",
   "link" : "https://sketchfab.com/",
-  "type" : [ "viewer, embeddable, service" ]
+  "type" : [ "viewer", "embeddable", "service" ]
 }, {
   "name" : "UnityGLTF",
   "description" : "Unity3D library for exporting, loading, parsing, and rendering glTF assets",
