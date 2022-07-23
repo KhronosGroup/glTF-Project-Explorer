@@ -1744,10 +1744,10 @@
   "link" : "https://blog.sketchfab.com/sketchfab-now-supports-gltf/",
   "type" : [ "application" ]
 }, {
-  "name" : "Wordpress",
+  "name" : "Wordpress 3D Viewer Plugin",
   "description" : "Inline glTF renderer for WordPress",
-  "link" : "plugin",
-  "type" : [ "application" ]
+  "link": "https://wordpress.org/plugins/3d-viewer/",
+  "type" : [ "plugin" ]
 }, {
   "name" : "Modo",
   "description" : "3D modeling, texturing & rendering tools",
