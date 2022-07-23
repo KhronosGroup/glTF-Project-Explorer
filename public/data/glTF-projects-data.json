@@ -948,10 +948,10 @@
   "inputs" : [ "Multiple", "glTF 2.0" ]
 }, {
   "name" : "EF EVE",
-  "description" : "3D asset library\n\nglTF assets at https://ef-eve.com/platform/?filterformat=gltf",
-  "link" : "https://ef-eve.com/platform",
+  "description" : "Volumetric video editor\n\nglTF assets at https://ef-eve.com/help-center/obj-with-texutres-to-gltf-or-glb/",
+  "link" : "https://ef-eve.com",
   "license" : [ "Multiple" ],
-  "type" : [ "asset library" ],
+  "type" : [ "application" ],
   "inputs" : [ "Multiple", "glTF 2.0" ]
 }, {
   "name" : "PlayCanvas glTF Viewer",
@@ -997,8 +997,8 @@
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "VirtualGIS Viewer",
-  "description" : "Cesium-based glTF viewer.",
-  "link" : "https://www.virtualgis.io/gltfviewer/",
+  "description" : "Geospatial application platform with a Cesium-based viewer that supports glTF",
+  "link" : "https://www.virtualgis.io/",
   "task" : [ "load", "view" ],
   "type" : [ "web application" ],
   "inputs" : [ "glTF 2.0" ]
