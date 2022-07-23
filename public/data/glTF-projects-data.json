@@ -578,8 +578,8 @@
   "outputs" : [ "USDZ" ]
 }, {
   "name" : "Speedernet Sphere",
-  "description" : "Virtual Reality software with glTF support\n\nDetails at https://sphereapp.io/speedernet-sphere-create-webvr-solidworks-gltf/",
-  "link" : "https://sphereapp.io/",
+  "description" : "Virtual Reality software with glTF support",
+  "link" : "https://speedernet-sphere.com/",
   "task" : [ "import", "view" ],
   "type" : [ "application" ],
   "inputs" : [ "glTF 2.0" ]
