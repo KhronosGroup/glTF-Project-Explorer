@@ -1026,7 +1026,7 @@
 }, {
   "name" : "glTFShowcase",
   "description" : "Android and iOS app for viewing glTF 2.0 asset from local files (gltf/glb/zip): supports environment lighting change.",
-  "link" : "https://www.vispolygon.com/",
+  "link" : "https://play.google.com/store/apps/details?id=com.vispolygon.gltfshowcase.alpha",
   "task" : [ "load", "view" ],
   "type" : [ "web application" ],
   "inputs" : [ "glTF 2.0" ]
