@@ -533,9 +533,9 @@
   "language" : [ "JavaScript" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
-  "name" : "Wave Engine",
+  "name" : "Evergine",
   "description" : "Cross-Platform graphics engine and authoring tool with glTF support\n\nglTF support announced in https://geeks.ms/waveengineteam/2018/07/03/model_workflow/",
-  "link" : "https://waveengine.net/",
+  "link" : "https://evergine.com/",
   "task" : [ "import", "view" ],
   "type" : [ "application" ],
   "inputs" : [ "glTF 2.0" ]
