@@ -1722,7 +1722,7 @@
 }, {
   "name" : "Facebook",
   "description" : "Use .glb files to create 3D Posts",
-  "link" : "https://developers.facebook.com/docs/sharing/3d-posts",
+  "link" : "https://developers.facebook.com/blog/post/2018/02/20/3d-posts-facebook/",
   "type" : [ "application" ]
 }, {
   "name" : "Sketchfab",
