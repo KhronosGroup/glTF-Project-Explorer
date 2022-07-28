@@ -168,14 +168,6 @@
   "language" : [ "C++" ],
   "inputs" : [ "Multiple" ]
 }, {
-  "name" : "Google Poly API",
-  "description" : "An API to access 3D assets",
-  "link" : "https://blog.google/products/poly/introducing-poly-api/",
-  "task" : [ "load" ],
-  "type" : [ "web api" ],
-  "language" : [ "REST" ],
-  "inputs" : [ "glTF 2.0" ]
-}, {
   "name" : "Insimo glTF tools",
   "description" : "Tools built on top of a glTF viewer\n\nTools in online viewer at https://gltf.insimo.com/",
   "link" : "https://github.com/InSimo/three-gltf-viewer/tree/tools/tools",
@@ -1802,12 +1794,6 @@
   "name" : "<model-viewer>",
   "description" : "HTML web component for viewing self-hosted glTF models.",
   "link" : "https://github.com/GoogleWebComponents/model-viewer",
-  "type" : [ "viewer, embeddable, self-hosted" ]
-}, {
-  "name" : "Poly",
-  "description" : "glTF models hosted on Poly may be embedded in an iframe on any site.",
-  "link" : "https://poly.google.com/",
-  "task" : [ "service" ],
   "type" : [ "viewer, embeddable, self-hosted" ]
 }, {
   "name" : "Sketchfab",
