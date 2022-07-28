@@ -14,7 +14,7 @@ const ProjectCard: React.FC<IProjectCardProps> = (props) => {
   const { project } = props;
 
   return (
-    <div className="project-card m-4 rounded p-4 shadow-sharp">
+    <div className="project-card m-4 rounded p-4 shadow-sharp transition ease-in-out hover:shadow-hover">
       <ProjectCardHeader project={project} />
       <div className="mt-4 grid gap-4 lg:grid-cols-3 lg:grid-rows-1">
         {project.description && (
