@@ -168,14 +168,6 @@
   "language" : [ "C++" ],
   "inputs" : [ "Multiple" ]
 }, {
-  "name" : "Google Poly API",
-  "description" : "An API to access 3D assets",
-  "link" : "https://blog.google/products/poly/introducing-poly-api/",
-  "task" : [ "load" ],
-  "type" : [ "web api" ],
-  "language" : [ "REST" ],
-  "inputs" : [ "glTF 2.0" ]
-}, {
   "name" : "Insimo glTF tools",
   "description" : "Tools built on top of a glTF viewer\n\nTools in online viewer at https://gltf.insimo.com/",
   "link" : "https://github.com/InSimo/three-gltf-viewer/tree/tools/tools",
