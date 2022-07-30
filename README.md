@@ -4,7 +4,7 @@
 
 Tool to provide a filterable registry of glTF community projects.
 
-http://github.khronos.org/glTF-Project-Explorer/
+https://github.khronos.org/glTF-Project-Explorer/
 
 ## Contributions
 
