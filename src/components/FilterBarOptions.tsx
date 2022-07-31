@@ -2,7 +2,7 @@ import { useState, useCallback } from "react";
 import { IFilter } from "../interfaces/IFilter";
 import { determineClassName } from "../utils/FilterHelpers";
 
-export interface IFilterBarOptionsProps {
+interface IFilterBarOptionsProps {
   filters: IFilter[];
   label: string;
   allowCollapse: boolean;

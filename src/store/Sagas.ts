@@ -4,7 +4,7 @@ import { ProjectsActionTypes } from "./projects/Types";
 import { watchForFilterRecalculate } from "./filters/Sagas";
 import { watchForResultUpdates } from "./results/Sagas";
 
-export function* startup() {
+function* startup() {
   yield put({ type: ProjectsActionTypes.PROJECTS_REQUESTED });
 }
 

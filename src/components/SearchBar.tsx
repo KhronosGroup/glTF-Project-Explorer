@@ -3,7 +3,7 @@ import { IAppState } from "../interfaces/IAppState";
 import { updateTitleSubstringFilter } from "../store/filters/Actions";
 import { useCallback } from "react";
 
-export interface ISearchBarProps {
+interface ISearchBarProps {
   titleSubstring: string;
   updateTitleSubstringFilter: typeof updateTitleSubstringFilter;
 }

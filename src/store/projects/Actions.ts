@@ -3,16 +3,9 @@ import { IProjectInfo } from "../../interfaces/IProjectInfo";
 import { IProjectSearchDoc } from "../../interfaces/IAppState";
 import { ProjectsActionTypes } from "./Types";
 import {
-  IRequestProjectsAction,
   ISuccessfulProjectsAction,
   IFailedProjectsAction,
 } from "./Interfaces";
-
-export function requestProjects(): IRequestProjectsAction {
-  return {
-    type: ProjectsActionTypes.PROJECTS_REQUESTED,
-  };
-}
 
 export function successfulProjects(
   projects: IProjectInfo[],

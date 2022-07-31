@@ -1,10 +1,9 @@
 // Aliases as these are the four possible types of filters.
-export type ProjectTask = string;
-export type ProjectType = string;
-export type ProjectLanguage = string;
-export type ProjectLicense = string;
-export type ProjectTag = string;
-export type ProjectExtension = string;
+type ProjectTask = string;
+type ProjectType = string;
+type ProjectLanguage = string;
+type ProjectLicense = string;
+type ProjectTag = string;
 
 /**
  * This COULD already be an entity description generated using

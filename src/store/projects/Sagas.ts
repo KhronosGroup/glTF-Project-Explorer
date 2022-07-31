@@ -6,7 +6,7 @@ import { IProjectInfo } from "../../interfaces/IProjectInfo";
 import { IProjectSearchDoc } from "../../interfaces/IAppState";
 import { ProjectsActionTypes } from "./Types";
 
-export function* retrieveProjects() {
+function* retrieveProjects() {
   try {
     const projects: IProjectInfo[] = yield call(fetchProjects);
 

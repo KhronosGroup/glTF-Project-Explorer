@@ -8,7 +8,7 @@ export type ProjectsActions =
   | ISuccessfulProjectsAction
   | IFailedProjectsAction;
 
-export interface IRequestProjectsAction {
+interface IRequestProjectsAction {
   readonly type: ProjectsActionTypes.PROJECTS_REQUESTED;
 }
 

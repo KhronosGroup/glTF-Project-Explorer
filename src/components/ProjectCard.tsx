@@ -6,7 +6,7 @@ import Markdown from "./Markdown";
 
 const shouldShowSection = (items?: string[]) => items && items.length > 0;
 
-export interface IProjectCardProps {
+interface IProjectCardProps {
   project: IProjectInfo;
 }
 

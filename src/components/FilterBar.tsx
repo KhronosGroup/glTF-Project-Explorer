@@ -7,11 +7,11 @@ import FilterBarOptions from "./FilterBarOptions";
 import "./FilterBar.css";
 import FilterBarSelected from "./FilterBarSelected";
 
-export interface IFilterBarOwnProps {
+interface IFilterBarOwnProps {
   allowCollapse: boolean;
 }
 
-export interface IFilterBarProps {
+interface IFilterBarProps {
   taskFilters: IFilter[];
   typeFilters: IFilter[];
   licenseFilters: IFilter[];

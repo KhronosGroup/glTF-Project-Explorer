@@ -8,6 +8,6 @@ export interface IStoreResultsAction {
   readonly results: IProjectInfo[];
 }
 
-export interface IRecalculateResultsAction {
+interface IRecalculateResultsAction {
   readonly type: ResultsActionTypes.RECALCULATE_RESULTS;
 }

@@ -112,7 +112,7 @@ function sortResults(projects: IProjectInfo[]): IProjectInfo[] {
   });
 }
 
-export function* applyFilters() {
+function* applyFilters() {
   const [projects, searchIndex, selectedFilters, query]: [
     IProjectInfo[],
     Document<IProjectSearchDoc> | undefined,

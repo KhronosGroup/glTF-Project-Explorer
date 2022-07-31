@@ -1,4 +1,4 @@
-export interface IProjectDetailListProps {
+interface IProjectDetailListProps {
   header: string;
   items?: string[];
 }
