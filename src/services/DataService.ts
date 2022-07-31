@@ -20,7 +20,7 @@ function fetchProjectsInternal(): Promise<IProjectInfo[]> {
  * @param p The project info
  * @returns The given project info
  */
-function convertProjectInfo(p : IProjectInfo) : IProjectInfo {
+function migrateProjectInfoForGeneralization(p : IProjectInfo) : IProjectInfo {
   p.properties = {};
   p.properties["task"] = p.task ? p.task : [];
   p.properties["license"] = p.license ? p.license : [];
@@ -43,7 +43,7 @@ export function fetchProjects(): Promise<IProjectInfo[]> {
       p.id = id++;
       return p;
     });
-    resultProjects = resultProjects.map(convertProjectInfo);
+    resultProjects = resultProjects.map(migrateProjectInfoForGeneralization);
     resolve(resultProjects)
   });
 }

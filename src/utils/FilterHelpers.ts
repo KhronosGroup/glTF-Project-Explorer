@@ -1,7 +1,11 @@
-import { IFilter, FilterDimension } from "../interfaces/IFilter";
+import { IFilter } from "../interfaces/IFilter";
 
 export const determineClassName = (filter: IFilter) => {
-  switch (filter.dimension) {
+  // TODO_GENERALIZATION This is this tailwind class name thingy, to be sorted out.
+  // For now, we're lucky: The classes are just 'propertyName'+'-filter' ...
+  return filter.propertyName+"-filter";
+  /*
+  switch (filter.propertyName) {
     case FilterDimension.Type:
       return "type-filter";
     case FilterDimension.Task:
@@ -15,4 +19,5 @@ export const determineClassName = (filter: IFilter) => {
     default:
       return "";
   }
+  */
 };

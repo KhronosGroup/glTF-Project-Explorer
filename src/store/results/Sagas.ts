@@ -4,8 +4,9 @@ import * as projectSelectors from "../projects/Selectors";
 import { all, debounce, put, select, takeEvery } from "redux-saga/effects";
 import { Document } from "flexsearch";
 import { FilterActionTypes } from "../filters/Types";
-import { FilterDimension, IFilter } from "../../interfaces/IFilter";
+import { IFilter } from "../../interfaces/IFilter";
 import { IProjectInfo } from "../../interfaces/IProjectInfo";
+import { ProjectFilterProperties } from "../../interfaces/IProjectInfo";
 import { IProjectSearchDoc } from "../../interfaces/IAppState";
 
 // Tags in these groups will be pulled to the top of the list.
@@ -27,14 +28,14 @@ function applyTagFilters(
     return projects;
   }
 
-  const dimensions = Object.values(FilterDimension);
+  const filterPropertyNames = Object.keys(ProjectFilterProperties);
   const groupedFilters = Array.from(selectedFilters).reduce<IGroupedFilters>(
     (acc, curr) => {
-      if (!acc[curr.dimension]) {
-        acc[curr.dimension] = [];
+      if (!acc[curr.propertyName]) {
+        acc[curr.propertyName] = [];
       }
 
-      acc[curr.dimension].push(curr);
+      acc[curr.propertyName].push(curr);
 
       return acc;
     },
@@ -44,13 +45,15 @@ function applyTagFilters(
   return projects.filter((project) => {
     let match = false;
 
-    for (const dimension of dimensions) {
-      if (!groupedFilters[dimension]) continue;
+    for (const propertyName of filterPropertyNames) {
+      if (!groupedFilters[propertyName]) continue;
 
-      match = groupedFilters[dimension].some((filter) => {
-        if (project[dimension]) {
+      // TODO_GENERALIZATION: This was adjusted only quickly, to use
+      // the "properties". Test and review this!
+      match = groupedFilters[propertyName].some((filter) => {
+        if (project.properties[propertyName]) {
           // Within the dimension we do an OR.
-          return project[dimension]!.some((v) => v === filter.value);
+          return project.properties[propertyName]!.some((v) => v === filter.value);
         }
 
         return false;

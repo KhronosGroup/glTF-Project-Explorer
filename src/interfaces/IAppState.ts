@@ -27,11 +27,7 @@ export interface IProjectsState {
 }
 
 export interface IFiltersState {
-  tasks: IFilter[];
-  types: IFilter[];
-  languages: IFilter[];
-  licenses: IFilter[];
-  tags: IFilter[];
+  filterOptions: Record<string, IFilter[]>;
   titleSubstring: string;
   selected: Set<IFilter>;
 }
