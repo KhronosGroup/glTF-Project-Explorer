@@ -11,16 +11,16 @@ function fetchProjectsInternal(): Promise<IProjectInfo[]> {
 /**
  * Converts the given project info into the new structure, where the
  * properties are stored in the `properties` record.
- * 
+ *
  * TODO_GENERALIZATION This is a preliminary state. In the future,
  * the input JSON could be modified, or be represented by a structure
  * like "ILegacyProjectInfo" that is converted into the IProjectInfo
- * here. 
- * 
+ * here.
+ *
  * @param p The project info
  * @returns The given project info
  */
-function migrateProjectInfoForGeneralization(p : IProjectInfo) : IProjectInfo {
+function migrateProjectInfoForGeneralization(p: IProjectInfo): IProjectInfo {
   p.properties = {};
   p.properties["task"] = p.task ? p.task : [];
   p.properties["license"] = p.license ? p.license : [];
@@ -35,7 +35,7 @@ function migrateProjectInfoForGeneralization(p : IProjectInfo) : IProjectInfo {
 export function fetchProjects(): Promise<IProjectInfo[]> {
   return new Promise(async (resolve) => {
     const projects = await fetchProjectsInternal();
-    
+
     // This work gives us a stable key. Eventually when this is database
     // backed the ID will be provided by the DB and this can be removed.
     let id = 0;
@@ -44,6 +44,6 @@ export function fetchProjects(): Promise<IProjectInfo[]> {
       return p;
     });
     resultProjects = resultProjects.map(migrateProjectInfoForGeneralization);
-    resolve(resultProjects)
+    resolve(resultProjects);
   });
 }

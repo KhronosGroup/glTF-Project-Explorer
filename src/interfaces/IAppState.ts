@@ -35,7 +35,7 @@ export interface IProjectsState {
  * @property titleSubstring The string that was entered in the free-text search box
  * @property selected The set of filters that are currently selected
  */
- export interface IFiltersState {
+export interface IFiltersState {
   filterOptions: Map<string, IFilter[]>;
   titleSubstring: string;
   selected: Set<IFilter>;

@@ -2,10 +2,7 @@ import { Document } from "flexsearch";
 import { IProjectInfo } from "../../interfaces/IProjectInfo";
 import { IProjectSearchDoc } from "../../interfaces/IAppState";
 import { ProjectsActionTypes } from "./Types";
-import {
-  ISuccessfulProjectsAction,
-  IFailedProjectsAction,
-} from "./Interfaces";
+import { ISuccessfulProjectsAction, IFailedProjectsAction } from "./Interfaces";
 
 export function successfulProjects(
   projects: IProjectInfo[],
