@@ -6,7 +6,7 @@ import { updateSelectedFilters } from "../store/filters/Actions";
 import FilterBarOptions from "./FilterBarOptions";
 import "./FilterBar.css";
 import FilterBarSelected from "./FilterBarSelected";
-import { ProjectFilterProperties } from "../interfaces/IProjectInfo"
+import { ProjectFilterProperties } from "../interfaces/IProjectInfo";
 
 interface IFilterBarOwnProps {
   allowCollapse: boolean;
@@ -18,8 +18,6 @@ interface IFilterBarProps {
   allowCollapse: boolean;
   updateSelectedFilters: typeof updateSelectedFilters;
 }
-
-// TODO_GENERALIZATION This had to be adjusted quite a bit, but is very much a draft and should be reviwed!
 
 const FilterBar: React.FC<IFilterBarProps> = (props) => {
   const {
@@ -67,25 +65,6 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
     [selectedFilters, updateSelectedFilters]
   );
 
-  const filterBarOptions = [];
-  const filterPropertyNames = Object.keys(filterOptions);
-  
-  //console.log("filterOptions ", filterOptions);
-
-  for (var i = 0; i < filterPropertyNames.length; i++) {
-    const filterPropertyName = filterPropertyNames[i];
-    const filterValues = filterOptions[filterPropertyName];
-    const name = ProjectFilterProperties[filterPropertyName];
-    const label = "Filter by " + name;
-    filterBarOptions.push(
-      <FilterBarOptions
-      filters={filterValues}
-      label={label} 
-      allowCollapse={allowCollapse}
-      addAction={handleFilterAddClick}
-    />
-    );
-  }
   return (
     <div className="m-4 rounded bg-near-white p-4 shadow-sharp">
       <h1
@@ -102,14 +81,22 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
           removeAction={handleFilterRemoveClick}
           resetAction={handleFilterResetClick}
         />
-        {filterBarOptions}
       </div>
+      {Object.keys(filterOptions).map((propName) => {
+        return (
+          <FilterBarOptions
+            filters={filterOptions[propName]}
+            label={`Filter by ${ProjectFilterProperties[propName]}`}
+            allowCollapse={allowCollapse}
+            addAction={handleFilterAddClick}
+          />
+        );
+      })}
     </div>
   );
 };
 
 function mapStateToProps(state: IAppState, ownProps: IFilterBarOwnProps) {
-
   const filterOptions = state.filters.filterOptions;
   const selected = state.filters.selected;
 
@@ -118,7 +105,7 @@ function mapStateToProps(state: IAppState, ownProps: IFilterBarOwnProps) {
   console.log("state ", state);
   console.log("state.filters ", state.filters);
   console.log("state ", state);
- 
+
   return {
     filterOptions,
     selectedFilters: selected,
