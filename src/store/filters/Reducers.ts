@@ -1,10 +1,11 @@
 import { IFiltersState } from "../../interfaces/IAppState";
 import { FilterActionTypes } from "./Types";
 import { FiltersActions } from "./Interfaces";
+import { IFilter } from "../../interfaces/IFilter";
 
 export function filters(
   state: IFiltersState = {
-    filterOptions: {},
+    filterOptions: new Map<string, IFilter[]>(),
     titleSubstring: "",
     selected: new Set(),
   },

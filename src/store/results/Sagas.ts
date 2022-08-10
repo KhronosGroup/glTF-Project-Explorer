@@ -28,7 +28,7 @@ function applyTagFilters(
     return projects;
   }
 
-  const filterPropertyNames = Object.keys(ProjectFilterProperties);
+  const filterPropertyNames = Array.from(ProjectFilterProperties.keys());
   const groupedFilters = Array.from(selectedFilters).reduce<IGroupedFilters>(
     (acc, curr) => {
       if (!acc[curr.propertyName]) {
@@ -53,7 +53,9 @@ function applyTagFilters(
       match = groupedFilters[propertyName].some((filter) => {
         if (project.properties[propertyName]) {
           // Within the dimension we do an OR.
-          return project.properties[propertyName]!.some((v) => v === filter.value);
+          return project.properties[propertyName]!.some(
+            (v) => v === filter.value
+          );
         }
 
         return false;

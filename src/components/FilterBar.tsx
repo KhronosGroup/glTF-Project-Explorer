@@ -13,7 +13,7 @@ interface IFilterBarOwnProps {
 }
 
 interface IFilterBarProps {
-  filterOptions: Record<string, IFilter[]>;
+  filterOptions: Map<string, IFilter[]>;
   selectedFilters: Set<IFilter>;
   allowCollapse: boolean;
   updateSelectedFilters: typeof updateSelectedFilters;
@@ -44,8 +44,11 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
   const handleFilterAddClick = useCallback(
     (filter: IFilter) => (_: React.MouseEvent) => {
       selectedFilters.add(filter);
-      const index = filterOptions[filter.propertyName].indexOf(filter);
-      filterOptions[filter.propertyName].splice(index, 1);
+      const options = filterOptions.get(filter.propertyName);
+      if (options) {
+        const index = options.indexOf(filter);
+        options.splice(index, 1);
+      }
       updateSelectedFilters(selectedFilters);
     },
     [filterOptions, selectedFilters, updateSelectedFilters]
@@ -54,7 +57,11 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
   const handleFilterRemoveClick = useCallback(
     (filter: IFilter) => (_: React.MouseEvent) => {
       selectedFilters.delete(filter);
-      filterOptions[filter.propertyName].push(filter);
+      const options = filterOptions.get(filter.propertyName);
+      if (options) {
+        options.push(filter);
+        options.sort((f0, f1) => f0.value.localeCompare(f1.value));
+      }
       updateSelectedFilters(selectedFilters);
     },
     [filterOptions, selectedFilters, updateSelectedFilters]
@@ -62,9 +69,14 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
 
   const handleFilterResetClick = useCallback(
     (_) => {
-      for (const filter of selectedFilters) 
-      {
-        filterOptions[filter.propertyName].push(filter);
+      for (const filter of selectedFilters) {
+        const options = filterOptions.get(filter.propertyName);
+        if (options) {
+          options.push(filter);
+        }
+      }
+      for (const options of filterOptions.values()) {
+        options.sort((f0, f1) => f0.value.localeCompare(f1.value));
       }
       selectedFilters.clear();
       updateSelectedFilters(selectedFilters);
@@ -89,11 +101,12 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
           resetAction={handleFilterResetClick}
         />
       </div>
-      {Object.keys(filterOptions).map((propName) => {
+      {[...filterOptions.entries()].map((entry) => {
         return (
           <FilterBarOptions
-            filters={filterOptions[propName]}
-            label={`Filter by ${ProjectFilterProperties[propName]}`}
+            key={entry[0]}
+            filters={entry[1]}
+            label={`Filter by ${ProjectFilterProperties.get(entry[0])}`}
             allowCollapse={allowCollapse}
             addAction={handleFilterAddClick}
           />
@@ -108,10 +121,6 @@ function mapStateToProps(state: IAppState, ownProps: IFilterBarOwnProps) {
   const selected = state.filters.selected;
 
   const { allowCollapse } = ownProps;
-
-  console.log("state ", state);
-  console.log("state.filters ", state.filters);
-  console.log("state ", state);
 
   return {
     filterOptions,

@@ -11,8 +11,8 @@ export type FiltersActions =
  * only called ONCE (?). 
  * 
  * The `filterOptions` are in fact the options for the filters. It is a
- * record that maps ProjectProperties values (i.e. the keys of the
- * IProjectInfo#properties record) to the values that have been collected
+ * map that maps ProjectProperties values (i.e. the keys of the
+ * IProjectInfo#properties map) to the filters that have been created
  * for the respective property for ALL available projects. 
  * 
  * TODO_GENERALIZTION: Why is the titleSubstring here...?
@@ -28,7 +28,7 @@ export type FiltersActions =
  */  
 export interface IUpdateFiltersAction {
   readonly type: FilterActionTypes.UPDATE_FILTERS;
-  readonly filterOptions: Record<string, string[]>;
+  readonly filterOptions: Map<string, IFilter[]>;
   readonly titleSubstring: string;
 }
 

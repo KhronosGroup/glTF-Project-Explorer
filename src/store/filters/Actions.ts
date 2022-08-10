@@ -7,7 +7,7 @@ import { FilterActionTypes } from "./Types";
 import { IFilter } from "../../interfaces/IFilter";
 
 export function updateFilters(
-  filterOptions: Record<string, string[]>,
+  filterOptions: Map<string, IFilter[]>,
   titleSubstring: string
 ): IUpdateFiltersAction {
   return {

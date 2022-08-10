@@ -36,7 +36,7 @@ export interface IProjectsState {
  * @property selected The set of filters that are currently selected
  */
  export interface IFiltersState {
-  filterOptions: Record<string, IFilter[]>;
+  filterOptions: Map<string, IFilter[]>;
   titleSubstring: string;
   selected: Set<IFilter>;
 }
