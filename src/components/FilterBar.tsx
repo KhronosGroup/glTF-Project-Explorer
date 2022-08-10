@@ -44,25 +44,32 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
   const handleFilterAddClick = useCallback(
     (filter: IFilter) => (_: React.MouseEvent) => {
       selectedFilters.add(filter);
+      const index = filterOptions[filter.propertyName].indexOf(filter);
+      filterOptions[filter.propertyName].splice(index, 1);
       updateSelectedFilters(selectedFilters);
     },
-    [selectedFilters, updateSelectedFilters]
+    [filterOptions, selectedFilters, updateSelectedFilters]
   );
 
   const handleFilterRemoveClick = useCallback(
     (filter: IFilter) => (_: React.MouseEvent) => {
       selectedFilters.delete(filter);
+      filterOptions[filter.propertyName].push(filter);
       updateSelectedFilters(selectedFilters);
     },
-    [selectedFilters, updateSelectedFilters]
+    [filterOptions, selectedFilters, updateSelectedFilters]
   );
 
   const handleFilterResetClick = useCallback(
     (_) => {
+      for (const filter of selectedFilters) 
+      {
+        filterOptions[filter.propertyName].push(filter);
+      }
       selectedFilters.clear();
       updateSelectedFilters(selectedFilters);
     },
-    [selectedFilters, updateSelectedFilters]
+    [filterOptions, selectedFilters, updateSelectedFilters]
   );
 
   return (
