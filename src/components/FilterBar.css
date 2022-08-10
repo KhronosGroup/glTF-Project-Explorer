@@ -1,20 +1,23 @@
 /* These class names are used by FilterHelpers.ts */
-.task-filter {
-  @apply bg-filter-task;
+.filter_0 {
+  @apply bg-filter-color_0;
+}
+.filter_1 {
+  @apply bg-filter-color_1;
+}
+.filter_2 {
+  @apply bg-filter-color_2;
+}
+.filter_3 {
+  @apply bg-filter-color_3;
+}
+.filter_4 {
+  @apply bg-filter-color_4;
+}
+.filter_5 {
+  @apply bg-filter-color_5;
+}
+.filter_6 {
+  @apply bg-filter-color_6;
 }
 
-.type-filter {
-  @apply bg-filter-type;
-}
-
-.license-filter {
-  @apply bg-filter-license;
-}
-
-.language-filter {
-  @apply bg-filter-language;
-}
-
-.tags-filter {
-  @apply bg-filter-tags;
-}

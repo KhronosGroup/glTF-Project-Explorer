@@ -1,23 +1,14 @@
 import { IFilter } from "../interfaces/IFilter";
 
+const NUM_FILTER_COLORS = 8; // As defined in tailwind.config.css
+const filterPropertyNames: string[] = [];
+
 export const determineClassName = (filter: IFilter) => {
-  // TODO_GENERALIZATION This is this tailwind class name thingy, to be sorted out.
-  // For now, we're lucky: The classes are just 'propertyName'+'-filter' ...
-  return filter.propertyName+"-filter";
-  /*
-  switch (filter.propertyName) {
-    case FilterDimension.Type:
-      return "type-filter";
-    case FilterDimension.Task:
-      return "task-filter";
-    case FilterDimension.License:
-      return "license-filter";
-    case FilterDimension.Language:
-      return "language-filter";
-    case FilterDimension.Tags:
-      return "tags-filter";
-    default:
-      return "";
+  let index = filterPropertyNames.indexOf(filter.propertyName);
+  if (index < 0) {
+    index = filterPropertyNames.length;
+    filterPropertyNames.push(filter.propertyName);
   }
-  */
+  index %= NUM_FILTER_COLORS;
+  return `filter_${index}`;
 };
