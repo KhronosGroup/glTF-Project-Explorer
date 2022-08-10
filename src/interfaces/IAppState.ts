@@ -26,7 +26,16 @@ export interface IProjectsState {
   searchIndex?: Document<IProjectSearchDoc>;
 }
 
-export interface IFiltersState {
+/**
+ * The part of the state that summarizes the filter options and selection.
+ *
+ * @property filterOptions A record that maps ProjectProperties values to the
+ * list of filters that are available for this project property. These are
+ * one filter object for each possible value of this property.
+ * @property titleSubstring The string that was entered in the free-text search box
+ * @property selected The set of filters that are currently selected
+ */
+ export interface IFiltersState {
   filterOptions: Record<string, IFilter[]>;
   titleSubstring: string;
   selected: Set<IFilter>;
