@@ -10,5 +10,5 @@ export const determineClassName = (filter: IFilter) => {
     filterPropertyNames.push(filter.propertyName);
   }
   index %= NUM_FILTER_COLORS;
-  return `filter_${index}`;
+  return `filter-${index}`;
 };

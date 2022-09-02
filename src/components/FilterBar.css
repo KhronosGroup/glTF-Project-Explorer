@@ -1,23 +1,23 @@
 /* These class names are used by FilterHelpers.ts */
-.filter_0 {
+.filter-0 {
   @apply bg-filter-color_0;
 }
-.filter_1 {
+.filter-1 {
   @apply bg-filter-color_1;
 }
-.filter_2 {
+.filter-2 {
   @apply bg-filter-color_2;
 }
-.filter_3 {
+.filter-3 {
   @apply bg-filter-color_3;
 }
-.filter_4 {
+.filter-4 {
   @apply bg-filter-color_4;
 }
-.filter_5 {
+.filter-5 {
   @apply bg-filter-color_5;
 }
-.filter_6 {
+.filter-6 {
   @apply bg-filter-color_6;
 }
 
