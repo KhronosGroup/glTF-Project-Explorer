@@ -15,13 +15,6 @@ export type FiltersActions =
  * IProjectInfo#properties map) to the filters that have been created
  * for the respective property for ALL available projects.
  *
- * TODO_GENERALIZTION: Why is the titleSubstring here...?
- *
- * TODO_GENERALIZATION (or beyond): It would be nice if the values
- * could be updated when a filter was selected. For example, when
- * the 'task' "export" was added as a 'selected' filter, then the
- * "export" entry should no longer be available in the filter options.
- *
  * @property type The type
  * @property filterOptions The filter options
  * @property titleSubstring The title substring

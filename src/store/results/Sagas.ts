@@ -48,8 +48,6 @@ function applyTagFilters(
     for (const propertyName of filterPropertyNames) {
       if (!groupedFilters[propertyName]) continue;
 
-      // TODO_GENERALIZATION: This was adjusted only quickly, to use
-      // the "properties". Test and review this!
       match = groupedFilters[propertyName].some((filter) => {
         if (project.properties[propertyName]) {
           // Within the dimension we do an OR.
