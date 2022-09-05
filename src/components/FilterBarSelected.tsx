@@ -1,7 +1,7 @@
 import { IFilter } from "../interfaces/IFilter";
 import { determineClassName } from "../utils/FilterHelpers";
 
-export interface IFilterBarSelectedProps {
+interface IFilterBarSelectedProps {
   selectedFilters: Set<IFilter>;
   removeAction: (f: IFilter) => (_: React.MouseEvent) => void;
   resetAction: (_: React.MouseEvent) => void;

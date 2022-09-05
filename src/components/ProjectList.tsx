@@ -3,7 +3,7 @@ import { IProjectInfo } from "../interfaces/IProjectInfo";
 import { IAppState } from "../interfaces/IAppState";
 import ProjectCard from "./ProjectCard";
 
-export interface IProjectListProps {
+interface IProjectListProps {
   projects: IProjectInfo[];
 }
 

@@ -1,18 +1,14 @@
-import { IFilter, FilterDimension } from "../interfaces/IFilter";
+import { IFilter } from "../interfaces/IFilter";
+
+const NUM_FILTER_COLORS = 8; // As defined in tailwind.config.css
+const filterPropertyNames: string[] = [];
 
 export const determineClassName = (filter: IFilter) => {
-  switch (filter.dimension) {
-    case FilterDimension.Type:
-      return "type-filter";
-    case FilterDimension.Task:
-      return "task-filter";
-    case FilterDimension.License:
-      return "license-filter";
-    case FilterDimension.Language:
-      return "language-filter";
-    case FilterDimension.Tags:
-      return "tags-filter";
-    default:
-      return "";
+  let index = filterPropertyNames.indexOf(filter.propertyName);
+  if (index < 0) {
+    index = filterPropertyNames.length;
+    filterPropertyNames.push(filter.propertyName);
   }
+  index %= NUM_FILTER_COLORS;
+  return `filter-${index}`;
 };

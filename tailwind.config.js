@@ -14,11 +14,17 @@ module.exports = {
         "link-focus": "#5772ce",
         "gltf-green": "#87c540",
         filter: {
-          task: "#ffdac1",
-          type: "#e2f0cb",
-          license: "#c7ceea",
-          language: "#ffb7b2",
-          tags: "#c3b2e0",
+          /* These are the colors that are used as the background for the filter
+             tag components, used in FilterBar.css and the FilterHelpers.ts
+             From https://colorbrewer2.org/#type=qualitative&scheme=Pastel2&n=8 */
+          color_0: "#b3e2cd",
+          color_1: "#fdcdac",
+          color_2: "#cbd5e8",
+          color_3: "#f4cae4",
+          color_4: "#e6f5c9",
+          color_5: "#fff2ae",
+          color_6: "#f1e2cc",
+          color_7: "#cccccc",
         },
       },
     },

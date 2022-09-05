@@ -1,14 +1,11 @@
 import { IFiltersState } from "../../interfaces/IAppState";
 import { FilterActionTypes } from "./Types";
 import { FiltersActions } from "./Interfaces";
+import { IFilter } from "../../interfaces/IFilter";
 
 export function filters(
   state: IFiltersState = {
-    tasks: [],
-    types: [],
-    licenses: [],
-    languages: [],
-    tags: [],
+    filterOptions: new Map<string, IFilter[]>(),
     titleSubstring: "",
     selected: new Set(),
   },
@@ -18,11 +15,7 @@ export function filters(
     case FilterActionTypes.UPDATE_FILTERS:
       return {
         ...state,
-        tasks: action.tasks,
-        types: action.types,
-        licenses: action.licenses,
-        languages: action.languages,
-        tags: action.tags,
+        filterOptions: action.filterOptions,
         titleSubstring: action.titleSubstring,
       };
     case FilterActionTypes.UPDATE_SELECTED_FILTERS:

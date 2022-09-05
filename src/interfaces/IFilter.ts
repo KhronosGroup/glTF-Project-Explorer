@@ -1,23 +1,12 @@
-export enum FilterDimension {
-  Task = "task",
-  Type = "type",
-  License = "license",
-  Language = "language",
-  Tags = "tags"
-}
-
 export interface IFilter {
-  dimension: FilterDimension;
+  propertyName: string;
   value: string;
   // selected: boolean;
 }
 
-export function createNewFilter(
-  dimension: FilterDimension,
-  value: string
-): IFilter {
+export function createNewFilter(propertyName: string, value: string): IFilter {
   return {
-    dimension,
+    propertyName,
     value,
     // selected: false
   };

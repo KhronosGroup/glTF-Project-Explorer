@@ -1,14 +1,14 @@
 import * as actions from "./Actions";
 import { call, put, takeEvery } from "redux-saga/effects";
 import { Document } from "flexsearch";
-import { fetchProjectsWithId } from "../../services/DataService";
+import { fetchProjects } from "../../services/DataService";
 import { IProjectInfo } from "../../interfaces/IProjectInfo";
 import { IProjectSearchDoc } from "../../interfaces/IAppState";
 import { ProjectsActionTypes } from "./Types";
 
-export function* retrieveProjects() {
+function* retrieveProjects() {
   try {
-    const projects: IProjectInfo[] = yield call(fetchProjectsWithId);
+    const projects: IProjectInfo[] = yield call(fetchProjects);
 
     // This probably isn't the best way to do this, but should be okay. In practice we only ever call `retrieveProjects()`
     //   once, so we shouldn't be creating (and leaking) multiple Document indices in memory.

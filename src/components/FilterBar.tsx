@@ -6,17 +6,14 @@ import { updateSelectedFilters } from "../store/filters/Actions";
 import FilterBarOptions from "./FilterBarOptions";
 import "./FilterBar.css";
 import FilterBarSelected from "./FilterBarSelected";
+import { ProjectFilterProperties } from "../interfaces/IProjectInfo";
 
-export interface IFilterBarOwnProps {
+interface IFilterBarOwnProps {
   allowCollapse: boolean;
 }
 
-export interface IFilterBarProps {
-  taskFilters: IFilter[];
-  typeFilters: IFilter[];
-  licenseFilters: IFilter[];
-  languageFilters: IFilter[];
-  tagFilters: IFilter[];
+interface IFilterBarProps {
+  filterOptions: Map<string, IFilter[]>;
   selectedFilters: Set<IFilter>;
   allowCollapse: boolean;
   updateSelectedFilters: typeof updateSelectedFilters;
@@ -24,12 +21,8 @@ export interface IFilterBarProps {
 
 const FilterBar: React.FC<IFilterBarProps> = (props) => {
   const {
-    taskFilters,
-    typeFilters,
-    licenseFilters,
-    languageFilters,
+    filterOptions,
     selectedFilters,
-    tagFilters,
     allowCollapse,
     updateSelectedFilters,
   } = props;
@@ -51,25 +44,44 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
   const handleFilterAddClick = useCallback(
     (filter: IFilter) => (_: React.MouseEvent) => {
       selectedFilters.add(filter);
+      const options = filterOptions.get(filter.propertyName);
+      if (options) {
+        const index = options.indexOf(filter);
+        options.splice(index, 1);
+      }
       updateSelectedFilters(selectedFilters);
     },
-    [selectedFilters, updateSelectedFilters]
+    [filterOptions, selectedFilters, updateSelectedFilters]
   );
 
   const handleFilterRemoveClick = useCallback(
     (filter: IFilter) => (_: React.MouseEvent) => {
       selectedFilters.delete(filter);
+      const options = filterOptions.get(filter.propertyName);
+      if (options) {
+        options.push(filter);
+        options.sort((f0, f1) => f0.value.localeCompare(f1.value));
+      }
       updateSelectedFilters(selectedFilters);
     },
-    [selectedFilters, updateSelectedFilters]
+    [filterOptions, selectedFilters, updateSelectedFilters]
   );
 
   const handleFilterResetClick = useCallback(
     (_) => {
+      for (const filter of selectedFilters) {
+        const options = filterOptions.get(filter.propertyName);
+        if (options) {
+          options.push(filter);
+        }
+      }
+      for (const options of filterOptions.values()) {
+        options.sort((f0, f1) => f0.value.localeCompare(f1.value));
+      }
       selectedFilters.clear();
       updateSelectedFilters(selectedFilters);
     },
-    [selectedFilters, updateSelectedFilters]
+    [filterOptions, selectedFilters, updateSelectedFilters]
   );
 
   return (
@@ -88,62 +100,31 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
           removeAction={handleFilterRemoveClick}
           resetAction={handleFilterResetClick}
         />
-        <FilterBarOptions
-          filters={tagFilters}
-          label="Filter by Tag"
-          allowCollapse={allowCollapse}
-          addAction={handleFilterAddClick}
-        />
-        <FilterBarOptions
-          filters={taskFilters}
-          label="Filter by Task"
-          allowCollapse={allowCollapse}
-          addAction={handleFilterAddClick}
-        />
-        <FilterBarOptions
-          filters={typeFilters}
-          label="Filter by Type"
-          allowCollapse={allowCollapse}
-          addAction={handleFilterAddClick}
-        />
-        <FilterBarOptions
-          filters={licenseFilters}
-          label="Filter by License"
-          allowCollapse={allowCollapse}
-          addAction={handleFilterAddClick}
-        />
-        <FilterBarOptions
-          filters={languageFilters}
-          label="Filter by Language"
-          allowCollapse={allowCollapse}
-          addAction={handleFilterAddClick}
-        />
       </div>
+      {[...filterOptions.entries()].map((entry) => {
+        return (
+          <FilterBarOptions
+            key={entry[0]}
+            filters={entry[1]}
+            label={`Filter by ${ProjectFilterProperties.get(entry[0])}`}
+            allowCollapse={allowCollapse}
+            addAction={handleFilterAddClick}
+          />
+        );
+      })}
     </div>
   );
 };
 
 function mapStateToProps(state: IAppState, ownProps: IFilterBarOwnProps) {
-  const {
-    filters: {
-      tasks: taskFilters,
-      types: typeFilters,
-      licenses: licenseFilters,
-      languages: languageFilters,
-      tags: tagFilters,
-      selected: selectedFilters,
-    },
-  } = state;
+  const filterOptions = state.filters.filterOptions;
+  const selected = state.filters.selected;
 
   const { allowCollapse } = ownProps;
 
   return {
-    taskFilters,
-    typeFilters,
-    licenseFilters,
-    languageFilters,
-    tagFilters,
-    selectedFilters,
+    filterOptions,
+    selectedFilters: selected,
     allowCollapse: allowCollapse,
   };
 }
