@@ -2374,5 +2374,14 @@
   "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ],
   "outputs": ["USD"]
+}, {
+  "name" : "fastgltf",
+  "description" : "A blazing fast C++17 glTF library powered by SIMD.",
+  "link" : "https://github.com/spnda/fastgltf",
+  "task" : [ "import" ],
+  "type" : [ "library" ],
+  "license" : [ "MIT" ],
+  "language" : [ "C++" ],
+  "inputs" : [ "glTF 2.0" ]
 }
 ]
