@@ -2383,5 +2383,39 @@
   "license" : [ "MIT" ],
   "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Minecraft MCglTF",
+  "description" : "A 3D model loader library for glTF models in the Minecraft Modding enviroment.",
+  "link" : "https://www.curseforge.com/minecraft/mc-mods/mcgltf",
+  "task" : [ "import" ],
+  "type" : [ "library", "plugin" ],
+  "license" : [ "MIT" ],
+  "language" : [ "Java" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Siemens NX",
+  "description" : "A design, simulation, and manufacturing software with glTF export, as described in https://blogs.sw.siemens.com/nx-design/visualizing-the-digital-twin-enhancements-in-the-latest-nx-release/",
+  "link" : "https://www.plm.automation.siemens.com/global/en/products/nx/",
+  "task" : [ "import", "export" ],
+  "type" : [ "application" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "migenius RealityServer",
+  "description" : "A platform for integrating photorealistic 3D rendering into web applications, with glTF support",
+  "link" : "https://realityserver.com/",
+  "task" : [ "view" ],
+  "type" : [ "web-api" ],
+  "inputs" : [ "glTF 2.0" ]
+}, {
+  "name" : "Titania X3D Editor",
+  "description" : "An X3D Graphics authoring tool and browser with glTF support",
+  "link" : "https://github.com/create3000/titania",
+  "license": [ "GPL-3.0-only" ],
+  "task" : [ "view", "import", "convert" ],
+  "type" : [ "application", "library" ],
+  "inputs" : [ "glTF 2.0", "Multiple" ],
+  "outputs" : [ "X3D" ]
 }
 ]
+
