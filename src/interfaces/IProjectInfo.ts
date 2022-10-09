@@ -22,22 +22,22 @@ type ProjectTag = string;
  */
 
 /**
- * The set of keys for the IProjectInfo#properties map
+ * The map of keys for the IProjectInfo#properties map,
+ * mapped to a human-readable form that is shown in the UI
  */
-export const ProjectProperties: Set<string> = new Set<string>([
-  "task",
-  "license",
-  "type",
-  "language",
-  "inputs",
-  "outputs",
-  "tags",
+export const ProjectProperties = new Map<string, string>([
+  ["task", "Task"],
+  ["license", "License"],
+  ["type", "Type"],
+  ["language", "Language"],
+  ["inputs", "Inputs"],
+  ["outputs", "Outputs"],
+  ["tags", "Tags"],
 ]);
 
 /**
  * A map defining the ProjectProperties by which the projects
- * can be filtered. The keys are the ProjectProperties elements.
- * The values are the string for the UI.
+ * can be filtered, which is a subset of the ProjectProperties 
  */
 export const ProjectFilterProperties = new Map<string, string>([
   ["tags", "Tags"],

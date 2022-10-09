@@ -1,4 +1,4 @@
-import { IProjectInfo } from "../interfaces/IProjectInfo";
+import { IProjectInfo, ProjectProperties } from "../interfaces/IProjectInfo";
 import ProjectDetailList from "./ProjectDetailList";
 import ProjectCardHeader from "./ProjectCardHeader";
 import "./ProjectCard.css";
@@ -12,7 +12,6 @@ interface IProjectCardProps {
 
 const ProjectCard: React.FC<IProjectCardProps> = (props) => {
   const { project } = props;
-
   return (
     <div className="project-card m-4 rounded p-4 shadow-sharp transition ease-in-out hover:shadow-hover">
       <ProjectCardHeader project={project} />
@@ -24,30 +23,17 @@ const ProjectCard: React.FC<IProjectCardProps> = (props) => {
           />
         )}
         <div className="grid gap-4 md:grid-cols-3 lg:col-span-2 lg:grid-cols-4">
-          {shouldShowSection(project.task) && (
-            <ProjectDetailList header="Task" items={project.task} />
-          )}
-          {shouldShowSection(project.license) && (
-            <ProjectDetailList header="License" items={project.license} />
-          )}
-          {shouldShowSection(project.language) && (
-            <ProjectDetailList
-              header="Supported Languages"
-              items={project.language!}
-            />
-          )}
-          {shouldShowSection(project.type) && (
-            <ProjectDetailList header="Type" items={project.type} />
-          )}
-          {shouldShowSection(project.inputs) && (
-            <ProjectDetailList header="Input Methods" items={project.inputs} />
-          )}
-          {shouldShowSection(project.outputs) && (
-            <ProjectDetailList
-              header="Output Methods"
-              items={project.outputs}
-            />
-          )}
+          {Object.keys(project.properties).map((propName) => {
+            const items = project.properties[propName];
+            return (
+              shouldShowSection(items) && (
+                <ProjectDetailList
+                  header={`${ProjectProperties.get(propName)}`}
+                  items={items}
+                />
+              )
+            );
+          })}
         </div>
       </div>
     </div>
