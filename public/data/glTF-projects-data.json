@@ -1991,7 +1991,7 @@
 }, {
   "name" : "pygltflib",
   "description" : "Python library for reading, writing and converting glTF 2.0 files.",
-  "link" : "https://github.com/chadj2/jgltf-mesh",
+  "link" : "https://gitlab.com/dodgyville/pygltflib",
   "task" : [ "import", "export", "convert" ],
   "license" : [ "MIT" ],
   "type" : [ "library" ],
