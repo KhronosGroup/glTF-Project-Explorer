@@ -28,6 +28,7 @@ const ProjectCard: React.FC<IProjectCardProps> = (props) => {
             return (
               shouldShowSection(items) && (
                 <ProjectDetailList
+                  key={propName}
                   header={`${ProjectProperties.get(propName)}`}
                   items={items}
                 />
