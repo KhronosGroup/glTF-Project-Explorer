@@ -2416,6 +2416,14 @@
   "type" : [ "application", "library" ],
   "inputs" : [ "glTF 2.0", "Multiple" ],
   "outputs" : [ "X3D" ]
+}, {
+  "name" : "3ds Max Importer/Exporter",
+  "description" : "Import/Export glTF file plugins for 3ds Max2021 or later",
+  "link" : "https://nu1963u.wixsite.com/custom3dsmax/gltfpluginfor3dsmax",
+  "task" : [ "import", "export" ],
+  "type" : [ "plugin" ],
+  "inputs" : [ "glTF 2.0" ],
+  "outputs" : [ "glTF 2.0" ]
 }
 ]
 
