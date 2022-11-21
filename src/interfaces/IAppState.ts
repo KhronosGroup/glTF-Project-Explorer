@@ -29,7 +29,7 @@ export interface IProjectsState {
 /**
  * The part of the state that summarizes the filter options and selection.
  *
- * @property filterOptions A record that maps ProjectProperties values to the
+ * @property filterOptions A record that maps ProjectProperties keys to the
  * list of filters that are available for this project property. These are
  * one filter object for each possible value of this property.
  * @property titleSubstring The string that was entered in the free-text search box
