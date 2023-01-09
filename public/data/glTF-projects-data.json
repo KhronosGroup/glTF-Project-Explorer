@@ -1,5 +1,13 @@
 [
   {
+  "name" : "Okino PolyTrans|CAD+DCC",
+  "description" : "An industry staple for the cross conversion of CAD, DCC, GIS & AEC 3D assets (all highly supported and refined) to and from glTF with extensive processing and conversions options, PBR material import/export support, and KHR extensions support.\n\nThe list of supported file formats: https://www.okino.com/conv/filefrmt.htm",
+  "link" : "https://www.okino.com/conv/exp_gltf.htm",
+  "task" : [ "import", "export", "analyze", "optimize", "view" ],
+  "type" : [ "application", "plugin" ],
+  "inputs" : [ "Multiple", "glTF 2.0" ],
+  "outputs" : [ "Multiple", "glTF 2.0" ]
+}, {
   "name" : "Onirix",
   "description" : "Augmented Reality Web Platform. Provides a CMS and SDKs to easily create AR experiences.",
   "link" : "https://www.onirix.com/",
