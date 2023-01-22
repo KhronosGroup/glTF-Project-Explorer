@@ -1,7 +1,7 @@
 os: linux
 dist: xenial
 node_js:
-  - 12
+  - 14
 language: node_js
 script:
   - yarn build
