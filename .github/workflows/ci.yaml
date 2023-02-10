@@ -22,6 +22,8 @@ jobs:
         with:
           node-version: lts/*
           cache: 'yarn'
+      - name: Install Packages
+        run: yarn
       - name: Build & Deploy
         run: yarn deploy
     
