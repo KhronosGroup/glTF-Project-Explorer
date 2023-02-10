@@ -11,7 +11,7 @@ jobs:
     name: Build
     runs-on: ubuntu-22.04
     env:
-      NODE_ENV: production
+      NODE_ENV: ci
     concurrency:
       group: ${{github.workflow}}-${{github.ref}}
     steps:
