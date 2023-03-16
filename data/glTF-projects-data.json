@@ -1,5 +1,13 @@
 [
   {
+  "name" : "Okino PolyTrans|CAD+DCC",
+  "description" : "An industry staple for the cross conversion of CAD, DCC, GIS & AEC 3D assets (all highly supported and refined) to and from glTF with extensive processing and conversions options, PBR material import/export support, and KHR extensions support.\n\nThe list of supported file formats: https://www.okino.com/conv/filefrmt.htm",
+  "link" : "https://www.okino.com/conv/exp_gltf.htm",
+  "task" : [ "import", "export", "analyze", "optimize", "view" ],
+  "type" : [ "application", "plugin" ],
+  "inputs" : [ "Multiple", "glTF 2.0" ],
+  "outputs" : [ "Multiple", "glTF 2.0" ]
+}, {
   "name" : "Onirix",
   "description" : "Augmented Reality Web Platform. Provides a CMS and SDKs to easily create AR experiences.",
   "link" : "https://www.onirix.com/",
@@ -1991,7 +1999,7 @@
 }, {
   "name" : "pygltflib",
   "description" : "Python library for reading, writing and converting glTF 2.0 files.",
-  "link" : "https://github.com/chadj2/jgltf-mesh",
+  "link" : "https://gitlab.com/dodgyville/pygltflib",
   "task" : [ "import", "export", "convert" ],
   "license" : [ "MIT" ],
   "type" : [ "library" ],
@@ -2424,6 +2432,16 @@
   "type" : [ "plugin" ],
   "inputs" : [ "glTF 2.0" ],
   "outputs" : [ "glTF 2.0" ]
+}, {
+  "name": "MATLAB-GLTF",
+  "link": "https://github.com/rohan-collins/MATLAB-GLTF",
+  "description": "MATLAB class to export 3D graphs and other content to glTF.",
+  "task": ["import", "export"],
+  "type": ["library"],
+  "license": ["GPL-3.0-only"],
+  "language": ["MATLAB"],
+  "inputs": ["glTF 2.0"],
+  "outputs": ["glTF 2.0", "COLLADA"]
 }
 ]
 
