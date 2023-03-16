@@ -2432,6 +2432,16 @@
   "type" : [ "plugin" ],
   "inputs" : [ "glTF 2.0" ],
   "outputs" : [ "glTF 2.0" ]
+}, {
+  "name": "MATLAB-GLTF",
+  "link": "https://github.com/rohan-collins/MATLAB-GLTF",
+  "description": "MATLAB class to export 3D graphs and other content to glTF.",
+  "task": ["import", "export"],
+  "type": ["library"],
+  "license": ["GPL-3.0-only"],
+  "language": ["MATLAB"],
+  "inputs": ["glTF 2.0"],
+  "outputs": ["glTF 2.0", "COLLADA"]
 }
 ]
 
