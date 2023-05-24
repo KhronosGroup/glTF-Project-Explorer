@@ -1795,7 +1795,18 @@
   "link" : "https://poly.google.com/",
   "task" : [ "service" ],
   "type" : [ "viewer", "embeddable", "self-hosted" ]
-}, {
+},
+{ 
+  "name" : "Filer", 
+  "description" : "Filer hosts a free public CDN library of 3D models + game assets, and a 3D glb scene editor. Community members regularly upload glb, gltf, fbx and other free files.",
+  "link" : "https://filer.netlify.app/", 
+  "type" : [ "viewer", "service", "application" ],
+  "license": ["Multiple"],
+  "task": ["load", "view", "import"],
+  "inputs" : [ "FBX", "glTF 2.0", "GLB", "JPEG", "JPG", "PNG", "SVG" ],
+  "outputs" : [ "glTF 2.0" ]
+}, 
+{
   "name" : "Sketchfab",
   "description" : "glTF models hosted on Sketchfab may be embedded in an iframe on any site, using the [embed models](https://help.sketchfab.com/hc/en-us/articles/203509907-Embed-Models) feature.",
   "link" : "https://sketchfab.com/",
