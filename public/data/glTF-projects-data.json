@@ -1794,8 +1794,7 @@
   "description" : "glTF models hosted on Poly may be embedded in an iframe on any site.",
   "link" : "https://poly.google.com/",
   "task" : [ "service" ],
-  "type" : [ "viewer", "embeddable", "self-hosted" ],
-  "inputs" : [ "glTF 2.0" ]
+  "type" : [ "viewer", "embeddable", "self-hosted" ]
 },
 { 
   "name" : "Filer", 
