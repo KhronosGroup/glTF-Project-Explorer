@@ -6,7 +6,7 @@ import { updateSelectedFilters } from "../store/filters/Actions";
 import FilterBarOptions from "./FilterBarOptions";
 import "./FilterBar.css";
 import FilterBarSelected from "./FilterBarSelected";
-import { ProjectFilterProperties } from "../interfaces/IProjectInfo";
+import { ProjectFilterTags } from "../interfaces/IProjectsMetadata";
 
 interface IFilterBarOwnProps {
   allowCollapse: boolean;
@@ -44,7 +44,7 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
   const handleFilterAddClick = useCallback(
     (filter: IFilter) => (_: React.MouseEvent) => {
       selectedFilters.add(filter);
-      const options = filterOptions.get(filter.propertyName);
+      const options = filterOptions.get(filter.tagName);
       if (options) {
         const index = options.indexOf(filter);
         options.splice(index, 1);
@@ -57,7 +57,7 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
   const handleFilterRemoveClick = useCallback(
     (filter: IFilter) => (_: React.MouseEvent) => {
       selectedFilters.delete(filter);
-      const options = filterOptions.get(filter.propertyName);
+      const options = filterOptions.get(filter.tagName);
       if (options) {
         options.push(filter);
         options.sort((f0, f1) => f0.value.localeCompare(f1.value));
@@ -70,7 +70,7 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
   const handleFilterResetClick = useCallback(
     (_) => {
       for (const filter of selectedFilters) {
-        const options = filterOptions.get(filter.propertyName);
+        const options = filterOptions.get(filter.tagName);
         if (options) {
           options.push(filter);
         }
@@ -106,7 +106,7 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
           <FilterBarOptions
             key={entry[0]}
             filters={entry[1]}
-            label={`Filter by ${ProjectFilterProperties.get(entry[0])}`}
+            label={`Filter by ${ProjectFilterTags.get(entry[0])}`}
             allowCollapse={allowCollapse}
             addAction={handleFilterAddClick}
           />

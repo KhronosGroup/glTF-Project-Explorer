@@ -1,4 +1,5 @@
-import { IProjectInfo, ProjectProperties } from "../interfaces/IProjectInfo";
+import { IProjectInfo } from "../interfaces/IProjectInfo";
+import { ProjectTags } from "../interfaces/IProjectsMetadata";
 import ProjectDetailList from "./ProjectDetailList";
 import ProjectCardHeader from "./ProjectCardHeader";
 import "./ProjectCard.css";
@@ -23,13 +24,13 @@ const ProjectCard: React.FC<IProjectCardProps> = (props) => {
           />
         )}
         <div className="grid gap-4 md:grid-cols-3 lg:col-span-2 lg:grid-cols-4">
-          {Object.keys(project.properties).map((propName) => {
-            const items = project.properties[propName];
+          {Object.keys(project.tags).map((propName) => {
+            const items = project.tags[propName];
             return (
               shouldShowSection(items) && (
                 <ProjectDetailList
                   key={propName}
-                  header={`${ProjectProperties.get(propName)}`}
+                  header={`${ProjectTags.get(propName)}`}
                   items={items}
                 />
               )

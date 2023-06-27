@@ -1,13 +1,13 @@
 import { IFilter } from "../interfaces/IFilter";
 
 const NUM_FILTER_COLORS = 8; // As defined in tailwind.config.css
-const filterPropertyNames: string[] = [];
+const filterTagNames: string[] = [];
 
 export const determineClassName = (filter: IFilter) => {
-  let index = filterPropertyNames.indexOf(filter.propertyName);
+  let index = filterTagNames.indexOf(filter.tagName);
   if (index < 0) {
-    index = filterPropertyNames.length;
-    filterPropertyNames.push(filter.propertyName);
+    index = filterTagNames.length;
+    filterTagNames.push(filter.tagName);
   }
   index %= NUM_FILTER_COLORS;
   return `filter-${index}`;

@@ -1,0 +1,44 @@
+{
+  "name": {
+    "type": "string",
+    "isArray": false
+  },
+  "link": {
+    "type": "url",
+    "isArray": false
+  },
+  "description": {
+    "type": "markdown",
+    "isArray": false
+  },
+  "tags": {
+    "task": {
+      "type": "string",
+      "isArray": true
+    },
+    "type": {
+      "type": "string",
+      "isArray": true
+    },
+    "license": {
+      "type": "string",
+      "isArray": true
+    },
+    "language": {
+      "type": "string",
+      "isArray": true
+    },
+    "inputs": {
+      "type": "string",
+      "isArray": true
+    },
+    "outputs": {
+      "type": "string",
+      "isArray": true
+    },
+    "tags": {
+      "type": "string",
+      "isArray": true
+    }
+  }
+}
