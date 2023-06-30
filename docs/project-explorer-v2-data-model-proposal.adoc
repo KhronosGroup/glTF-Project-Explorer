@@ -1,0 +1,111 @@
+= Project Explorer V2 JSON Data Model Proposal
+Adam Morris <adam@cesium.com>
+2023-06-21
+:toc:
+
+== Introduction
+
+As part of the effort to produce a new version of Project Explorer that can be used by multiple Working Groups within Khronos, there is a strong need to make the data model more generic. This proposal outlines one potential but incomplete solution for the V2 JSON data model. The ultimate goal of this draft of this document is to prompt and foster further discussion on this matter.
+
+== Proposal
+
+=== Existing Data Model
+
+Today, the JSON data model follows the following form:
+
+[source,json]
+----
+[
+  {
+    "name": "Example", // <1>
+    "link": "http://example.com", // <2>
+    "description": "An example project. The description can contain basic markdown.", // <1>
+    "task": ["view", "import", "export"], // <3>
+    "type": ["application", "library"], // <3>
+    "license": ["MIT", "CC-BY-2.5"], // <4>
+    "language": ["TypeScript"], // <3>
+    "inputs": ["glTF 1.0", "glTF 2.0", "OBJ"], // <3>
+    "outputs": ["glTF 2.0", "FBX"] // <3>
+  }
+]
+----
+<1> Name and description are simple text output for each card.
+<2> Link is used for the actual hyperlink to the project.
+<3> The "Tags" are all string separated lists of data. All are effectively freeform with the exception of license.
+<4> The license field is intended to be used with SPDX license identifiers.
+
+=== Proposed Data Model
+
+The proposal here is aimed at providing a pathway forward for both Project Explorer V2, as well as future versions of Project Explorer.
+
+[source,json]
+----
+{
+  "metadata": {
+    "link": {  // <1> <2>
+      "type": "url", // <3>
+      "isArray": false
+    },
+    "description": {
+      "type": "markdown",
+      "isArray": false,
+    },
+    "tags": { // <4>
+      "task": {
+        "type": "string",
+        "isArray": true // <5>
+      },
+      "type": {
+        "type": "string",
+        "isArray": true
+      },
+      "license": {
+        "type": "string",
+        "isArray": true
+      },
+      "language": {
+        "type": "string",
+        "isArray": true
+      },
+      "inputs": {
+        "type": "string",
+        "isArray": true
+      },
+      "outputs": {
+        "type": "string",
+        "isArray": true
+      }
+    }
+  },
+  "data": [ // <6>
+    {
+      "name": "Example",
+      "link": "http://example.com",
+      "description": "An example project. The description can contain basic markdown.",
+      "tags": {
+        "task": ["view", "import", "export"],
+        "type": ["application", "library"],
+        "license": ["MIT", "CC-BY-2.5"],
+        "language": ["TypeScript"],
+        "inputs": ["glTF 1.0", "glTF 2.0", "OBJ"],
+        "outputs": ["glTF 2.0", "FBX"]
+      }
+    }
+  ]
+}
+----
+<1> The top-level properties are specific to the data model and are `name`, `link`, `description`, and `tags`. This could change in the future to allow any top-level property as long as the relevant metadata is included.
+<2> Any top-level property can have metadata specified, which can be used for security validation on either the server or client side. It also allows us some flexibility in the future. If not metadata is specified, we fallback to a scenario where the type is assumed to be `string` and `isArray` is assumed `false`.
+<3> Potential types are `string`, `url`, `date`, `markdown`, and `number`. These should be clearly defined in both documentation and a schema.
+<4> The `tags` property in the metadata section is special. It is the only top level field that is allowed to have a child object.
+<5> The `isArray` property specifies whether or not something is an array. There is potentially a way to pack whether or not we are using an array in the `type` field, but I am attempting to avoid complex string parsing requirements for consumption of the data model.
+<6> Rather than calling the block `projects`, I chose `data` instead. This decouples us somewhat from the concept of having only projects within the Explorer.
+
+Striking a clear balance between flexibility and implementation is tough, but the idea here is that some of these things, such as the validation pieces, may not need to be initially implemented by the Project Explorer client code, but provide an avenue for more flexibility in the future, including full customization of the data shown on the project cards.
+
+Please note, this proposal avoids the topic of property relationships. I believe the relationships issue will largely be a server-side issue and I think it's best to leave the topic of relationships there and not model them in the communication between the server and the client.
+
+== Open Questions
+
+1. How do we define which fields can be used for searching, and which for filtering? In the current UX design of the Project Explorer we perform full-text searching on `name` and `description`, and filtering on the "tags". With a more generic and open data model, we will likely need to find a way to explicitly specify what is used for filtering and what is using for searching. Alternatively, we ditch the "filters" and go to a more powerful solution which "searches" across all properties. (I am a fan of the latter longer term.)
+2. Should the metadata and data be provided through the same endpoint, or different endpoints?
