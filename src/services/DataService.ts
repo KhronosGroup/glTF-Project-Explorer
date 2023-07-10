@@ -73,7 +73,7 @@ export async function fetchProjects(): Promise<IProjectInfo[]> {
   return resultProjects;
 }
 
-async function fetchProjectsMetadata(): Promise<IProjectsMetadata | undefined> {
+export async function fetchProjectsMetadata(): Promise<IProjectsMetadata | undefined> {
   try {
     const response = await fetch(
       `${process.env.PUBLIC_URL}/data/glTF-projects-metadata.json`

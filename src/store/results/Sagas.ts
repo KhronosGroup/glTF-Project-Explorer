@@ -6,7 +6,7 @@ import { Document } from "flexsearch";
 import { FilterActionTypes } from "../filters/Types";
 import { IFilter } from "../../interfaces/IFilter";
 import { IProjectInfo } from "../../interfaces/IProjectInfo";
-import { ProjectFilterTags } from "../../interfaces/IProjectsMetadata";
+import { IProjectsMetadata } from "../../interfaces/IProjectsMetadata";
 import { IProjectSearchDoc } from "../../interfaces/IAppState";
 
 // Tags in these groups will be pulled to the top of the list.
@@ -21,6 +21,7 @@ interface IGroupedFilters {
 }
 
 function applyTagFilters(
+  projectsMetadata: IProjectsMetadata,
   projects: IProjectInfo[],
   selectedFilters: Set<IFilter>
 ): IProjectInfo[] {
@@ -28,7 +29,7 @@ function applyTagFilters(
     return projects;
   }
 
-  const filterTagNames = Array.from(ProjectFilterTags.keys());
+  const filterTagNames = projectsMetadata.filterTags;
   const groupedFilters = Array.from(selectedFilters).reduce<IGroupedFilters>(
     (acc, curr) => {
       if (!acc[curr.tagName]) {
@@ -126,19 +127,21 @@ function sortResults(projects: IProjectInfo[]): IProjectInfo[] {
 }
 
 function* applyFilters() {
-  const [projects, searchIndex, selectedFilters, query]: [
+  const [projectsMetadata, projects, searchIndex, selectedFilters, query]: [
+    IProjectsMetadata,
     IProjectInfo[],
     Document<IProjectSearchDoc> | undefined,
     Set<IFilter>,
     string
   ] = yield all([
+    select(projectSelectors.getProjectsMetadata),
     select(projectSelectors.getProjects),
     select(projectSelectors.getSearchIndex),
     select(filterSelectors.getSelectedFilters),
     select(filterSelectors.getTitleSubstring),
   ]);
 
-  const filteredResults = applyTagFilters(projects, selectedFilters);
+  const filteredResults = applyTagFilters(projectsMetadata, projects, selectedFilters);
   const searchedResults = applyIndexedSearch(
     filteredResults,
     searchIndex,

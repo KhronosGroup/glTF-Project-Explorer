@@ -1,7 +1,6 @@
 import { takeEvery, select, put } from "redux-saga/effects";
 import { createNewFilter, IFilter } from "../../interfaces/IFilter";
 import { IProjectInfo } from "../../interfaces/IProjectInfo";
-import { ProjectFilterTags } from "../../interfaces/IProjectsMetadata";
 import { ProjectsActionTypes } from "../projects/Types";
 import * as projectSelectors from "../projects/Selectors";
 import * as actions from "./Actions";
@@ -17,9 +16,10 @@ function calculateFiltersForTag(projects: IProjectInfo[], tagName: string) {
 
 function* calculateFilters(): any {
   const projects = yield select(projectSelectors.getProjects);
+  const projectsMetadata = yield select(projectSelectors.getProjectsMetadata);
 
   const filterOptions = new Map<string, IFilter[]>();
-  const filterTags = Array.from(ProjectFilterTags.keys());
+  const filterTags = projectsMetadata.filterTags;
   for (const tagName of filterTags) {
     const filters = calculateFiltersForTag(projects, tagName);
     const sortedFilters = filters.sort((f0, f1) =>

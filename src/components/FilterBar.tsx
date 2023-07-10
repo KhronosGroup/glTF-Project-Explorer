@@ -6,7 +6,6 @@ import { updateSelectedFilters } from "../store/filters/Actions";
 import FilterBarOptions from "./FilterBarOptions";
 import "./FilterBar.css";
 import FilterBarSelected from "./FilterBarSelected";
-import { ProjectFilterTags } from "../interfaces/IProjectsMetadata";
 
 interface IFilterBarOwnProps {
   allowCollapse: boolean;
@@ -106,7 +105,7 @@ const FilterBar: React.FC<IFilterBarProps> = (props) => {
           <FilterBarOptions
             key={entry[0]}
             filters={entry[1]}
-            label={`Filter by ${ProjectFilterTags.get(entry[0])}`}
+            label={`Filter by ${entry[0]}`}
             allowCollapse={allowCollapse}
             addAction={handleFilterAddClick}
           />

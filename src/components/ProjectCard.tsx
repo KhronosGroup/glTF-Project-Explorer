@@ -1,5 +1,4 @@
 import { IProjectInfo } from "../interfaces/IProjectInfo";
-import { ProjectTags } from "../interfaces/IProjectsMetadata";
 import ProjectDetailList from "./ProjectDetailList";
 import ProjectCardHeader from "./ProjectCardHeader";
 import "./ProjectCard.css";
@@ -30,7 +29,7 @@ const ProjectCard: React.FC<IProjectCardProps> = (props) => {
               shouldShowSection(items) && (
                 <ProjectDetailList
                   key={propName}
-                  header={`${ProjectTags.get(propName)}`}
+                  header={`${propName}`}
                   items={items}
                 />
               )

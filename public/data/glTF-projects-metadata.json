@@ -40,5 +40,6 @@
       "type": "string",
       "isArray": true
     }
-  }
+  },
+  "filterTags": ["tags", "task", "type", "language", "license"]
 }
