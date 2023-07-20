@@ -2453,6 +2453,15 @@
   "language": ["MATLAB"],
   "inputs": ["glTF 2.0"],
   "outputs": ["glTF 2.0", "COLLADA"]
+}, {
+  "name": "Govie Editor",
+  "link": "https://govie-editor.de",
+  "description": "Create interactive 3D presentations - called Govies - within seconds, as easily as using PowerPoint. Convert multiple CAD formats to GLTF 2.0 and utilize them for your 3D interactions. Share the 3D presentations or embed and control them with the Govie web API. Additionally, export them as an offline Govie and view them in the Govie standalone player.",
+  "task": ["view", "optimize", "load", "import", "export", "embed", "process", "service"],
+  "type": ["web-api", "service", "web-application", "viewer", "file format"],
+  "language": ["JavaScript", "TypeScript"],
+  "inputs": ["glTF 2.0", "3MF", "SAT", "SAB", "3DS", "DWF", "DWFX", "IPT", "IAM", "NWD", "MODEL", "SESSION", "3DVIA / CATIA / SOLIDWORKS Composer", "EXP", "CATIA V4", "CATIA V5", "CATIA V6", "3DEXPERIENCE", "3DXML", "DAE", "DWG", "DXF", "ASM", "NEU", "PRT", "XAS", "XPR", "CREO", "FBX", "GLB", "GLTF", "MF1", "ARC", "UNV", "PKG", "IFC", "IFC-STEP", "IGES", "IGS", "JT", "DGN", "Parasolid", "PRC", "RVT", "RFA", "Revit", "Rhino", "3DM", "ASM", "PAR", "PWD", "PSM", "SCS", "Solid Edge", "SLDASM", "SLDPRT", "SOLIDWORKS", "STEP", "STP", "STPZ", "STPX", "STL", "U3D", "VDA", "VRML", "WRL", "OBJ"],
+  "outputs": ["govie", "glTF 2.0", "SCS"]
 }
 ]
 
