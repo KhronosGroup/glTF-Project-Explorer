@@ -2251,7 +2251,8 @@
   "description": "An editing, rendering and analysis tool, which can connect to different content creation applications, and import glTF.",
   "task": ["view", "import", "export", "analyze"],
   "type": ["application"],
-  "inputs": ["glTF 2.0", "Multiple"]
+  "inputs": ["glTF 2.0", "GLB", "USD", "FBX", "OBJ", "LXO", "MD5", "STL", "BVH", "e57", "pts"],
+  "outputs" : [ "glTF 2.0", "USD", "FBX", "OBJ", "STL"]
 }, {
   "name": "Emersya",
   "link": "https://emersya.com/en/home",
