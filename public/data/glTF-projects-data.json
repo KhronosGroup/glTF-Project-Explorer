@@ -2248,10 +2248,11 @@
 }, {
   "name": "NVIDIA Omniverse",
   "link": "https://docs.omniverse.nvidia.com/",
-  "description": "An editing, rendering and analysis tool, which can connect to different content creation applications, and import glTF.",
+  "description": "[USD Composer](https://www.nvidia.com/en-us/omniverse/apps/create/) is an NVIDIA Omniverse foundation application for large scale world building and scene composition. With plug-ins it can [interoperate with other applications](https://docs.omniverse.nvidia.com/connect/latest/connecting-to-omniverse.html).",
   "task": ["view", "import", "export", "analyze"],
   "type": ["application"],
-  "inputs": ["glTF 2.0", "Multiple"]
+  "inputs": ["glTF 2.0", "GLB", "USD", "FBX", "OBJ", "LXO", "MD5", "STL", "BVH", "e57", "pts"],
+  "outputs" : [ "glTF 2.0", "USD", "FBX", "OBJ", "STL"]
 }, {
   "name": "Emersya",
   "link": "https://emersya.com/en/home",
