@@ -1,14 +1,15 @@
 export interface IProjectInfo {
   id: number;
+  key: string;
   name: string;
   description?: string;
   link?: string;
-
   tags: Record<string, any>;
 }
 
 export interface ILegacyProjectInfo {
   id: number;
+  key: string;
   name: string;
   description?: string;
   link?: string;

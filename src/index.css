@@ -51,13 +51,13 @@ a:focus {
   color: theme("colors.link-focus");
 }
 
-a[href*="http"] {
+a.external[href*="http"] {
   background: url(./external-link-icon.svg) no-repeat 100% 0;
   background-size: 1rem 1rem;
   padding-right: 1.25rem;
 }
 
-h1 a[href*="http"] {
+h1 a.external[href*="http"] {
   background-size: 1.5rem 1.5rem;
   padding-right: 2rem;
 }

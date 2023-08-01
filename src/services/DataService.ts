@@ -9,7 +9,7 @@ async function fetchProjectsInternal(): Promise<ILegacyProjectInfo[]> {
     const response = await fetch(
       `${process.env.PUBLIC_URL}/data/glTF-projects-data.json`
     );
-    return response.json();
+    return await response.json();
   } catch (error) {
     console.error(`Error fetching data. Reason: ${error}`);
     return [];
@@ -28,6 +28,7 @@ function migrateProjectInfoForGeneralization(
 ): IProjectInfo {
   const result: IProjectInfo = {
     id: p.id,
+    key: p.key,
     name: p.name,
     description: p.description,
     link: p.link,
