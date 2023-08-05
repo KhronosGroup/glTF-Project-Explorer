@@ -2386,10 +2386,10 @@
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "guc",
-  "description" : "guc is a glTF to Universal Scene Description (USD) converter.",
+  "description" : "glTF to Universal Scene Description (USD) converter with MaterialX support",
   "link" : "https://github.com/pablode/guc",
   "task" : [ "load", "convert" ],
-  "type" : [ "application" ],
+  "type" : [ "application", "library", "plugin" ],
   "license" : [ "Apache-2.0" ],
   "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ],
