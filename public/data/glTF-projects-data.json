@@ -2472,6 +2472,15 @@
     "language": [ "JavaScript", "TypeScript", "C#", "Python" ],
     "inputs": [ "glTF 2.0", "FBX", "OBJ", "DAE", "GLB" ],
     "outputs": [ "glTF 2.0" ]
+  }, {
+    "name": "Wicked Engine",
+    "link": "https://github.com/turanszkij/WickedEngine",
+    "description": "3D engine with modern graphics",
+    "task": [ "export", "import", "edit" ],
+    "type": [ "application", "engine" ],
+    "language": [ "C++", "Lua" ],
+    "inputs": [ "glTF 2.0", "VRM", "OBJ", "GLB" ],
+    "outputs": [ "glTF 2.0" ]
   }
 ]
 
