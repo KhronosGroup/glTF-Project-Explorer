@@ -2481,6 +2481,15 @@
     "language": [ "C++", "Lua" ],
     "inputs": [ "glTF 2.0", "VRM", "OBJ", "GLB" ],
     "outputs": [ "glTF 2.0" ]
+  }, {
+    "name": "ATON framework",
+    "link": "https://github.com/phoenixbf/aton",
+    "description": "ATON framework is based on modern web standards and open-source technologies to create interactive, liquid and collaborative Web3D/WebXR apps targeting Cultural Heritage field. It allows to create scalable, collaborative and cross-device 3D web-apps (mobile, desktop and immersive XR) without any installation required for final users, providing built-in tools (view, inspect, edit, annotate, measure, ...) and a modular architecture based on node.js",
+    "task": [ "view", "load", "import"],
+    "type": [ "library", "service", "application"],
+    "license": ["GPL-3.0-only"],
+    "language": [ "JavaScript" ],
+    "inputs": [ "glTF 2.0", "GLB" ]
   }
 ]
 
