@@ -2247,10 +2247,11 @@
 }, {
   "name": "NVIDIA Omniverse",
   "link": "https://docs.omniverse.nvidia.com/",
-  "description": "An editing, rendering and analysis tool, which can connect to different content creation applications, and import glTF.",
+  "description": "[USD Composer](https://www.nvidia.com/en-us/omniverse/apps/create/) is an NVIDIA Omniverse foundation application for large scale world building and scene composition. With plug-ins it can [interoperate with other applications](https://docs.omniverse.nvidia.com/connect/latest/connecting-to-omniverse.html).",
   "task": ["view", "import", "export", "analyze"],
   "type": ["application"],
-  "inputs": ["glTF 2.0", "Multiple"]
+  "inputs": ["glTF 2.0", "GLB", "USD", "FBX", "OBJ", "LXO", "MD5", "STL", "BVH", "e57", "pts"],
+  "outputs" : [ "glTF 2.0", "USD", "FBX", "OBJ", "STL"]
 }, {
   "name": "Emersya",
   "link": "https://emersya.com/en/home",
@@ -2384,10 +2385,10 @@
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "guc",
-  "description" : "guc is a glTF to Universal Scene Description (USD) converter.",
+  "description" : "glTF to Universal Scene Description (USD) converter with MaterialX support",
   "link" : "https://github.com/pablode/guc",
   "task" : [ "load", "convert" ],
-  "type" : [ "application" ],
+  "type" : [ "application", "library", "plugin" ],
   "license" : [ "Apache-2.0" ],
   "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ],
@@ -2452,6 +2453,42 @@
   "language": ["MATLAB"],
   "inputs": ["glTF 2.0"],
   "outputs": ["glTF 2.0", "COLLADA"]
-}
+}, {
+  "name": "Govie Editor",
+  "link": "https://govie-editor.de",
+  "description": "Create interactive 3D presentations - called Govies - within seconds, as easily as using PowerPoint. Convert multiple CAD formats to GLTF 2.0 and utilize them for your 3D interactions. Share the 3D presentations or embed and control them with the Govie web API. Additionally, export them as an offline Govie and view them in the Govie standalone player.",
+  "task": ["view", "optimize", "load", "import", "export", "embed", "process", "service"],
+  "type": ["web-api", "service", "web-application", "viewer", "file format"],
+  "language": ["JavaScript", "TypeScript"],
+  "inputs": ["glTF 2.0", "3MF", "SAT", "SAB", "3DS", "DWF", "DWFX", "IPT", "IAM", "NWD", "MODEL", "SESSION", "3DVIA / CATIA / SOLIDWORKS Composer", "EXP", "CATIA V4", "CATIA V5", "CATIA V6", "3DEXPERIENCE", "3DXML", "DAE", "DWG", "DXF", "ASM", "NEU", "PRT", "XAS", "XPR", "CREO", "FBX", "GLB", "GLTF", "MF1", "ARC", "UNV", "PKG", "IFC", "IFC-STEP", "IGES", "IGS", "JT", "DGN", "Parasolid", "PRC", "RVT", "RFA", "Revit", "Rhino", "3DM", "ASM", "PAR", "PWD", "PSM", "SCS", "Solid Edge", "SLDASM", "SLDPRT", "SOLIDWORKS", "STEP", "STP", "STPZ", "STPX", "STL", "U3D", "VDA", "VRML", "WRL", "OBJ"],
+  "outputs": ["govie", "glTF 2.0", "SCS"]
+  }, {
+    "name": "Needle Engine",
+    "link": "https://needle.tools",
+    "description": "Needle Engine is a web engine for complex and simple 3D applications alike. Run on your machine and deploy anywhere. It is flexible, extensible and has built-in support for **collaboration and XR**! It is built around the glTF standard for 3D assets. Powerful integrations for **Unity** and **Blender** allow artists and developers to collaborate and manage web applications inside battle-tested 3d editors. **Needle Engine Integrations** allow you to use Editor features for exporting models, author materials, animate and sequence animations, bake lightmaps and more with ease. Our powerful **compression and optimization pipeline for the web** make sure your files are ready, small and load fast!",
+    "task": [ "export", "import", "load", "optimize", "service", "convert", "edit" ],
+    "type": [ "engine", "service", "viewer" ],
+    "language": [ "JavaScript", "TypeScript", "C#", "Python" ],
+    "inputs": [ "glTF 2.0", "FBX", "OBJ", "DAE", "GLB" ],
+    "outputs": [ "glTF 2.0" ]
+  }, {
+    "name": "Wicked Engine",
+    "link": "https://github.com/turanszkij/WickedEngine",
+    "description": "3D engine with modern graphics",
+    "task": [ "export", "import", "edit" ],
+    "type": [ "application", "engine" ],
+    "language": [ "C++", "Lua" ],
+    "inputs": [ "glTF 2.0", "VRM", "OBJ", "GLB" ],
+    "outputs": [ "glTF 2.0" ]
+  }, {
+    "name": "ATON framework",
+    "link": "https://github.com/phoenixbf/aton",
+    "description": "ATON framework is based on modern web standards and open-source technologies to create interactive, liquid and collaborative Web3D/WebXR apps targeting Cultural Heritage field. It allows to create scalable, collaborative and cross-device 3D web-apps (mobile, desktop and immersive XR) without any installation required for final users, providing built-in tools (view, inspect, edit, annotate, measure, ...) and a modular architecture based on node.js",
+    "task": [ "view", "load", "import"],
+    "type": [ "library", "service", "application"],
+    "license": ["GPL-3.0-only"],
+    "language": [ "JavaScript" ],
+    "inputs": [ "glTF 2.0", "GLB" ]
+  }
 ]
 
