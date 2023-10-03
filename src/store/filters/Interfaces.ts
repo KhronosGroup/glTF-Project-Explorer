@@ -11,9 +11,8 @@ export type FiltersActions =
  * only called ONCE (?).
  *
  * The `filterOptions` are in fact the options for the filters. It is a
- * map that maps ProjectProperties keys (i.e. the keys of the
- * IProjectInfo#properties map) to the filters that have been created
- * for the respective property for ALL available projects.
+ * map that maps projectsMetadata tags to the filters that have been 
+ * created for the respective tag for ALL available projects.
  *
  * @property type The type
  * @property filterOptions The filter options

@@ -1,6 +1,7 @@
 import { Document } from "flexsearch";
 import { IFilter } from "./IFilter";
 import { IProjectInfo } from "./IProjectInfo";
+import { IProjectsMetadata } from "./IProjectsMetadata";
 
 /**
  * This is the document layout used for indexing the Projects.
@@ -24,12 +25,14 @@ export interface IProjectsState {
   isFetchingProjects: boolean;
   values: IProjectInfo[];
   searchIndex?: Document<IProjectSearchDoc>;
+  isFetchingProjectsMetadata: boolean;
+  projectsMetadata?: IProjectsMetadata
 }
 
 /**
  * The part of the state that summarizes the filter options and selection.
  *
- * @property filterOptions A record that maps ProjectProperties keys to the
+ * @property filterOptions A record that maps projectsMetadata tags to the
  * list of filters that are available for this project property. These are
  * one filter object for each possible value of this property.
  * @property titleSubstring The string that was entered in the free-text search box

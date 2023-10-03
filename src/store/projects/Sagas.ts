@@ -2,9 +2,11 @@ import * as actions from "./Actions";
 import { call, put, takeEvery } from "redux-saga/effects";
 import { Document } from "flexsearch";
 import { fetchProjects } from "../../services/DataService";
+import { fetchProjectsMetadata } from "../../services/DataService";
 import { IProjectInfo } from "../../interfaces/IProjectInfo";
 import { IProjectSearchDoc } from "../../interfaces/IAppState";
 import { ProjectsActionTypes } from "./Types";
+import { IProjectsMetadata } from "../../interfaces/IProjectsMetadata";
 
 function* retrieveProjects() {
   try {
@@ -37,4 +39,17 @@ function* retrieveProjects() {
 
 export function* updateProjects() {
   yield takeEvery(ProjectsActionTypes.PROJECTS_REQUESTED, retrieveProjects);
+}
+
+function* retrieveProjectsMetadata() {
+  try {
+    const projectsMetadata: IProjectsMetadata = yield call(fetchProjectsMetadata);
+    yield put(actions.successfulProjectsMetadata(projectsMetadata));
+  } catch (err) {
+    yield put(actions.failedProjectsMetadata(err as Error));
+  }
+}
+
+export function* updateProjectsMetadata() {
+  yield takeEvery(ProjectsActionTypes.PROJECTS_METADATA_REQUESTED, retrieveProjectsMetadata);
 }
