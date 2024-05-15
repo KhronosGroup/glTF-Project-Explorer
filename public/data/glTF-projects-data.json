@@ -1372,8 +1372,7 @@
   "link" : "https://github.com/BabylonJS/Babylon.js/tree/master/packages/dev/loaders/src/glTF",
   "task" : [ "import", "view" ],
   "type" : [ "engine" ],
-  "inputs" : [ "glTF 2.0" ],
-  "tags" : [ "Staff Picks" ]
+  "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "OSG.JS glTF loader",
   "description" : "WebGL engine",
@@ -1541,7 +1540,7 @@
   "name" : "Microsoft.glTF.CPP",
   "description" : "A C++ library for serializing and deserializing gltf/glb files.",
   "link" : "https://github.com/microsoft/glTF-SDK",
-  "language" : [ "2.0" ],
+  "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name" : "Qt 3D",
@@ -2108,7 +2107,7 @@
   "link" : "https://prototechsolutions.com/3d-products/inventor/gltf-exporter/",
   "task" : [ "export" ],
   "type" : [ "plugin", "sdk" ],
-  "language" : [ "c#" ],
+  "language" : [ "C#" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "ProtoTech glTF Exporter For Fusion 360",
@@ -2116,7 +2115,7 @@
   "link" : "https://prototechsolutions.com/3d-products/fusion-360/gltf-exporter/",
   "task" : [ "export" ],
   "type" : [ "plugin", "sdk" ],
-  "language" : [ "c#" ],
+  "language" : [ "C#" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "ProtoTech glTF Exporter For Revit",
@@ -2124,7 +2123,7 @@
   "link" : "https://prototechsolutions.com/3d-products/revit/gltf-exporter/",
    "task" : [ "export" ],
   "type" : [ "plugin", "sdk" ],
-  "language" : [ "c#" ],
+  "language" : [ "C#" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "ProtoTech glTF Exporter For SolidEdge",
@@ -2132,7 +2131,7 @@
   "link" : "https://prototechsolutions.com/3d-products/solidedge/gltf-exporter/",
   "task" : [ "export" ],
   "type" : [ "plugin", "sdk" ],
-  "language" : [ "c#" ],
+  "language" : [ "C#" ],
   "outputs" : [ "glTF 2.0" ]
  }, {
   "name" : "ProtoTech glTF Exporter For SolidWorks",
@@ -2140,7 +2139,7 @@
   "link" : "https://prototechsolutions.com/3d-products/solidworks/gltf-exporter/",
   "task" : [ "export" ],
   "type" : [ "plugin", "sdk" ],
-  "language" : [ "c#" ],
+  "language" : [ "C#" ],
   "outputs" : [ "glTF 2.0" ]
 }, {
   "name" : "F3D",
@@ -2148,7 +2147,7 @@
   "link" : "https://f3d-app.github.io/f3d/",
   "task" : [ "view" ],
   "type" : [ "application" ],
-  "language" : [ "c++" ],
+  "language" : [ "C++" ],
   "inputs" : [ "glTF 2.0" ]
 }, {
   "name": "Cesium for Unreal",
