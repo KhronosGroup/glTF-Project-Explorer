@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/glTF-Project-Explorer/static/css/main.8dcfcdbe.css",
-    "main.js": "/glTF-Project-Explorer/static/js/main.89681a70.js",
+    "main.js": "/glTF-Project-Explorer/static/js/main.6e2bb03b.js",
     "static/media/external-link-icon.svg": "/glTF-Project-Explorer/static/media/external-link-icon.b36dcdd10143d60d15c4.svg",
     "index.html": "/glTF-Project-Explorer/index.html",
     "main.8dcfcdbe.css.map": "/glTF-Project-Explorer/static/css/main.8dcfcdbe.css.map",
-    "main.89681a70.js.map": "/glTF-Project-Explorer/static/js/main.89681a70.js.map"
+    "main.6e2bb03b.js.map": "/glTF-Project-Explorer/static/js/main.6e2bb03b.js.map"
   },
   "entrypoints": [
     "static/css/main.8dcfcdbe.css",
-    "static/js/main.89681a70.js"
+    "static/js/main.6e2bb03b.js"
   ]
 }
