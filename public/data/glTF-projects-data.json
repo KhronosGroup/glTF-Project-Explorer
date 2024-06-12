@@ -1799,7 +1799,7 @@
 { 
   "name" : "Filer", 
   "description" : "Filer hosts a free public CDN library of 3D models + game assets, and a 3D glb scene editor. Community members regularly upload glb, gltf, fbx and other free files.",
-  "link" : "https://filer.netlify.app/", 
+  "link" : "https://filer.dev/", 
   "type" : [ "viewer", "service", "application" ],
   "license": ["Multiple"],
   "task": ["load", "view", "import"],
