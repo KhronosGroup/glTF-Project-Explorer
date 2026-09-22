@@ -1,13 +1,11 @@
 export interface IFilter {
-  propertyName: string;
+  tagName: string;
   value: string;
-  // selected: boolean;
 }
 
-export function createNewFilter(propertyName: string, value: string): IFilter {
+export function createNewFilter(tagName: string, value: string): IFilter {
   return {
-    propertyName,
+    tagName,
     value,
-    // selected: false
   };
 }

@@ -1,7 +1,6 @@
 import ProjectList from "./components/ProjectList";
 import FilterBar from "./components/FilterBar";
 import SearchBar from "./components/SearchBar";
-import GitHubForkRibbon from "react-github-fork-ribbon";
 import { useWindowDimensions } from "./utils/WindowWidthHook";
 
 const App: React.FC = () => {
@@ -18,7 +17,20 @@ const App: React.FC = () => {
           src={`${process.env.PUBLIC_URL}/glTF_RGB_June16.svg`}
           alt="glTF"
         />
-        <h1 className="pl-2">Project Explorer</h1>
+        <h1 className="flex-1 pl-2">Project Explorer</h1>
+        <a
+          className="bg-white font-semibold visited:bg-white focus:bg-white active:bg-white hover:bg-gltf-green hover:text-white py-2 px-4 mx-4 border border-slate-300 hover:border-transparent rounded"
+          href="https://ecosystem.khronos.org/submit/"
+        >
+          Submit New Project
+        </a>
+        <a href="https://www.github.com/KhronosGroup/glTF-Project-Explorer">
+          <img
+            className="h-10"
+            src={`${process.env.PUBLIC_URL}/github-mark-white.svg`}
+            alt="GitHub"
+          />
+        </a>
       </div>
       <div className="grid grid-cols-1 grid-rows-1 lg:grid-cols-3 xl:grid-cols-4">
         <div className="col-auto h-fit">
@@ -29,13 +41,6 @@ const App: React.FC = () => {
           <ProjectList></ProjectList>
         </div>
       </div>
-      <GitHubForkRibbon
-        position="right"
-        color="white"
-        href="https://github.com/KhronosGroup/glTF-Project-Explorer"
-      >
-        Fork us on GitHub
-      </GitHubForkRibbon>
     </div>
   );
 };
